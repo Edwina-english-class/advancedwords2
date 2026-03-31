@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高頻英文詞彙刷題系統</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1a2e;
+    --ink-soft: #3d3d5c;
+    --paper: #faf8f3;
+    --paper-warm: #f5f0e8;
+    --accent: #c8553d;
+    --accent-light: #e8765a;
+    --gold: #c9a84c;
+    --sage: #5a7a6a;
+    --correct: #3d7a5a;
+    --correct-bg: #e8f4ee;
+    --wrong: #b03020;
+    --wrong-bg: #faeae8;
+    --card-shadow: 0 4px 24px rgba(26,26,46,0.10), 0 1px 4px rgba(26,26,46,0.07);
+    --radius: 12px;
+    --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--ink);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 1.35rem;
+    color: var(--paper);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; display: inline-block; }
+
+  .header-stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .stat-pill {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 20px;
+    padding: 5px 14px;
+    font-size: 0.82rem;
+    color: var(--paper);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .stat-pill .val { color: var(--gold); font-weight: 700; font-size: 0.95rem; }
+  .stat-pill.correct-pill .val { color: #6fcf97; }
+  .stat-pill.wrong-pill .val { color: #f2994a; }
+
+  /* ── Main Layout ── */
+  main {
+    flex: 1;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── Mode Selector ── */
+  .mode-bar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 32px;
+    background: var(--paper-warm);
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid rgba(26,26,46,0.08);
+  }
+  .mode-btn {
+    flex: 1;
+    padding: 9px 0;
+    border: none;
+    border-radius: 7px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 500;
+    cursor: pointer;
+    background: transparent;
+    color: var(--ink-soft);
+    transition: var(--transition);
+    letter-spacing: 0.01em;
+  }
+  .mode-btn.active {
+    background: var(--ink);
+    color: var(--paper);
+    box-shadow: 0 2px 8px rgba(26,26,46,0.18);
+  }
+
+  /* ── Progress ── */
+  .progress-wrap {
+    margin-bottom: 28px;
+  }
+  .progress-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+  }
+  .progress-label {
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .progress-num {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .progress-bar {
+    height: 6px;
+    background: var(--paper-warm);
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid rgba(26,26,46,0.07);
+  }
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    border-radius: 3px;
+    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
+  }
+
+  /* ── Question Card ── */
+  .question-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 36px 40px;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 20px;
+    border: 1px solid rgba(26,26,46,0.06);
+    animation: slideUp 0.3s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .q-number {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--accent);
+  }
+  .q-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    background: var(--paper-warm);
+    border-radius: 4px;
+    padding: 2px 8px;
+  }
+
+  .q-sentence {
+    font-size: 1.13rem;
+    line-height: 1.75;
+    color: var(--ink);
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 0.01em;
+  }
+  .q-sentence .blank {
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    color: var(--accent);
+    background: rgba(200, 85, 61, 0.07);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+
+  /* ── Options ── */
+  .options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  @media (max-width: 560px) { .options-grid { grid-template-columns: 1fr; } }
+
+  .option-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    border: 1.5px solid rgba(26,26,46,0.12);
+    border-radius: 9px;
+    background: var(--paper);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--ink);
+    text-align: left;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+  }
+  .option-btn:hover:not(:disabled) {
+    border-color: var(--accent);
+    background: rgba(200,85,61,0.04);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(200,85,61,0.12);
+  }
+  .option-btn:disabled { cursor: default; }
+
+  .opt-label {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: rgba(26,26,46,0.07);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-weight: 500;
+    font-size: 0.82rem;
+    flex-shrink: 0;
+    transition: var(--transition);
+  }
+  .opt-text { flex: 1; font-style: italic; }
+
+  .option-btn.correct {
+    border-color: var(--correct);
+    background: var(--correct-bg);
+  }
+  .option-btn.correct .opt-label {
+    background: var(--correct);
+    color: white;
+  }
+  .option-btn.wrong {
+    border-color: var(--wrong);
+    background: var(--wrong-bg);
+  }
+  .option-btn.wrong .opt-label {
+    background: var(--wrong);
+    color: white;
+  }
+
+  /* ── Explanation ── */
+  .explanation {
+    margin-top: 20px;
+    padding: 18px 20px;
+    border-radius: 9px;
+    border-left: 3px solid;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    font-weight: 300;
+    animation: fadeIn 0.35s ease;
+    display: none;
+  }
+  .explanation.show { display: block; }
+  .explanation.correct-exp {
+    background: var(--correct-bg);
+    border-color: var(--correct);
+    color: #1d4a30;
+  }
+  .explanation.wrong-exp {
+    background: var(--wrong-bg);
+    border-color: var(--wrong);
+    color: #5a1a10;
+  }
+  .explanation strong {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── Nav Buttons ── */
+  .nav-row {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 8px;
+  }
+  .nav-btn {
+    padding: 11px 26px;
+    border-radius: 8px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    letter-spacing: 0.01em;
+  }
+  .nav-btn.primary {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .nav-btn.primary:hover { background: var(--accent); }
+  .nav-btn.secondary {
+    background: var(--paper-warm);
+    color: var(--ink-soft);
+    border: 1.5px solid rgba(26,26,46,0.12);
+  }
+  .nav-btn.secondary:hover { border-color: var(--ink); color: var(--ink); }
+  .nav-btn:disabled { opacity: 0.35; cursor: default; }
+
+  /* ── Result Screen ── */
+  .result-screen {
+    display: none;
+    text-align: center;
+    animation: slideUp 0.4s ease;
+  }
+  .result-screen.show { display: block; }
+
+  .result-trophy {
+    font-size: 4rem;
+    margin-bottom: 16px;
+  }
+  .result-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .result-sub {
+    color: var(--ink-soft);
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 36px;
+  }
+
+  .score-ring-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+  }
+  .score-ring {
+    position: relative;
+    width: 140px;
+    height: 140px;
+  }
+  .score-ring svg { transform: rotate(-90deg); }
+  .score-ring .ring-bg { fill: none; stroke: var(--paper-warm); stroke-width: 10; }
+  .score-ring .ring-fill {
+    fill: none;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1);
+  }
+  .score-ring-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .score-big {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .score-label {
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .result-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+  .rs-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 20px 12px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(26,26,46,0.06);
+  }
+  .rs-val {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.9rem;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .rs-val.green { color: var(--correct); }
+  .rs-val.red { color: var(--wrong); }
+  .rs-val.blue { color: var(--accent); }
+  .rs-label {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .result-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .result-actions .nav-btn { padding: 13px 32px; font-size: 0.95rem; }
+
+  /* ── Mini map ── */
+  .mini-map-wrap {
+    background: white;
+    border-radius: var(--radius);
+    padding: 20px 24px;
+    margin-top: 20px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(26,26,46,0.06);
+  }
+  .mini-map-title {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .mini-map {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .map-dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    border: 1.5px solid rgba(26,26,46,0.12);
+    background: var(--paper-warm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.6rem;
+    color: var(--ink-soft);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  .map-dot:hover { border-color: var(--accent); }
+  .map-dot.done-correct { background: var(--correct-bg); border-color: var(--correct); color: var(--correct); font-weight: 700; }
+  .map-dot.done-wrong   { background: var(--wrong-bg); border-color: var(--wrong); color: var(--wrong); font-weight: 700; }
+  .map-dot.current      { background: var(--ink); border-color: var(--ink); color: white; font-weight: 700; }
+
+  /* ── Review screen ── */
+  .review-list { display: flex; flex-direction: column; gap: 16px; }
+  .review-item {
+    background: white;
+    border-radius: var(--radius);
+    padding: 22px 26px;
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(26,26,46,0.06);
+    border-left: 4px solid;
+  }
+  .review-item.correct-item { border-left-color: var(--correct); }
+  .review-item.wrong-item   { border-left-color: var(--wrong); }
+  .review-q {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .review-answer-row {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    flex-wrap: wrap;
+  }
+  .review-correct { color: var(--correct); }
+  .review-wrong   { color: var(--wrong); }
+  .review-exp {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    font-weight: 300;
+    line-height: 1.6;
+    padding-top: 10px;
+    border-top: 1px solid rgba(26,26,46,0.07);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <span class="logo-dot"></span>
+    高頻詞彙刷題系統
+  </div>
+  <div class="header-stats">
+    <div class="stat-pill">題庫 <span class="val" id="hd-total">100</span> 題</div>
+    <div class="stat-pill correct-pill">✓ <span class="val" id="hd-correct">0</span></div>
+    <div class="stat-pill wrong-pill">✗ <span class="val" id="hd-wrong">0</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="mode-bar">
+    <button class="mode-btn active" onclick="setMode('sequential')">📖 順序刷題</button>
+    <button class="mode-btn" onclick="setMode('random')">🔀 隨機刷題</button>
+    <button class="mode-btn" onclick="setMode('mistakes')">🔁 錯題重練</button>
+    <button class="mode-btn" onclick="showReview()">📋 錯題回顧</button>
+  </div>
+
+  <!-- Quiz area -->
+  <div id="quiz-area">
+    <div class="progress-wrap">
+      <div class="progress-row">
+        <span class="progress-label">Progress</span>
+        <span class="progress-num" id="progress-num">0 / 100</span>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
+      </div>
+    </div>
+
+    <div class="question-card" id="question-card">
+      <div class="q-meta">
+        <span class="q-number" id="q-number">Q1</span>
+        <span class="q-tag" id="q-tag">順序模式</span>
+      </div>
+      <p class="q-sentence" id="q-sentence"></p>
+      <div class="options-grid" id="options-grid"></div>
+      <div class="explanation" id="explanation"></div>
+    </div>
+
+    <div class="nav-row">
+      <button class="nav-btn secondary" onclick="prevQ()" id="btn-prev" disabled>← 上一題</button>
+      <button class="nav-btn primary" onclick="nextQ()" id="btn-next" disabled>下一題 →</button>
+    </div>
+
+    <div class="mini-map-wrap">
+      <div class="mini-map-title">題目總覽</div>
+      <div class="mini-map" id="mini-map"></div>
+    </div>
+  </div>
+
+  <!-- Result screen -->
+  <div class="result-screen" id="result-screen">
+    <div class="result-trophy" id="result-trophy">🏆</div>
+    <h2 class="result-title" id="result-title">刷題完成！</h2>
+    <p class="result-sub" id="result-sub">你已完成本輪所有題目</p>
+    <div class="score-ring-wrap">
+      <div class="score-ring">
+        <svg viewBox="0 0 140 140" width="140" height="140">
+          <circle class="ring-bg" cx="70" cy="70" r="60"/>
+          <circle class="ring-fill" id="ring-fill" cx="70" cy="70" r="60"
+            stroke-dasharray="376.99" stroke-dashoffset="376.99"/>
+        </svg>
+        <div class="score-ring-text">
+          <span class="score-big" id="score-pct">0%</span>
+          <span class="score-label">正確率</span>
+        </div>
+      </div>
+    </div>
+    <div class="result-stats">
+      <div class="rs-card"><div class="rs-val green" id="rs-correct">0</div><div class="rs-label">答對題數</div></div>
+      <div class="rs-card"><div class="rs-val red" id="rs-wrong">0</div><div class="rs-label">答錯題數</div></div>
+      <div class="rs-card"><div class="rs-val blue" id="rs-total">0</div><div class="rs-label">作答總數</div></div>
+    </div>
+    <div class="result-actions">
+      <button class="nav-btn secondary" onclick="showReview()">📋 查看錯題</button>
+      <button class="nav-btn primary" onclick="restartMode()">🔄 再來一輪</button>
+    </div>
+  </div>
+
+  <!-- Review screen -->
+  <div id="review-screen" style="display:none; animation: slideUp 0.3s ease;">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
+      <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:900;">錯題回顧</h2>
+      <button class="nav-btn secondary" onclick="backToQuiz()" style="padding:8px 18px; font-size:0.85rem;">← 返回刷題</button>
+    </div>
+    <div class="review-list" id="review-list"></div>
+    <div id="no-mistakes" style="display:none; text-align:center; padding:60px; color:var(--ink-soft);">
+      <div style="font-size:3rem; margin-bottom:12px;">🎉</div>
+      <div style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700;">目前沒有錯題！</div>
+      <div style="font-size:0.9rem; margin-top:6px;">繼續保持，全力衝刺！</div>
+    </div>
+  </div>
+</main>
+
+<script>
+const QUESTIONS = [{"id": 1, "sentence": "Despite his repeated refusals, the children continued to _____ their father for a new puppy, their pleas growing more insistent with each passing hour.", "options": {"A": "placate", "B": "mollify", "C": "badger", "D": "cajole"}, "answer": "C", "explanation": "Badger 意為一再煩擾、纏著某人，符合「不斷纏著父親要求」的語境。A) placate 意為安撫；B) mollify 意為平息怒氣；D) cajole 意為哄騙，均與持續騷擾的語境不符。"}, {"id": 2, "sentence": "The government decided to _____ the outdated law that had been on the books for over a century, replacing it with a more modern and comprehensive regulation.", "options": {"A": "annul", "B": "exacerbate", "C": "promulgate", "D": "condone"}, "answer": "A", "explanation": "Annul 意為取消、廢除，符合「廢除過時法律」的語境。B) exacerbate 意為惡化；C) promulgate 意為宣布；D) condone 意為寬恕，均不符。"}, {"id": 3, "sentence": "The new CEO's _____ management style left employees feeling micromanaged and unable to make even the smallest decisions without her approval.", "options": {"A": "magnanimous", "B": "overbearing", "C": "unassuming", "D": "amenable"}, "answer": "B", "explanation": "Overbearing 意為專橫獨斷，符合「讓員工感到被過度管控」的語境。A) magnanimous 意為寬宏大量；C) unassuming 意為謙虛；D) amenable 意為通情達理，均與文意相反。"}, {"id": 4, "sentence": "After the scandal broke, the politician tried to _____ his earlier statement, claiming he had been misquoted by the media.", "options": {"A": "recant", "B": "insinuate", "C": "augment", "D": "propagate"}, "answer": "A", "explanation": "Recant 意為撤回先前聲明，符合「收回否認說法」的語境。B) insinuate 意為暗示；C) augment 意為增加；D) propagate 意為傳播，均不符。"}, {"id": 5, "sentence": "The documentary filmmaker managed to _____ rare footage of the elusive snow leopard in its natural mountain habitat, thrilling wildlife enthusiasts worldwide.", "options": {"A": "expropriate", "B": "garner", "C": "dissipate", "D": "abrogate"}, "answer": "B", "explanation": "Garner 意為收集、獲得，符合「取得珍貴影像」的語境。A) expropriate 意為充公；C) dissipate 意為浪費；D) abrogate 意為廢止，均不符。"}, {"id": 6, "sentence": "His speech was so _____ that the audience was moved to tears, with many calling it the most powerful address they had ever heard.", "options": {"A": "prosaic", "B": "insipid", "C": "evocative", "D": "cursory"}, "answer": "C", "explanation": "Evocative 意為引起強烈情感，符合「令觀眾感動落淚」的語境。A) prosaic 意為乏味；B) insipid 意為無生氣；D) cursory 意為草率，均與文意相反。"}, {"id": 7, "sentence": "The hikers were forced to _____ from the original trail after a landslide blocked their path, adding three hours to their journey.", "options": {"A": "convene", "B": "deviate", "C": "culminate", "D": "permeate"}, "answer": "B", "explanation": "Deviate 意為偏離原定路線，符合「被迫偏離原路」的語境。A) convene 意為召集；C) culminate 意為達到頂點；D) permeate 意為滲透，均不符。"}, {"id": 8, "sentence": "The young intern's _____ behavior—constantly flattering supervisors and agreeing with everything they said—annoyed her more experienced colleagues.", "options": {"A": "intrepid", "B": "stoical", "C": "obdurate", "D": "fawning"}, "answer": "D", "explanation": "Fawning 意為諂媚奉承，符合「不斷討好上司」的行為。A) intrepid 意為無畏；B) stoical 意為不動感情；C) obdurate 意為固執，均不符。"}, {"id": 9, "sentence": "Despite warnings from financial advisors, she _____ her entire inheritance on luxury vacations and designer goods within just two years.", "options": {"A": "hoarded", "B": "squandered", "C": "augmented", "D": "bequeathed"}, "answer": "B", "explanation": "Squander 意為揮霍浪費，符合「在兩年內揮霍掉遺產」的語境。A) hoarded 意為囤積；C) augmented 意為增加；D) bequeathed 意為遺留，均不符。"}, {"id": 10, "sentence": "The professor was known for his _____ grading standards, often returning papers with detailed corrections on even the most minor grammatical errors.", "options": {"A": "perfunctory", "B": "lenient", "C": "meticulous", "D": "desultory"}, "answer": "C", "explanation": "Meticulous 意為極注意細節的，符合「連細微文法錯誤都詳批」的語境。A) perfunctory 意為敷衍；B) lenient 意為寬大；D) desultory 意為散漫，均不符。"}, {"id": 11, "sentence": "The accused criminal appeared completely _____ during the trial, showing no remorse whatsoever for the suffering he had caused his victims.", "options": {"A": "contrite", "B": "callous", "C": "penitent", "D": "magnanimous"}, "answer": "B", "explanation": "Callous 意為冷漠無情，符合「毫無悔意」的語境。A) contrite 意為痛悔；C) penitent 意為懺悔；D) magnanimous 意為寬宏，均與語境相反。"}, {"id": 12, "sentence": "The small coastal village had remained completely _____ from modern technology for decades, with residents still relying on fishing and farming for sustenance.", "options": {"A": "inundated", "B": "sequestered", "C": "amalgamated", "D": "proliferated"}, "answer": "B", "explanation": "Sequestered 意為與外界隔絕，符合「與現代科技完全隔離」的語境。A) inundated 意為淹沒；C) amalgamated 意為合併；D) proliferated 意為激增，均不符。"}, {"id": 13, "sentence": "The dictator's _____ regime tolerated no dissent, imprisoning journalists and opposition leaders who dared to speak out against his policies.", "options": {"A": "benevolent", "B": "despotic", "C": "equitable", "D": "propitious"}, "answer": "B", "explanation": "Despotic 意為專橫獨裁，符合「不容異議、監禁記者」的極權統治語境。A) benevolent 意為善心；C) equitable 意為公正；D) propitious 意為吉祥，均與文意相反。"}, {"id": 14, "sentence": "After months of negotiations, the two rival companies finally agreed to _____ their operations, creating what would become the largest firm in the industry.", "options": {"A": "sever", "B": "amalgamate", "C": "bifurcate", "D": "disseminate"}, "answer": "B", "explanation": "Amalgamate 意為合併，符合「兩家競爭公司合而為一」的語境。A) sever 意為切斷；C) bifurcate 意為分叉；D) disseminate 意為散佈，均不符。"}, {"id": 15, "sentence": "The scientist spent years trying to _____ the cause of the mysterious disease, eventually discovering that it was transmitted through contaminated water supplies.", "options": {"A": "obfuscate", "B": "elucidate", "C": "expunge", "D": "attenuate"}, "answer": "B", "explanation": "Elucidate 意為闡明，符合「釐清並說明疾病原因」的語境。A) obfuscate 意為混淆；C) expunge 意為刪除；D) attenuate 意為減弱，均不符。"}, {"id": 16, "sentence": "The mountain climber showed remarkable _____ in the face of terrible weather conditions, continuing her ascent despite freezing temperatures and howling winds.", "options": {"A": "trepidation", "B": "torpor", "C": "fortitude", "D": "diffidence"}, "answer": "C", "explanation": "Fortitude 意為堅忍不拔，符合「在惡劣天氣中仍堅持攀登」的語境。A) trepidation 意為驚恐；B) torpor 意為萎靡；D) diffidence 意為缺乏自信，均與語境相反。"}, {"id": 17, "sentence": "His _____ remarks about his colleague's presentation, made in front of the entire team, caused considerable embarrassment and damaged their working relationship.", "options": {"A": "laudatory", "B": "innocuous", "C": "derogatory", "D": "felicitous"}, "answer": "C", "explanation": "Derogatory 意為貶損輕視的，符合「在全隊面前令同事難堪的言論」。A) laudatory 意為讚美；B) innocuous 意為無害；D) felicitous 意為恰當，均不符。"}, {"id": 18, "sentence": "The elderly professor had become increasingly _____, often forgetting students' names, repeating the same stories in class, and losing track of where he was in his lectures.", "options": {"A": "perspicacious", "B": "erudite", "C": "senile", "D": "astute"}, "answer": "C", "explanation": "Senile 意為老年記憶衰退，符合「忘記學生名字、重複故事」等老化症狀。A) perspicacious 意為敏銳；B) erudite 意為博學；D) astute 意為精明，均與語境相反。"}, {"id": 19, "sentence": "The activists staged a protest to _____ what they saw as the government's _____ treatment of refugees, demanding immediate policy reform.", "options": {"A": "condone / exemplary", "B": "denounce / egregious", "C": "endorse / inequitable", "D": "extol / deplorable"}, "answer": "B", "explanation": "Denounce（公開指責）配合 egregious（極端惡劣），符合「抗議政府對難民惡劣對待、要求改革」的語境。其餘選項的第一個動詞均含贊同意味，與抗議語境矛盾。"}, {"id": 20, "sentence": "The once-thriving neighborhood had become completely _____ after the factory closed, with abandoned buildings, empty streets, and a pervasive sense of hopelessness.", "options": {"A": "vibrant", "B": "desolate", "C": "bustling", "D": "verdant"}, "answer": "B", "explanation": "Desolate 意為荒涼孤獨，符合「廢棄建築、空曠街道、瀰漫絕望」的描述。A) vibrant 意為充滿活力；C) bustling 意為熙攘；D) verdant 意為翠綠，均與衰敗語境相反。"}, {"id": 21, "sentence": "The young artist's debut novel was so _____ that critics struggled to understand its layered symbolism, yet its complexity only added to its allure.", "options": {"A": "lucid", "B": "trite", "C": "abstruse", "D": "pellucid"}, "answer": "C", "explanation": "Abstruse 意為深奧難懂，符合「評論家難以解讀其層層象徵」的語境。A) lucid 清晰；B) trite 陳腐；D) pellucid 清晰，均與語境相反。"}, {"id": 22, "sentence": "After years of conflict, the two neighboring nations signed a treaty to _____ their border disputes, hoping to usher in an era of lasting peace.", "options": {"A": "exacerbate", "B": "inflame", "C": "conciliate", "D": "contravene"}, "answer": "C", "explanation": "Conciliate 意為和解安撫，符合「簽署條約解決邊界糾紛」的語境。A) exacerbate 惡化；B) inflame 激化；D) contravene 違反，均相反。"}, {"id": 23, "sentence": "The CEO's _____ decision to expand into five new markets simultaneously, without adequate research, led to the company's near collapse.", "options": {"A": "judicious", "B": "prudent", "C": "precipitate", "D": "meritorious"}, "answer": "C", "explanation": "Precipitate 意為倉促魯莽，符合「未充分研究便草率擴張」的語境。A) judicious 有判斷力；B) prudent 謹慎；D) meritorious 值得讚揚，均相反。"}, {"id": 24, "sentence": "The once-celebrated author had fallen into _____, his name barely recognized by younger generations who had never encountered his works.", "options": {"A": "prominence", "B": "oblivion", "C": "notoriety", "D": "renown"}, "answer": "B", "explanation": "Oblivion 意為被遺忘的狀態，符合「年輕一代幾乎不認識此作者」的語境。A) prominence 顯著；C) notoriety 惡名；D) renown 聲譽，均不符。"}, {"id": 25, "sentence": "Her _____ for adventure led her to quit her stable corporate job and embark on a solo journey across six continents.", "options": {"A": "aversion", "B": "apathy", "C": "wanderlust", "D": "diffidence"}, "answer": "C", "explanation": "Wanderlust 意為強烈旅遊渴望，符合「辭掉工作環遊六大洲」的語境。A) aversion 反感；B) apathy 冷漠；D) diffidence 缺乏自信，均不符。"}, {"id": 26, "sentence": "The lawyer argued that the confession was obtained under _____, as his client had been threatened and had no legal representation during questioning.", "options": {"A": "duress", "B": "candor", "C": "volition", "D": "alacrity"}, "answer": "A", "explanation": "Duress 意為脅迫強制，符合「遭受威脅且無律師陪同」的被迫認罪語境。B) candor 坦白；C) volition 意志；D) alacrity 敏捷熱心，均不符。"}, {"id": 27, "sentence": "The scientist's groundbreaking research proved to be _____, inspiring dozens of subsequent studies that built upon her foundational discoveries.", "options": {"A": "futile", "B": "nugatory", "C": "seminal", "D": "ephemeral"}, "answer": "C", "explanation": "Seminal 意為對未來有深遠影響的，符合「啟發數十項後續研究」的語境。A) futile 徒勞；B) nugatory 無用；D) ephemeral 短暫，均相反。"}, {"id": 28, "sentence": "The politician's promise to reduce taxes was merely _____, designed to win votes without any genuine intention of following through after the election.", "options": {"A": "veracious", "B": "forthright", "C": "candid", "D": "specious"}, "answer": "D", "explanation": "Specious 意為似是而非的、具欺騙性的，符合「口頭承諾但無意兌現」的語境。A) veracious 誠實；B) forthright 直截了當；C) candid 坦白，均相反。"}, {"id": 29, "sentence": "The new regulation was designed to _____ the rampant corruption that had long plagued the city's construction industry.", "options": {"A": "foster", "B": "perpetuate", "C": "eradicate", "D": "propagate"}, "answer": "C", "explanation": "Eradicate 意為根除，符合「消除長期腐敗問題」的語境。A) foster 培養；B) perpetuate 使持續；D) propagate 傳播，均相反。"}, {"id": 30, "sentence": "After the earthquake, rescue workers had to _____ through enormous piles of rubble to find survivors trapped beneath the collapsed buildings.", "options": {"A": "saunter", "B": "meander", "C": "dally", "D": "delve"}, "answer": "D", "explanation": "Delve 意為深入搜索，符合「在瓦礫堆中搜救倖存者」的語境。A) saunter 閒逛；B) meander 漫步；C) dally 浪費時間，均不符緊急搜救情境。"}, {"id": 31, "sentence": "The general's _____ strategy of attacking on multiple fronts simultaneously overwhelmed the enemy, who had expected only a conventional assault.", "options": {"A": "timorous", "B": "audacious", "C": "craven", "D": "tentative"}, "answer": "B", "explanation": "Audacious 意為大膽的，符合「同時在多個戰線發動攻擊」的大膽策略。A) timorous 膽小；C) craven 懦弱；D) tentative 試探性的，均與大膽相反。"}, {"id": 32, "sentence": "Years of overgrazing had left the land completely _____, with cracked dry earth stretching as far as the eye could see and no vegetation in sight.", "options": {"A": "verdant", "B": "fecund", "C": "arid", "D": "fertile"}, "answer": "C", "explanation": "Arid 意為乾旱的，符合「龜裂乾燥、毫無植被」的描述。A) verdant 翠綠；B) fecund 肥沃；D) fertile 肥沃，均相反。"}, {"id": 33, "sentence": "The committee voted to _____ the controversial clause from the contract, as it had caused significant confusion among all parties involved.", "options": {"A": "append", "B": "excise", "C": "expound", "D": "inculcate"}, "answer": "B", "explanation": "Excise 意為切除刪去，符合「刪除引起混淆的爭議條款」的語境。A) append 附加；C) expound 詳述；D) inculcate 灌輸，均不符。"}, {"id": 34, "sentence": "The employee's _____ behavior—showing up late, missing deadlines, and ignoring emails—finally led to his dismissal after multiple warnings.", "options": {"A": "assiduous", "B": "exemplary", "C": "delinquent", "D": "sedulous"}, "answer": "C", "explanation": "Delinquent 意為失職怠惰，符合「遲到、錯過截止日、忽視郵件」等行為。A) assiduous 勤勉；B) exemplary 模範；D) sedulous 勤勉，均相反。"}, {"id": 35, "sentence": "The diplomat's _____ in handling the hostage crisis—remaining calm under enormous pressure and negotiating skillfully—earned her widespread admiration.", "options": {"A": "trepidation", "B": "aplomb", "C": "consternation", "D": "agitation"}, "answer": "B", "explanation": "Aplomb 意為沉著冷靜，符合「在巨大壓力下保持冷靜並成功談判」的語境。A) trepidation 驚恐；C) consternation 震驚不安；D) agitation 激動，均相反。"}, {"id": 36, "sentence": "The investigative journalist spent two years _____ through thousands of financial documents to expose the corporation's decade-long fraud scheme.", "options": {"A": "rummaging", "B": "sauntering", "C": "loitering", "D": "dawdling"}, "answer": "A", "explanation": "Rummaging 意為仔細翻找搜索，符合「翻閱大量文件揭露詐欺案」的語境。B) sauntering 悠閒漫步；C) loitering 閒蕩；D) dawdling 虛度時間，均不符。"}, {"id": 37, "sentence": "The toddler's _____ in the supermarket—screaming and throwing items off the shelves—left her exhausted mother mortified in front of the other shoppers.", "options": {"A": "decorum", "B": "composure", "C": "tantrum", "D": "placidity"}, "answer": "C", "explanation": "Tantrum 意為（幼兒）情緒大爆發，完全符合「在超市尖叫亂丟東西」的描述。A) decorum 禮節；B) composure 鎮靜；D) placidity 平靜，均相反。"}, {"id": 38, "sentence": "The professor was known to _____ lazy thinking, insisting that students support every argument with concrete evidence and rigorous logical reasoning.", "options": {"A": "condone", "B": "champion", "C": "abhor", "D": "espouse"}, "answer": "C", "explanation": "Abhor 意為深惡痛絕，符合「不容許懶散思維、堅持嚴謹論證」的語境。A) condone 縱容；B) champion 支持；D) espouse 擁護，均相反。"}, {"id": 39, "sentence": "The defense attorney worked tirelessly to _____ her client, presenting new DNA evidence that conclusively proved his innocence after twelve years in prison.", "options": {"A": "indict", "B": "incriminate", "C": "impugn", "D": "exculpate"}, "answer": "D", "explanation": "Exculpate 意為洗清罪名，符合「提出新DNA證據證明無罪」的語境。A) indict 起訴；B) incriminate 入罪；C) impugn 抨擊，均相反。"}, {"id": 40, "sentence": "Her _____ childhood in rural poverty, far from discouraging her, only strengthened her resolve to succeed and provide a better life for her own children.", "options": {"A": "opulent", "B": "privileged", "C": "penurious", "D": "bountiful"}, "answer": "C", "explanation": "Penurious 意為極度貧困，符合「在農村貧困中成長」並與後文形成激勵對比。A) opulent 富裕；B) privileged 有特權；D) bountiful 豐裕，均相反。"}, {"id": 41, "sentence": "The renowned chef's restaurant had a _____ reputation for using only the freshest seasonal ingredients, sourced directly from local farms each morning.", "options": {"A": "dubious", "B": "sterling", "C": "tarnished", "D": "mediocre"}, "answer": "B", "explanation": "Sterling 意為卓越的、信譽極佳的，符合「享有盛名的主廚餐廳」語境。A) dubious 意為可疑的；C) tarnished 意為玷汙的；D) mediocre 意為平庸的，均與高聲譽相反。"}, {"id": 42, "sentence": "The witness's testimony was so _____ and full of contradictions that the jury found it impossible to determine what had actually occurred that night.", "options": {"A": "cogent", "B": "perspicuous", "C": "irrefutable", "D": "convoluted"}, "answer": "D", "explanation": "Convoluted 意為複雜混亂的、難以理解的，符合「充滿矛盾、難以判斷真相」的語境。A) cogent 意為有說服力的；B) perspicuous 意為清晰的；C) irrefutable 意為無可反駁的，均與混亂矛盾相反。"}, {"id": 43, "sentence": "After the merger, hundreds of employees found their positions _____, as the two companies had significant overlap in their accounting and marketing departments.", "options": {"A": "indispensable", "B": "coveted", "C": "redundant", "D": "pivotal"}, "answer": "C", "explanation": "Redundant 意為多餘的、因重疊而不再需要的，符合「兩公司合併後職位重疊」的語境。A) indispensable 意為不可或缺的；B) coveted 意為受人覬覦的；D) pivotal 意為關鍵的，均與職位多餘的語境相反。"}, {"id": 44, "sentence": "The athlete's recovery from the severe knee injury was nothing short of _____, as doctors had initially doubted she would ever compete again at the professional level.", "options": {"A": "mundane", "B": "negligible", "C": "phenomenal", "D": "tentative"}, "answer": "C", "explanation": "Phenomenal 意為非凡的、驚人的，符合「醫生原本認為不可能再上場、卻奇蹟式康復」的語境。A) mundane 意為平凡的；B) negligible 意為微不足道的；D) tentative 意為試探性的，均不符合驚人復原的語境。"}, {"id": 45, "sentence": "The senator used every parliamentary trick available to _____ the vote on the controversial bill, hoping public opinion would shift in his favor over time.", "options": {"A": "expedite", "B": "precipitate", "C": "filibuster", "D": "ratify"}, "answer": "C", "explanation": "Filibuster 意為用冗長演說等手段阻礙議案通過，符合「利用一切議會手段拖延投票」的語境。A) expedite 意為加速；B) precipitate 意為促進；D) ratify 意為批准，均與阻撓議案的語境相反或不符。"}, {"id": 46, "sentence": "The scholar's lecture was so _____ that even students with no background in philosophy found themselves captivated and eagerly taking notes.", "options": {"A": "soporific", "B": "pedantic", "C": "abstruse", "D": "engrossing"}, "answer": "D", "explanation": "Engrossing 意為引人入勝的、令人全神貫注的，符合「連門外漢都聽得入迷」的語境。A) soporific 意為引起睡意的；B) pedantic 意為迂腐的；C) abstruse 意為深奧難懂的，均與吸引人的語境相反。"}, {"id": 47, "sentence": "Decades of political instability had left the country's infrastructure in a _____ state, with crumbling roads, unreliable electricity, and failing water systems.", "options": {"A": "pristine", "B": "dilapidated", "C": "robust", "D": "immaculate"}, "answer": "B", "explanation": "Dilapidated 意為殘破不堪的，符合「道路崩塌、電力不穩、供水系統失效」的語境。A) pristine 意為完好如新的；C) robust 意為強健的；D) immaculate 意為完美無瑕的，均與破敗狀態相反。"}, {"id": 48, "sentence": "The whistleblower risked his career and personal safety to _____ the company's illegal dumping of toxic waste into the local river.", "options": {"A": "condone", "B": "perpetuate", "C": "divulge", "D": "suppress"}, "answer": "C", "explanation": "Divulge 意為洩漏、公開秘密，符合「冒著風險揭露公司非法行為」的語境。A) condone 意為縱容；B) perpetuate 意為使持續；D) suppress 意為壓制，均與揭露行為的語境相反。"}, {"id": 49, "sentence": "His _____ generosity during the fundraiser—donating half his annual salary—left the entire audience speechless and moved many to tears.", "options": {"A": "niggardly", "B": "paltry", "C": "munificent", "D": "grudging"}, "answer": "C", "explanation": "Munificent 意為極為慷慨的，符合「捐出半年薪水讓眾人震驚感動」的語境。A) niggardly 意為吝嗇的；B) paltry 意為微不足道的；D) grudging 意為勉強的，均與極度慷慨相反。"}, {"id": 50, "sentence": "The debate moderator struggled to maintain order as both candidates became increasingly _____, interrupting each other and raising their voices.", "options": {"A": "placid", "B": "bellicose", "C": "temperate", "D": "genial"}, "answer": "B", "explanation": "Bellicose 意為好戰的、好鬥的，符合「互相打斷、提高音量」的激烈對抗語境。A) placid 意為平靜的；C) temperate 意為有節制的；D) genial 意為和藹的，均與激烈爭論的語境相反。"}, {"id": 51, "sentence": "The startup founder had to _____ significant personal debt to finance her vision, betting everything on the belief that the market was ready for her product.", "options": {"A": "mitigate", "B": "incur", "C": "forestall", "D": "alleviate"}, "answer": "B", "explanation": "Incur 意為招致、遭受（尤指負面後果），符合「承擔巨額個人債務來資助創業」的語境。A) mitigate 意為減輕；C) forestall 意為先發制人防止；D) alleviate 意為緩解，均不符合主動承擔債務的語境。"}, {"id": 52, "sentence": "The community was _____ by the sudden closure of the town's only hospital, leaving thousands of residents without access to emergency medical care.", "options": {"A": "galvanized", "B": "invigorated", "C": "devastated", "D": "buoyed"}, "answer": "C", "explanation": "Devastated 意為深受打擊的、毀滅性的，符合「唯一醫院突然關閉、居民無法獲得緊急醫療」的嚴峻語境。A) galvanized 意為被激勵的；B) invigorated 意為充滿活力的；D) buoyed 意為受到鼓舞的，均與打擊性事件不符。"}, {"id": 53, "sentence": "The art critic described the sculptor's latest work as _____, noting how its elegant simplicity conveyed profound emotions without unnecessary embellishment.", "options": {"A": "ornate", "B": "garish", "C": "austere", "D": "flamboyant"}, "answer": "C", "explanation": "Austere 意為樸素的、無裝飾的，符合「優雅的簡潔、無多餘裝飾」的藝術風格描述。A) ornate 意為裝飾華麗的；B) garish 意為俗麗的；D) flamboyant 意為誇張炫耀的，均與簡潔風格相反。"}, {"id": 54, "sentence": "The child's _____ imagination transformed an ordinary cardboard box into a spaceship, a castle, and a submarine all within a single afternoon.", "options": {"A": "dormant", "B": "stunted", "C": "vivid", "D": "tepid"}, "answer": "C", "explanation": "Vivid 意為生動的、充滿活力的，符合「將普通紙板箱想像成各種事物」的豐富想像力描述。A) dormant 意為休眠的；B) stunted 意為發育不全的；D) tepid 意為不熱情的，均與豐富想像力相反。"}, {"id": 55, "sentence": "Refusing to _____ to public pressure, the mayor stood firm on her decision to rezone the area despite widespread protests from local residents.", "options": {"A": "accede", "B": "persist", "C": "adhere", "D": "prevail"}, "answer": "A", "explanation": "Accede 意為同意、屈服於，符合「面對公眾壓力但拒絕讓步」的語境（refuse to accede = 拒絕妥協）。B) persist 意為堅持；C) adhere 意為遵守；D) prevail 意為佔上風，均不符合「向壓力屈服」的語境。"}, {"id": 56, "sentence": "The village elder's stories were _____ with local folklore, weaving together myths, historical events, and moral lessons into captivating narratives.", "options": {"A": "devoid", "B": "bereft", "C": "replete", "D": "sparse"}, "answer": "C", "explanation": "Replete 意為充滿的，符合「故事中融入大量民間傳說、神話、歷史」的語境。A) devoid 意為缺乏的；B) bereft 意為喪失的；D) sparse 意為稀少的，均與充滿內容的語境相反。"}, {"id": 57, "sentence": "The financial advisor warned her client against _____ investments, reminding him that the promise of unusually high returns was almost always a red flag.", "options": {"A": "prudent", "B": "judicious", "C": "speculative", "D": "conservative"}, "answer": "C", "explanation": "Speculative 意為投機性的、風險極高的，符合「承諾異常高回報、被視為警訊」的高風險投資語境。A) prudent 意為謹慎的；B) judicious 意為明智的；D) conservative 意為保守的，均與高風險投機相反。"}, {"id": 58, "sentence": "The retired general was known to _____ endlessly about the military's modern recruitment standards, claiming they were far too lax compared to his era.", "options": {"A": "eulogize", "B": "extol", "C": "grouse", "D": "laud"}, "answer": "C", "explanation": "Grouse 意為抱怨、發牢騷，符合「喋喋不休地抱怨現代招募標準太鬆散」的語境。A) eulogize 意為稱讚；B) extol 意為讚揚；D) laud 意為讚美，均與抱怨的語境相反。"}, {"id": 59, "sentence": "The CEO's _____ lifestyle—private jets, luxury yachts, and multiple mansions—drew sharp criticism from employees who had just been asked to accept pay cuts.", "options": {"A": "frugal", "B": "austere", "C": "penurious", "D": "lavish"}, "answer": "D", "explanation": "Lavish 意為揮霍的、奢侈的，符合「私人飛機、豪華遊艇、多處豪宅」的奢靡生活描述。A) frugal 意為節儉的；B) austere 意為樸素的；C) penurious 意為貧困的，均與奢侈生活相反。"}, {"id": 60, "sentence": "The defense minister's comments were deliberately _____, using vague language that could be interpreted multiple ways to avoid committing to a clear policy position.", "options": {"A": "unequivocal", "B": "forthright", "C": "ambiguous", "D": "candid"}, "answer": "C", "explanation": "Ambiguous 意為模糊的、有多種解釋的，符合「故意使用可被多種方式解讀的模糊語言」的語境。A) unequivocal 意為明確的；B) forthright 意為直截了當的；D) candid 意為坦率的，均與刻意含糊相反。"}, {"id": 61, "sentence": "His _____ attitude toward his studies—rarely attending class and submitting assignments weeks late—ultimately resulted in his expulsion from the university.", "options": {"A": "assiduous", "B": "dilatory", "C": "sedulous", "D": "zealous"}, "answer": "B", "explanation": "Dilatory 意為拖延的、慢吞吞的，符合「極少上課、作業嚴重遲交」的怠惰態度。A) assiduous 意為勤勉的；C) sedulous 意為勤勉的；D) zealous 意為熱情的，均與怠惰相反。"}, {"id": 62, "sentence": "The celebrity chef's new cookbook became an overnight sensation, its popularity _____ across social media platforms within days of its release.", "options": {"A": "dwindling", "B": "waning", "C": "burgeoning", "D": "ebbing"}, "answer": "C", "explanation": "Burgeoning 意為迅速成長的，符合「出版後幾天內在社群媒體上爆紅」的語境。A) dwindling 意為縮減的；B) waning 意為衰退的；D) ebbing 意為退潮般消退的，均與快速成長相反。"}, {"id": 63, "sentence": "The ancient manuscript was so _____ that even expert paleographers had difficulty deciphering more than a few words per page.", "options": {"A": "legible", "B": "lucid", "C": "cryptic", "D": "perspicuous"}, "answer": "C", "explanation": "Cryptic 意為神秘的、難以解讀的，符合「連專家都難以辨讀的古代手稿」的語境。A) legible 意為清晰可辨的；B) lucid 意為清楚的；D) perspicuous 意為清晰易懂的，均與難以解讀的語境相反。"}, {"id": 64, "sentence": "The opposition leader accused the ruling party of trying to _____ the election results by intimidating voters and manipulating the ballot counting process.", "options": {"A": "validate", "B": "authenticate", "C": "subvert", "D": "ratify"}, "answer": "C", "explanation": "Subvert 意為顛覆、破壞，符合「透過恐嚇選民和操縱計票來破壞選舉結果」的語境。A) validate 意為驗證；B) authenticate 意為證明真實；D) ratify 意為批准，均與破壞程序的語境相反。"}, {"id": 65, "sentence": "The team's morale was completely _____ after their star player announced his retirement mid-season, leaving them struggling to stay competitive.", "options": {"A": "bolstered", "B": "invigorated", "C": "sapped", "D": "galvanized"}, "answer": "C", "explanation": "Sapped 意為耗盡、削弱，符合「核心球員宣布退休後士氣大受打擊」的語境。A) bolstered 意為加強的；B) invigorated 意為振奮的；D) galvanized 意為激勵的，均與士氣低落相反。"}, {"id": 66, "sentence": "The hostage negotiator spoke in a calm, _____ voice designed to de-escalate the situation and build trust with the armed suspect.", "options": {"A": "stentorian", "B": "strident", "C": "placatory", "D": "vociferous"}, "answer": "C", "explanation": "Placatory 意為安撫性的，符合「旨在緩和情勢、與持槍嫌疑人建立信任」的語境。A) stentorian 意為聲音洪亮的；B) strident 意為刺耳的；D) vociferous 意為喧嘩的，均與平靜安撫的語境相反。"}, {"id": 67, "sentence": "The biographer spent a decade researching her subject's life, producing an exhaustive and _____ account that left virtually no aspect of his career unexplored.", "options": {"A": "cursory", "B": "superficial", "C": "perfunctory", "D": "comprehensive"}, "answer": "D", "explanation": "Comprehensive 意為全面詳盡的，符合「花費十年研究、幾乎涵蓋所有面向」的語境。A) cursory 意為草率的；B) superficial 意為膚淺的；C) perfunctory 意為敷衍的，均與詳盡徹底相反。"}, {"id": 68, "sentence": "Faced with mounting evidence against him, the suspect finally _____ his initial denial and admitted to being present at the scene of the crime.", "options": {"A": "reiterated", "B": "corroborated", "C": "retracted", "D": "upheld"}, "answer": "C", "explanation": "Retracted 意為撤回（先前的聲明），符合「面對越來越多的證據而收回否認」的語境。A) reiterated 意為重申；B) corroborated 意為確認；D) upheld 意為維持，均與放棄原本說法的語境相反。"}, {"id": 69, "sentence": "The company's new marketing campaign sought to _____ a sense of nostalgia in older consumers by featuring iconic products from the 1980s.", "options": {"A": "suppress", "B": "stifle", "C": "evoke", "D": "quell"}, "answer": "C", "explanation": "Evoke 意為喚起（情感或記憶），符合「利用80年代經典產品引發消費者懷舊感」的語境。A) suppress 意為壓制；B) stifle 意為抑制；D) quell 意為平息，均與喚起情感的語境相反。"}, {"id": 70, "sentence": "The medieval castle had been built in a _____ location atop a steep cliff, making it nearly impossible for enemies to launch a successful siege.", "options": {"A": "vulnerable", "B": "precarious", "C": "impregnable", "D": "accessible"}, "answer": "C", "explanation": "Impregnable 意為攻不破的，符合「建於陡峭懸崖頂端、幾乎無法被圍攻」的語境。A) vulnerable 意為脆弱的；B) precarious 意為危險不穩的；D) accessible 意為易於進入的，均與易守難攻的語境相反。"}, {"id": 71, "sentence": "The therapist encouraged her patient to _____ on his childhood experiences, believing that understanding the past was key to resolving his present anxieties.", "options": {"A": "ruminate", "B": "discard", "C": "suppress", "D": "trivialize"}, "answer": "A", "explanation": "Ruminate 意為深思、反芻思考，符合「治療師鼓勵病人深入思考童年經歷」的語境。B) discard 意為丟棄；C) suppress 意為壓制；D) trivialize 意為輕視，均與深入探索的語境相反。"}, {"id": 72, "sentence": "The startup's business model was _____ at best, relying on assumptions about consumer behavior that had never been tested in a real market.", "options": {"A": "ironclad", "B": "viable", "C": "tenuous", "D": "robust"}, "answer": "C", "explanation": "Tenuous 意為薄弱的、站不住腳的，符合「依賴從未在真實市場驗證的假設」的脆弱商業模式。A) ironclad 意為無法更改的、堅固的；B) viable 意為可行的；D) robust 意為穩健的，均與薄弱基礎的語境相反。"}, {"id": 73, "sentence": "Her _____ tongue often landed her in trouble at work, as colleagues found her blunt assessments of their ideas hurtful rather than constructive.", "options": {"A": "diplomatic", "B": "tactful", "C": "acerbic", "D": "mollifying"}, "answer": "C", "explanation": "Acerbic 意為尖刻的、刻薄的，符合「對同事想法的直白評價令人受傷」的語境。A) diplomatic 意為有外交手腕的；B) tactful 意為圓融的；D) mollifying 意為安撫的，均與尖刻言語相反。"}, {"id": 74, "sentence": "The philanthropist's decision to _____ her entire fortune to educational charities surprised those who had expected her to leave it to her children.", "options": {"A": "bequeath", "B": "embezzle", "C": "squander", "D": "withhold"}, "answer": "A", "explanation": "Bequeath 意為遺贈，符合「將全部財產捐給教育慈善機構」的語境。B) embezzle 意為盜用；C) squander 意為揮霍；D) withhold 意為扣留，均不符合捐贈財產的語境。"}, {"id": 75, "sentence": "The professor was known for her _____ approach to teaching, using humor, unexpected demonstrations, and real-world examples to make complex theories accessible.", "options": {"A": "pedantic", "B": "didactic", "C": "innovative", "D": "orthodox"}, "answer": "C", "explanation": "Innovative 意為創新的，符合「使用幽默、意外示範和實際案例讓複雜理論易於理解」的教學方式。A) pedantic 意為迂腐學究的；B) didactic 意為說教式的；D) orthodox 意為傳統正統的，均不符合創新教學的語境。"}, {"id": 76, "sentence": "The entire courtroom fell silent as the judge delivered her _____ remarks, condemning the defendant's actions in the strongest possible terms.", "options": {"A": "laudatory", "B": "scathing", "C": "tepid", "D": "equivocal"}, "answer": "B", "explanation": "Scathing 意為嚴苛的、嚴厲批評的，符合「以最強烈措辭譴責被告行為」的語境。A) laudatory 意為讚美的；C) tepid 意為不熱情的；D) equivocal 意為模糊的，均不符合強烈譴責的語境。"}, {"id": 77, "sentence": "After three days of _____ negotiations, the union and management finally reached an agreement that satisfied both parties' core demands.", "options": {"A": "perfunctory", "B": "cursory", "C": "arduous", "D": "facile"}, "answer": "C", "explanation": "Arduous 意為艱辛費力的，符合「歷經三天艱難談判」的語境。A) perfunctory 意為敷衍的；B) cursory 意為草率的；D) facile 意為輕鬆容易的，均與艱難協商的語境不符。"}, {"id": 78, "sentence": "The manager's decision to _____ authority to her team members not only boosted their confidence but also dramatically improved overall productivity.", "options": {"A": "usurp", "B": "delegate", "C": "monopolize", "D": "appropriate"}, "answer": "B", "explanation": "Delegate 意為授權、將職責移交給他人，符合「將決策權下放給團隊成員」的語境。A) usurp 意為霸佔；C) monopolize 意為壟斷；D) appropriate 意為擅自挪用，均與授權下放的語境相反。"}, {"id": 79, "sentence": "The environmental activist's _____ speech about the destruction of rainforests moved many audience members to donate to conservation efforts on the spot.", "options": {"A": "impassive", "B": "lackluster", "C": "vehement", "D": "indifferent"}, "answer": "C", "explanation": "Vehement 意為感情強烈的、激昂的，符合「令觀眾當場捐款的熱情演講」的語境。A) impassive 意為冷漠無表情的；B) lackluster 意為無光彩的；D) indifferent 意為漠不關心的，均與激情演講相反。"}, {"id": 80, "sentence": "The young executive's _____ rise to the top of the corporation in just five years was the talk of the business world.", "options": {"A": "sluggish", "B": "gradual", "C": "meteoric", "D": "imperceptible"}, "answer": "C", "explanation": "Meteoric 意為驚人迅速的，符合「僅五年便登頂、震驚商界」的快速晉升語境。A) sluggish 意為緩慢的；B) gradual 意為漸進的；D) imperceptible 意為難以察覺的，均與迅速崛起的語境相反。"}, {"id": 81, "sentence": "The spy's true identity remained _____ for decades, protected by layers of false documents, aliases, and carefully constructed backstories.", "options": {"A": "conspicuous", "B": "transparent", "C": "clandestine", "D": "manifest"}, "answer": "C", "explanation": "Clandestine 意為秘密的、隱蔽的，符合「透過假身分和精心編造的背景故事長期隱藏真實身份」的語境。A) conspicuous 意為顯眼的；B) transparent 意為透明的；D) manifest 意為明顯的，均與秘密隱藏的語境相反。"}, {"id": 82, "sentence": "The historian argued that judging past societies by modern standards was inherently _____, as it ignored the vastly different contexts in which those societies existed.", "options": {"A": "objective", "B": "anachronistic", "C": "impartial", "D": "judicious"}, "answer": "B", "explanation": "Anachronistic 意為時代錯誤的，符合「用現代標準評判過去社會而忽略其時代背景」的論點。A) objective 意為客觀的；C) impartial 意為公正的；D) judicious 意為明智的，均與時代錯誤的批評方式不符。"}, {"id": 83, "sentence": "The new intern's excessive _____ toward senior colleagues—constantly praising their most mediocre work—quickly earned her a reputation as insincere.", "options": {"A": "candor", "B": "obsequiousness", "C": "forthrightness", "D": "bluntness"}, "answer": "B", "explanation": "Obsequiousness 意為諂媚奉承、卑躬屈膝，符合「過度讚美平庸工作因而被視為虛偽」的語境。A) candor 意為坦白；C) forthrightness 意為直接；D) bluntness 意為直率，均與諂媚行為相反。"}, {"id": 84, "sentence": "The reclusive novelist refused all interview requests, preferring to let her work speak for itself rather than _____ her private thoughts and opinions to the public.", "options": {"A": "conceal", "B": "withhold", "C": "divulge", "D": "suppress"}, "answer": "C", "explanation": "Divulge 意為透露、洩漏，符合「拒絕向大眾透露私人想法和觀點」的語境（refuse to divulge = 拒絕透露）。A) conceal 意為隱藏；B) withhold 意為扣留；D) suppress 意為壓制，在語意上與 divulge 相近，但 refuse to divulge 是固定用法，最為貼切。"}, {"id": 85, "sentence": "The surgeon's hands were remarkably _____, allowing her to perform the most delicate procedures with extraordinary precision and minimal invasiveness.", "options": {"A": "clumsy", "B": "tremulous", "C": "dexterous", "D": "unwieldy"}, "answer": "C", "explanation": "Dexterous 意為靈巧的，符合「執行最精細手術所需的高超技巧與精確度」的語境。A) clumsy 意為笨拙的；B) tremulous 意為顫抖的；D) unwieldy 意為笨拙難用的，均與精巧靈活相反。"}, {"id": 86, "sentence": "The opposition party accused the government of _____ in awarding contracts to firms with close ties to senior ministers, bypassing standard procurement procedures.", "options": {"A": "transparency", "B": "probity", "C": "malfeasance", "D": "rectitude"}, "answer": "C", "explanation": "Malfeasance 意為不法行為、瀆職，符合「將合約授予與高級官員關係密切的公司、繞過正常採購程序」的語境。A) transparency 意為透明度；B) probity 意為正直；D) rectitude 意為廉正，均與違法行為相反。"}, {"id": 87, "sentence": "The once _____ river had been reduced to a trickle after decades of upstream damming and agricultural water extraction left it a shadow of its former self.", "options": {"A": "arid", "B": "turbid", "C": "torrential", "D": "stagnant"}, "answer": "C", "explanation": "Torrential 意為洪流般的、水量充沛的，符合「曾經水量豐沛，如今只剩細流」的對比語境（once torrential = 昔日水勢澎湃）。A) arid 意為乾旱的；B) turbid 意為混濁的；D) stagnant 意為停滯的，均不符合描述河流昔日壯觀水勢的語境。"}, {"id": 88, "sentence": "The young chess prodigy's ability to _____ her opponents' strategies several moves in advance left seasoned players struggling to keep up.", "options": {"A": "ignore", "B": "anticipate", "C": "misconstrue", "D": "overlook"}, "answer": "B", "explanation": "Anticipate 意為預料、預先判斷，符合「能提前數步預見對手策略」的語境。A) ignore 意為忽視；C) misconstrue 意為誤解；D) overlook 意為忽略，均與主動預測相反或不符。"}, {"id": 89, "sentence": "The soldier's act of _____ himself onto a live grenade to save his comrades was celebrated as the ultimate act of heroism and self-sacrifice.", "options": {"A": "immolating", "B": "preserving", "C": "insulating", "D": "extricating"}, "answer": "A", "explanation": "Immolating 意為犧牲自身（尤指以死亡換取他人的安全），符合「犧牲自己以拯救戰友」的語境。B) preserving 意為保護；C) insulating 意為隔絕；D) extricating 意為解脫，均不符合自我犧牲的語境。"}, {"id": 90, "sentence": "The seasoned detective's _____ questioning technique gradually wore down the suspect's resistance until he finally broke and confessed to the crime.", "options": {"A": "perfunctory", "B": "tenacious", "C": "desultory", "D": "halfhearted"}, "answer": "B", "explanation": "Tenacious 意為堅韌不拔的、持久的，符合「不斷追問直到嫌疑人崩潰認罪」的語境。A) perfunctory 意為敷衍的；C) desultory 意為散漫的；D) halfhearted 意為不熱情的，均與堅持不懈的審問方式相反。"}, {"id": 91, "sentence": "The journalist's _____ report on human trafficking exposed the brutal realities of the trade, sparking international calls for stronger legislation.", "options": {"A": "sanitized", "B": "harrowing", "C": "superficial", "D": "anodyne"}, "answer": "B", "explanation": "Harrowing 意為令人痛苦難受的，符合「揭露人口販賣殘酷現實、引發國際關注」的深度報導語境。A) sanitized 意為淨化過的；C) superficial 意為膚淺的；D) anodyne 意為不冒犯的，均與揭露殘酷現實的報導相反。"}, {"id": 92, "sentence": "The prime minister's refusal to _____ on the terms of the trade agreement frustrated negotiators from the other nation, who felt there was no room for compromise.", "options": {"A": "capitulate", "B": "budge", "C": "relent", "D": "acquiesce"}, "answer": "B", "explanation": "Budge 意為（態度、立場）絲毫移動，符合「拒絕在貿易協議條款上讓步」的語境（refuse to budge = 毫不退讓）。A) capitulate 意為投降；C) relent 意為心軟；D) acquiesce 意為默許，均含有妥協意味，與 budge 在否定句中的語感最接近的是 B。"}, {"id": 93, "sentence": "The child's _____ behavior at the dinner table—talking with her mouth full and reaching across others for food—embarrassed her parents in front of their guests.", "options": {"A": "decorous", "B": "refined", "C": "boorish", "D": "genteel"}, "answer": "C", "explanation": "Boorish 意為粗野無禮的，符合「嘴巴含著食物說話、越過他人搶食物」等無禮行為的描述。A) decorous 意為合乎禮節的；B) refined 意為優雅的；D) genteel 意為有教養的，均與粗野行為相反。"}, {"id": 94, "sentence": "The company's new policy was designed to _____ against potential lawsuits by ensuring all employees completed mandatory safety training before operating heavy machinery.", "options": {"A": "contravene", "B": "exacerbate", "C": "indemnify", "D": "precipitate"}, "answer": "C", "explanation": "Indemnify 意為賠償、保障免受損失或責任，符合「確保員工完成安全培訓以防止潛在訴訟」的語境。A) contravene 意為違反；B) exacerbate 意為惡化；D) precipitate 意為促成，均不符合保護免受法律責任的語境。"}, {"id": 95, "sentence": "The remote island community had developed a remarkably _____ culture over centuries of isolation, with unique traditions, language, and artistic practices found nowhere else.", "options": {"A": "homogeneous", "B": "derivative", "C": "insular", "D": "idiosyncratic"}, "answer": "D", "explanation": "Idiosyncratic 意為獨特的、與眾不同的，符合「數百年孤立發展出獨一無二的傳統、語言和藝術」的語境。A) homogeneous 意為同質的；B) derivative 意為衍生的；C) insular 意為心胸狹隘的（雖也指島嶼的），均不如 idiosyncratic 準確描述獨特文化。"}, {"id": 96, "sentence": "After years of drought, the sudden arrival of monsoon rains was a _____ sight for farmers who had watched their crops wither and their livelihoods disappear.", "options": {"A": "baleful", "B": "ominous", "C": "propitious", "D": "foreboding"}, "answer": "C", "explanation": "Propitious 意為吉祥的、有利的，符合「久旱之後迎來季風雨對農民而言是喜訊」的語境。A) baleful 意為有害的；B) ominous 意為不祥的；D) foreboding 意為預感不好的，均與令人振奮的降雨相反。"}, {"id": 97, "sentence": "The CEO's seemingly _____ decision to pivot the entire company strategy turned out to be a stroke of genius, catapulting them to market leadership within two years.", "options": {"A": "judicious", "B": "sagacious", "C": "quixotic", "D": "prudent"}, "answer": "C", "explanation": "Quixotic 意為不切實際的、理想化的（最初看起來荒唐），符合「看似瘋狂卻最終奏效的決策」語境（seemingly quixotic = 表面上看來不切實際）。A) judicious 意為明智的；B) sagacious 意為睿智的；D) prudent 意為謹慎的，均為正面評價，不符合「看似」不合理的語境。"}, {"id": 98, "sentence": "The coach's halftime speech was so _____ that players who had seemed defeated minutes earlier ran back onto the field with renewed energy and determination.", "options": {"A": "soporific", "B": "galvanizing", "C": "desultory", "D": "tepid"}, "answer": "B", "explanation": "Galvanizing 意為激勵人心的、使人振奮的，符合「讓之前看似頹敗的球員重新充滿鬥志上場」的語境。A) soporific 意為令人昏昏欲睡的；C) desultory 意為散漫的；D) tepid 意為不熱情的，均與激勵演講的語境相反。"}, {"id": 99, "sentence": "The new employee was warned that any attempt to _____ confidential client information would result in immediate termination and potential legal action.", "options": {"A": "safeguard", "B": "purloin", "C": "preserve", "D": "protect"}, "answer": "B", "explanation": "Purloin 意為偷竊，符合「竊取機密客戶資料將面臨立即解雇和法律行動」的語境。A) safeguard 意為保護；C) preserve 意為保存；D) protect 意為保護，均與竊取行為相反。"}, {"id": 100, "sentence": "The veteran diplomat possessed a rare ability to _____ even the most antagonistic parties into productive dialogue, a skill honed over forty years of international mediation.", "options": {"A": "antagonize", "B": "alienate", "C": "coax", "D": "provoke"}, "answer": "C", "explanation": "Coax 意為勸誘、哄勸，符合「能將最敵對的各方引導至有建設性的對話」的語境。A) antagonize 意為激怒；B) alienate 意為使疏遠；D) provoke 意為挑釁，均與促成對話的語境相反。"}];
+
+// ── Persistence ──────────────────────────────────────────────
+const SAVE_KEY = 'vocabQuiz_v1';
+
+function saveProgress() {
+  const payload = {
+    mode,
+    qIndex,
+    answered,
+    correctCount,
+    wrongCount,
+    queueIds: queue.map(q => q.id),
+    savedAt: Date.now()
+  };
+  try { localStorage.setItem(SAVE_KEY, JSON.stringify(payload)); } catch(e) {}
+}
+
+function loadProgress() {
+  try {
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch(e) { return null; }
+}
+
+function clearProgress() {
+  try { localStorage.removeItem(SAVE_KEY); } catch(e) {}
+}
+
+function formatRelativeTime(ts) {
+  if (!ts) return '';
+  const diff = Date.now() - ts;
+  const mins = Math.floor(diff / 60000);
+  const hrs  = Math.floor(diff / 3600000);
+  const days = Math.floor(diff / 86400000);
+  if (mins < 1)   return '剛才';
+  if (mins < 60)  return `${mins} 分鐘前`;
+  if (hrs  < 24)  return `${hrs} 小時前`;
+  return `${days} 天前`;
+}
+
+// ── State ────────────────────────────────────────────────────
+let mode = 'sequential';
+let queue = [];
+let qIndex = 0;
+let answered = {};   // questionId -> {correct: bool, chosen: str}
+let correctCount = 0;
+let wrongCount = 0;
+let currentAnswered = false;
+
+function setMode(m) {
+  mode = m;
+  document.querySelectorAll('.mode-btn').forEach((b, i) => {
+    b.classList.toggle('active', ['sequential','random','mistakes','review'][i] === m);
+  });
+  if (m === 'mistakes') {
+    const mistakeIds = Object.keys(answered).filter(id => !answered[id].correct).map(Number);
+    if (mistakeIds.length === 0) { alert('目前沒有錯題！請先作答。'); return; }
+    queue = QUESTIONS.filter(q => mistakeIds.includes(q.id));
+    shuffleArr(queue);
+    qIndex = 0;
+    currentAnswered = false;
+    renderQuestion();
+    document.getElementById('quiz-area').style.display = '';
+    document.getElementById('result-screen').classList.remove('show');
+    document.getElementById('review-screen').style.display = 'none';
+  } else if (m === 'random') {
+    queue = [...QUESTIONS];
+    shuffleArr(queue);
+    qIndex = 0;
+    currentAnswered = false;
+    renderQuestion();
+    document.getElementById('quiz-area').style.display = '';
+    document.getElementById('result-screen').classList.remove('show');
+    document.getElementById('review-screen').style.display = 'none';
+  } else if (m === 'sequential') {
+    queue = [...QUESTIONS];
+    qIndex = 0;
+    currentAnswered = false;
+    renderQuestion();
+    document.getElementById('quiz-area').style.display = '';
+    document.getElementById('result-screen').classList.remove('show');
+    document.getElementById('review-screen').style.display = 'none';
+  }
+  updateMiniMap();
+}
+
+function shuffleArr(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+function renderQuestion() {
+  if (qIndex >= queue.length) { showResult(); return; }
+  const q = queue[qIndex];
+  const prev = answered[q.id];
+  currentAnswered = !!prev;
+
+  // Card animation
+  const card = document.getElementById('question-card');
+  card.style.animation = 'none';
+  void card.offsetWidth;
+  card.style.animation = '';
+
+  // Meta
+  document.getElementById('q-number').textContent = `Q${q.id}`;
+  const tagMap = { sequential: '順序模式', random: '隨機模式', mistakes: '錯題重練' };
+  document.getElementById('q-tag').textContent = tagMap[mode] || '刷題';
+
+  // Sentence: highlight blank
+  const sentenceEl = document.getElementById('q-sentence');
+  sentenceEl.innerHTML = q.sentence.replace('_____', '<span class="blank">_____</span>');
+
+  // Options
+  const grid = document.getElementById('options-grid');
+  grid.innerHTML = '';
+  const optKeys = Object.keys(q.options);
+  optKeys.forEach(key => {
+    const btn = document.createElement('button');
+    btn.className = 'option-btn';
+    btn.innerHTML = `<span class="opt-label">${key}</span><span class="opt-text">${q.options[key]}</span>`;
+    btn.onclick = () => selectAnswer(key, q);
+    if (currentAnswered) {
+      btn.disabled = true;
+      if (key === q.answer) btn.classList.add('correct');
+      if (prev && prev.chosen === key && key !== q.answer) btn.classList.add('wrong');
+    }
+    grid.appendChild(btn);
+  });
+
+  // Explanation
+  const expEl = document.getElementById('explanation');
+  if (currentAnswered && prev) {
+    expEl.className = 'explanation show ' + (prev.correct ? 'correct-exp' : 'wrong-exp');
+    expEl.innerHTML = `<strong>${prev.correct ? '✓ 答對了！' : '✗ 答錯了'}</strong>${q.explanation}`;
+  } else {
+    expEl.className = 'explanation';
+    expEl.innerHTML = '';
+  }
+
+  // Nav buttons
+  document.getElementById('btn-prev').disabled = qIndex === 0;
+  document.getElementById('btn-next').disabled = !currentAnswered;
+
+  // Progress
+  const done = Object.keys(answered).length;
+  const total = QUESTIONS.length;
+  document.getElementById('progress-num').textContent = `${done} / ${total}`;
+  document.getElementById('progress-fill').style.width = (done / total * 100) + '%';
+
+  updateMiniMap();
+  updateHeaderStats();
+}
+
+function selectAnswer(chosen, q) {
+  if (currentAnswered) return;
+  currentAnswered = true;
+
+  const isCorrect = chosen === q.answer;
+  const wasAnswered = !!answered[q.id];
+
+  // Only count first attempt
+  if (!wasAnswered) {
+    if (isCorrect) correctCount++; else wrongCount++;
+  } else {
+    // Re-doing mistakes mode: update if now correct
+    if (!answered[q.id].correct && isCorrect) {
+      correctCount++;
+      wrongCount = Math.max(0, wrongCount - 1);
+    }
+  }
+
+  answered[q.id] = { correct: isCorrect, chosen };
+
+  // Style buttons
+  const btns = document.querySelectorAll('.option-btn');
+  btns.forEach(btn => {
+    btn.disabled = true;
+    const key = btn.querySelector('.opt-label').textContent;
+    if (key === q.answer) btn.classList.add('correct');
+    if (key === chosen && !isCorrect) btn.classList.add('wrong');
+  });
+
+  // Explanation
+  const expEl = document.getElementById('explanation');
+  expEl.className = 'explanation show ' + (isCorrect ? 'correct-exp' : 'wrong-exp');
+  expEl.innerHTML = `<strong>${isCorrect ? '✓ 答對了！' : '✗ 答錯了'}</strong>${q.explanation}`;
+
+  document.getElementById('btn-next').disabled = false;
+
+  updateMiniMap();
+  updateHeaderStats();
+}
+
+function nextQ() {
+  if (qIndex < queue.length - 1) {
+    qIndex++;
+    currentAnswered = false;
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function prevQ() {
+  if (qIndex > 0) {
+    qIndex--;
+    renderQuestion();
+  }
+}
+
+function updateMiniMap() {
+  const map = document.getElementById('mini-map');
+  map.innerHTML = '';
+  const total = queue.length || QUESTIONS.length;
+  const displayQ = queue.length ? queue : QUESTIONS;
+  displayQ.forEach((q, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'map-dot';
+    dot.textContent = q.id;
+    dot.title = `Q${q.id}`;
+    if (i === qIndex && document.getElementById('quiz-area').style.display !== 'none') {
+      dot.classList.add('current');
+    } else if (answered[q.id]) {
+      dot.classList.add(answered[q.id].correct ? 'done-correct' : 'done-wrong');
+    }
+    dot.onclick = () => { qIndex = i; renderQuestion(); };
+    map.appendChild(dot);
+  });
+}
+
+function updateHeaderStats() {
+  document.getElementById('hd-correct').textContent = correctCount;
+  document.getElementById('hd-wrong').textContent = wrongCount;
+}
+
+function showResult() {
+  document.getElementById('quiz-area').style.display = 'none';
+  document.getElementById('review-screen').style.display = 'none';
+  const rs = document.getElementById('result-screen');
+  rs.classList.add('show');
+
+  const total = Object.keys(answered).length;
+  const pct = total ? Math.round(correctCount / total * 100) : 0;
+
+  document.getElementById('score-pct').textContent = pct + '%';
+  document.getElementById('rs-correct').textContent = correctCount;
+  document.getElementById('rs-wrong').textContent = wrongCount;
+  document.getElementById('rs-total').textContent = total;
+
+  // Trophy
+  const trophies = pct >= 90 ? '🏆' : pct >= 70 ? '🥈' : pct >= 50 ? '🥉' : '📚';
+  document.getElementById('result-trophy').textContent = trophies;
+  document.getElementById('result-title').textContent = pct >= 90 ? '太厲害了！' : pct >= 70 ? '表現不錯！' : pct >= 50 ? '繼續加油！' : '需要多練習！';
+
+  // Ring animation
+  setTimeout(() => {
+    const circumference = 2 * Math.PI * 60;
+    const offset = circumference * (1 - pct / 100);
+    const ring = document.getElementById('ring-fill');
+    ring.style.stroke = pct >= 70 ? 'var(--correct)' : pct >= 50 ? 'var(--gold)' : 'var(--wrong)';
+    ring.style.strokeDashoffset = offset;
+  }, 100);
+}
+
+function showReview() {
+  document.getElementById('quiz-area').style.display = 'none';
+  document.getElementById('result-screen').classList.remove('show');
+  const rs = document.getElementById('review-screen');
+  rs.style.display = '';
+
+  const mistakeIds = Object.keys(answered).filter(id => !answered[id].correct).map(Number);
+  const list = document.getElementById('review-list');
+  const noEl = document.getElementById('no-mistakes');
+
+  list.innerHTML = '';
+  if (mistakeIds.length === 0) {
+    noEl.style.display = '';
+    return;
+  }
+  noEl.style.display = 'none';
+
+  mistakeIds.forEach(id => {
+    const q = QUESTIONS.find(x => x.id === id);
+    if (!q) return;
+    const info = answered[id];
+    const div = document.createElement('div');
+    div.className = 'review-item wrong-item';
+    div.innerHTML = `
+      <div class="review-q">${q.sentence.replace('_____','<span style="color:var(--accent);font-family:DM Mono,monospace">_____</span>')}</div>
+      <div class="review-answer-row">
+        <span class="review-wrong">✗ 你的答案：${info.chosen}) ${q.options[info.chosen]}</span>
+        <span class="review-correct">✓ 正確答案：${q.answer}) ${q.options[q.answer]}</span>
+      </div>
+      <div class="review-exp">${q.explanation}</div>
+    `;
+    list.appendChild(div);
+  });
+}
+
+function backToQuiz() {
+  document.getElementById('review-screen').style.display = 'none';
+  document.getElementById('quiz-area').style.display = '';
+  renderQuestion();
+}
+
+function restartMode() {
+  document.getElementById('result-screen').classList.remove('show');
+  setMode(mode);
+}
+
+// ── Auto-save on every answer ─────────────────────────────────
+const _origSelectAnswer = selectAnswer;
+// Patch selectAnswer to auto-save after each pick
+const _selectAnswerOrig = selectAnswer;
+
+// ── Toast notification ────────────────────────────────────────
+function showToast(msg, type = 'info') {
+  let toast = document.getElementById('save-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'save-toast';
+    toast.style.cssText = `
+      position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(80px);
+      background:var(--ink); color:var(--paper); padding:11px 22px; border-radius:30px;
+      font-size:0.88rem; font-weight:500; z-index:9999; transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+      box-shadow:0 4px 20px rgba(0,0,0,0.25); white-space:nowrap; pointer-events:none;
+      display:flex; align-items:center; gap:8px;
+    `;
+    document.body.appendChild(toast);
+  }
+  const icons = { info:'💾', success:'✅', resume:'📌' };
+  toast.innerHTML = `<span>${icons[type]||'💾'}</span><span>${msg}</span>`;
+  if (type === 'success') toast.style.background = 'var(--correct)';
+  else if (type === 'resume') toast.style.background = '#2d3a6e';
+  else toast.style.background = 'var(--ink)';
+  toast.style.transform = 'translateX(-50%) translateY(0)';
+  clearTimeout(toast._timeout);
+  toast._timeout = setTimeout(() => {
+    toast.style.transform = 'translateX(-50%) translateY(80px)';
+  }, 2600);
+}
+
+// ── Resume banner ─────────────────────────────────────────────
+function showResumeBanner(saved) {
+  const existing = document.getElementById('resume-banner');
+  if (existing) existing.remove();
+
+  const done = Object.keys(saved.answered).length;
+  const total = QUESTIONS.length;
+  const pct = total ? Math.round(done / total * 100) : 0;
+  const timeStr = formatRelativeTime(saved.savedAt);
+  const modeLabel = { sequential:'順序模式', random:'隨機模式', mistakes:'錯題重練' }[saved.mode] || saved.mode;
+
+  const banner = document.createElement('div');
+  banner.id = 'resume-banner';
+  banner.style.cssText = `
+    background: #2d3a6e; color: white; border-radius: 12px;
+    padding: 18px 22px; margin-bottom: 20px;
+    display: flex; align-items: center; gap: 16px;
+    animation: slideUp 0.35s ease; border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 4px 20px rgba(45,58,110,0.25);
+  `;
+  banner.innerHTML = `
+    <div style="font-size:2rem; flex-shrink:0;">📌</div>
+    <div style="flex:1; min-width:0;">
+      <div style="font-weight:600; font-size:0.95rem; margin-bottom:4px;">發現上次的進度！</div>
+      <div style="font-size:0.82rem; opacity:0.8; line-height:1.5;">
+        ${modeLabel}・已完成 <strong>${done}/${total} 題</strong>（${pct}%）・${timeStr}儲存
+      </div>
+      <div style="height:4px; background:rgba(255,255,255,0.15); border-radius:2px; margin-top:8px; overflow:hidden;">
+        <div style="height:100%; width:${pct}%; background:var(--gold); border-radius:2px; transition:width 0.8s ease;"></div>
+      </div>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
+      <button onclick="resumeProgress()" style="
+        background:var(--gold); color:var(--ink); border:none; border-radius:7px;
+        padding:8px 16px; font-size:0.85rem; font-weight:600; cursor:pointer;
+        font-family:'DM Sans',sans-serif; white-space:nowrap;
+      ">繼續作答 →</button>
+      <button onclick="discardProgress()" style="
+        background:rgba(255,255,255,0.12); color:white; border:1px solid rgba(255,255,255,0.2);
+        border-radius:7px; padding:8px 16px; font-size:0.82rem; cursor:pointer;
+        font-family:'DM Sans',sans-serif; white-space:nowrap;
+      ">從頭開始</button>
+    </div>
+  `;
+
+  const main = document.querySelector('main');
+  main.insertBefore(banner, main.firstChild);
+}
+
+function resumeProgress() {
+  const saved = loadProgress();
+  if (!saved) return;
+
+  mode = saved.mode || 'sequential';
+  answered = saved.answered || {};
+  correctCount = saved.correctCount || 0;
+  wrongCount = saved.wrongCount || 0;
+
+  // Restore queue
+  if (saved.queueIds && saved.queueIds.length) {
+    queue = saved.queueIds.map(id => QUESTIONS.find(q => q.id === id)).filter(Boolean);
+  } else {
+    queue = [...QUESTIONS];
+  }
+
+  // Find first unanswered question in queue
+  let resumeIndex = saved.qIndex || 0;
+  // If that question is already answered, find next unanswered
+  const firstUnanswered = queue.findIndex((q, i) => i >= resumeIndex && !answered[q.id]);
+  qIndex = firstUnanswered >= 0 ? firstUnanswered : resumeIndex;
+
+  // Update mode buttons
+  document.querySelectorAll('.mode-btn').forEach((b, i) => {
+    b.classList.toggle('active', ['sequential','random','mistakes','review'][i] === mode);
+  });
+
+  const banner = document.getElementById('resume-banner');
+  if (banner) banner.remove();
+
+  currentAnswered = false;
+  renderQuestion();
+  updateHeaderStats();
+  showToast('已恢復上次進度！', 'resume');
+}
+
+function discardProgress() {
+  clearProgress();
+  const banner = document.getElementById('resume-banner');
+  if (banner) banner.remove();
+  showToast('已清除舊進度，從頭開始');
+}
+
+// ── Patch nextQ and selectAnswer to auto-save ─────────────────
+const _nextQ_orig = nextQ;
+
+// Override selectAnswer to add save
+const _selectAnswer_patched = selectAnswer;
+selectAnswer = function(chosen, q) {
+  _selectAnswer_patched(chosen, q);
+  saveProgress();
+  showToast('進度已儲存', 'info');
+};
+
+// Override nextQ to save qIndex
+nextQ = function() {
+  if (qIndex < queue.length - 1) {
+    qIndex++;
+    currentAnswered = false;
+    renderQuestion();
+    saveProgress();
+  } else {
+    showResult();
+    clearProgress(); // Clear after completing a round
+  }
+};
+
+// ── Add reset button to header ────────────────────────────────
+(function addResetBtn() {
+  const headerStats = document.querySelector('.header-stats');
+  if (!headerStats) return;
+  const btn = document.createElement('button');
+  btn.textContent = '🗑 清除進度';
+  btn.style.cssText = `
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; color: rgba(255,255,255,0.7);
+    cursor: pointer; font-family: 'DM Sans',sans-serif; font-weight: 500;
+    transition: background 0.2s;
+  `;
+  btn.onmouseenter = () => btn.style.background = 'rgba(200,85,61,0.3)';
+  btn.onmouseleave = () => btn.style.background = 'rgba(255,255,255,0.08)';
+  btn.onclick = () => {
+    if (confirm('確定要清除所有進度嗎？此操作無法復原。')) {
+      clearProgress();
+      answered = {}; correctCount = 0; wrongCount = 0;
+      updateHeaderStats();
+      setMode('sequential');
+      showToast('進度已清除！');
+    }
+  };
+  headerStats.appendChild(btn);
+})();
+
+// ── Init ──────────────────────────────────────────────────────
+(function init() {
+  const saved = loadProgress();
+  if (saved && Object.keys(saved.answered || {}).length > 0) {
+    // Show resume banner, still render Q1 in background
+    setMode('sequential');
+    showResumeBanner(saved);
+  } else {
+    setMode('sequential');
+  }
+})();
+</script>
+</body>
+</html>
