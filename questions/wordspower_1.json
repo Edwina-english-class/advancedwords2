@@ -1,602 +1,602 @@
 [
-    {
-        "id": 1,
-        "question": "The senator's long-standing feud with his political rival was marked by a _______ antagonism that often poisoned public debate.",
-        "options": {
-            "A": "imperious",
-            "B": "rancorous",
-            "C": "elegiac",
-            "D": "lugubrious"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) rancorous。Rancorous (adj.) 意指「充滿敵意、惡意的；怨恨的」，修飾 antagonism (敵意、對抗)，恰好描述了長期宿怨所帶來的充滿怨恨的對抗，進而「毒害了公共辯論」。\n(A) imperious (adj.) 傲慢的，專橫的。\n(C) elegiac (adj.) 輓歌般的，哀傷的（常指對逝去事物的哀悼）。\n(D) lugubrious (adj.) 悲傷的，陰鬱的。\n句意翻譯：這位參議員與其政治對手之間長期存在的宿怨，以一種充滿敵意的對抗為標誌，這種對抗常常毒害了公共辯論。"
+  {
+    "id": 101,
+    "options": {
+      "A": "imperious",
+      "B": "rancorous",
+      "C": "elegiac",
+      "D": "lugubrious"
     },
-    {
-        "id": 2,
-        "question": "Her _______ demeanor, combined with a tendency to micromanage, alienated many team members who felt their contributions were undervalued.",
-        "options": {
-            "A": "candid",
-            "B": "imperious",
-            "C": "suffused",
-            "D": "privation"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) imperious。Imperious (adj.) 意指「專橫的，傲慢的；盛氣凌人的」，修飾 demeanor (風度、舉止) 恰好形容了導致團隊成員感到被疏遠（alienated）的專橫態度。\n(A) candid (adj.) 坦白的，率直的。\n(C) suffused (v. 過去式/過去分詞) 瀰漫，充滿（通常指顏色、情感等）。\n(D) privation (n.) 匱乏，窮困（指基本生活所需品的缺乏）。\n句意翻譯：她傲慢專橫的態度，加上微觀管理的傾向，疏遠了許多團隊成員，他們覺得自己的貢獻未被重視。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) rancorous。Rancorous (adj.) 意指「充滿敵意、惡意的；怨恨的」，修飾 antagonism (敵意、對抗)，恰好描述了長期宿怨所帶來的充滿怨恨的對抗，進而「毒害了公共辯論」。\n(A) imperious (adj.) 傲慢的，專橫的。\n(C) elegiac (adj.) 輓歌般的，哀傷的（常指對逝去事物的哀悼）。\n(D) lugubrious (adj.) 悲傷的，陰鬱的。\n句意翻譯：這位參議員與其政治對手之間長期存在的宿怨，以一種充滿敵意的對抗為標誌，這種對抗常常毒害了公共辯論。",
+    "sentence": "The senator's long-standing feud with his political rival was marked by a _______ antagonism that often poisoned public debate."
+  },
+  {
+    "id": 102,
+    "options": {
+      "A": "candid",
+      "B": "imperious",
+      "C": "suffused",
+      "D": "privation"
     },
-    {
-        "id": 3,
-        "question": "The refugees had endured years of severe _______, lacking adequate food, shelter, and medical care, yet their spirit remained unbroken.",
-        "options": {
-            "A": "locution",
-            "B": "disquisition",
-            "C": "privation",
-            "D": "credence"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) privation。Privation (n.) 意指「匱乏，窮困；基本生活所需品的缺乏」，與句中「缺乏足夠的食物、住所和醫療照護」（lacking adequate food, shelter, and medical care）的描述相符。\n(A) locution (n.) 慣用語，措辭。\n(B) disquisition (n.) 專題論文；長篇論述。\n(D) credence (n.) 相信，信任。\n句意翻譯：難民們忍受了多年的嚴重匱乏，缺乏足夠的食物、住所和醫療照護，但他們的精神依然堅韌不屈。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) imperious。Imperious (adj.) 意指「專橫的，傲慢的；盛氣凌人的」，修飾 demeanor (風度、舉止) 恰好形容了導致團隊成員感到被疏遠（alienated）的專橫態度。\n(A) candid (adj.) 坦白的，率直的。\n(C) suffused (v. 過去式/過去分詞) 瀰漫，充滿（通常指顏色、情感等）。\n(D) privation (n.) 匱乏，窮困（指基本生活所需品的缺乏）。\n句意翻譯：她傲慢專橫的態度，加上微觀管理的傾向，疏遠了許多團隊成員，他們覺得自己的貢獻未被重視。",
+    "sentence": "Her _______ demeanor, combined with a tendency to micromanage, alienated many team members who felt their contributions were undervalued."
+  },
+  {
+    "id": 103,
+    "options": {
+      "A": "locution",
+      "B": "disquisition",
+      "C": "privation",
+      "D": "credence"
     },
-    {
-        "id": 4,
-        "question": "Professor Eldridge concluded his comprehensive _______ on quantum entanglement, leaving the advanced physics students deep in thought.",
-        "options": {
-            "A": "triumvirate",
-            "B": "misgiving",
-            "C": "disquisition",
-            "D": "bulwark"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) disquisition。Disquisition (n.) 意指「專題論文；長篇論述」，與句中「全面性的」（comprehensive）和主題「量子糾纏」（quantum entanglement）相搭配，表示教授完成了一篇深入的學術討論。\n(A) triumvirate (n.) 三巨頭，三人執政。\n(B) misgiving (n.) 疑慮，不安。\n(D) bulwark (n.) 堡壘，防禦工事；保護者。\n句意翻譯：埃爾德里奇教授結束了他關於量子糾纏的全面性長篇論述，讓高級物理系的學生們陷入沉思。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) privation。Privation (n.) 意指「匱乏，窮困；基本生活所需品的缺乏」，與句中「缺乏足夠的食物、住所和醫療照護」（lacking adequate food, shelter, and medical care）的描述相符。\n(A) locution (n.) 慣用語，措辭。\n(B) disquisition (n.) 專題論文；長篇論述。\n(D) credence (n.) 相信，信任。\n句意翻譯：難民們忍受了多年的嚴重匱乏，缺乏足夠的食物、住所和醫療照護，但他們的精神依然堅韌不屈。",
+    "sentence": "The refugees had endured years of severe _______, lacking adequate food, shelter, and medical care, yet their spirit remained unbroken."
+  },
+  {
+    "id": 104,
+    "options": {
+      "A": "triumvirate",
+      "B": "misgiving",
+      "C": "disquisition",
+      "D": "bulwark"
     },
-    {
-        "id": 5,
-        "question": "Despite the lack of concrete evidence, many conspiracy theorists continued to give _______ to the wild accusations circulating online.",
-        "options": {
-            "A": "candor",
-            "B": "privation",
-            "C": "credence",
-            "D": "locution"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) credence。Credence (n.) 意指「相信，信任」，短語「give credence to」表示「相信…，對…給予信任」，與句中「儘管缺乏確鑿證據」（Despite the lack of concrete evidence）相呼應，描述了對線上瘋狂指控的信任。\n(A) candor (n.) 坦白，直率。\n(B) privation (n.) 匱乏，窮困。\n(D) locution (n.) 慣用語，措辭。\n句意翻譯：儘管缺乏確鑿證據，許多陰謀論者仍繼續相信在網上流傳的那些瘋狂指控。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) disquisition。Disquisition (n.) 意指「專題論文；長篇論述」，與句中「全面性的」（comprehensive）和主題「量子糾纏」（quantum entanglement）相搭配，表示教授完成了一篇深入的學術討論。\n(A) triumvirate (n.) 三巨頭，三人執政。\n(B) misgiving (n.) 疑慮，不安。\n(D) bulwark (n.) 堡壘，防禦工事；保護者。\n句意翻譯：埃爾德里奇教授結束了他關於量子糾纏的全面性長篇論述，讓高級物理系的學生們陷入沉思。",
+    "sentence": "Professor Eldridge concluded his comprehensive _______ on quantum entanglement, leaving the advanced physics students deep in thought."
+  },
+  {
+    "id": 105,
+    "options": {
+      "A": "candor",
+      "B": "privation",
+      "C": "credence",
+      "D": "locution"
     },
-    {
-        "id": 6,
-        "question": "A free press is often considered a crucial _______ against governmental overreach and corruption in a democratic society.",
-        "options": {
-            "A": "gadfly",
-            "B": "bulwark",
-            "C": "miscreant",
-            "D": "triumvirate"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) bulwark。Bulwark (n.) 意指「堡壘，防禦工事；保護者」，在句中用來比喻「自由媒體」是抵禦政府越權和腐敗的「重要防線」或「屏障」，意義上符合。\n(A) gadfly (n.) 牛虻；（喻指）惹人厭的批評者，催促人行動者。\n(C) miscreant (n.) 惡棍，歹徒。\n(D) triumvirate (n.) 三巨頭，三人執政。\n句意翻譯：在民主社會中，自由媒體常被視為抵禦政府越權和腐敗的關鍵堡壘。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) credence。Credence (n.) 意指「相信，信任」，短語「give credence to」表示「相信…，對…給予信任」，與句中「儘管缺乏確鑿證據」（Despite the lack of concrete evidence）相呼應，描述了對線上瘋狂指控的信任。\n(A) candor (n.) 坦白，直率。\n(B) privation (n.) 匱乏，窮困。\n(D) locution (n.) 慣用語，措辭。\n句意翻譯：儘管缺乏確鑿證據，許多陰謀論者仍繼續相信在網上流傳的那些瘋狂指控。",
+    "sentence": "Despite the lack of concrete evidence, many conspiracy theorists continued to give _______ to the wild accusations circulating online."
+  },
+  {
+    "id": 106,
+    "options": {
+      "A": "gadfly",
+      "B": "bulwark",
+      "C": "miscreant",
+      "D": "triumvirate"
     },
-    {
-        "id": 7,
-        "question": "After hours of negotiations, the union leaders finally decided to _______ to the management's revised terms, averting a strike.",
-        "options": {
-            "A": "inundate",
-            "B": "interdict",
-            "C": "accede",
-            "D": "crepitate"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) accede。Accede (v.) 意指「同意，應允；就任」，在句中表示工會領袖最終同意了資方修訂後的條款，成功避免了罷工，語境符合。\n(A) inundate (v.) 淹沒，氾濫；使應接不暇。\n(B) interdict (v.) 禁止，阻止。\n(D) crepitate (v.) 發出劈啪聲，作爆裂聲。\n句意翻譯：經過數小時的談判，工會領袖們最終決定同意管理層修訂後的條款，避免了一場罷工。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) bulwark。Bulwark (n.) 意指「堡壘，防禦工事；保護者」，在句中用來比喻「自由媒體」是抵禦政府越權和腐敗的「重要防線」或「屏障」，意義上符合。\n(A) gadfly (n.) 牛虻；（喻指）惹人厭的批評者，催促人行動者。\n(C) miscreant (n.) 惡棍，歹徒。\n(D) triumvirate (n.) 三巨頭，三人執政。\n句意翻譯：在民主社會中，自由媒體常被視為抵禦政府越權和腐敗的關鍵堡壘。",
+    "sentence": "A free press is often considered a crucial _______ against governmental overreach and corruption in a democratic society."
+  },
+  {
+    "id": 107,
+    "options": {
+      "A": "inundate",
+      "B": "interdict",
+      "C": "accede",
+      "D": "crepitate"
     },
-    {
-        "id": 8,
-        "question": "She had a deep _______ about leaving her secure job to start a risky new venture, despite the potential for greater rewards.",
-        "options": {
-            "A": "candor",
-            "B": "misgiving",
-            "C": "locution",
-            "D": "saturnalia"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) misgiving。Misgiving (n.) 意指「疑慮，不安；預感不祥」，與句中「儘管有更大的潛在回報」（despite the potential for greater rewards）形成對比，描述了她對放棄穩定工作去開創高風險事業的深層疑慮。\n(A) candor (n.) 坦白，直率。\n(C) locution (n.) 慣用語，措辭。\n(D) saturnalia (n.) 狂歡節，狂宴。\n句意翻譯：儘管有更大的潛在回報，她對放棄穩定工作去開創高風險新事業感到深切的疑慮。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) accede。Accede (v.) 意指「同意，應允；就任」，在句中表示工會領袖最終同意了資方修訂後的條款，成功避免了罷工，語境符合。\n(A) inundate (v.) 淹沒，氾濫；使應接不暇。\n(B) interdict (v.) 禁止，阻止。\n(D) crepitate (v.) 發出劈啪聲，作爆裂聲。\n句意翻譯：經過數小時的談判，工會領袖們最終決定同意管理層修訂後的條款，避免了一場罷工。",
+    "sentence": "After hours of negotiations, the union leaders finally decided to _______ to the management's revised terms, averting a strike."
+  },
+  {
+    "id": 108,
+    "options": {
+      "A": "candor",
+      "B": "misgiving",
+      "C": "locution",
+      "D": "saturnalia"
     },
-    {
-        "id": 9,
-        "question": "After the popular influencer posted about the new product, the company's customer service department was _______ with inquiries and orders.",
-        "options": {
-            "A": "suffused",
-            "B": "crepitated",
-            "C": "interdicted",
-            "D": "inundated"
-        },
-        "answer": "D",
-        "explanation": "正確答案是 (D) inundated。Inundate (v.) 意指「淹沒，氾濫；使應接不暇，使不堪負荷」，在句中完美描述了客戶服務部門因大量查詢和訂單而「應接不暇」的狀況。\n(A) suffused (v. 過去式/過去分詞) 瀰漫，充滿（通常指顏色、情感等）。\n(B) crepitated (v. 過去式/過去分詞) 發出劈啪聲，作爆裂聲。\n(C) interdicted (v. 過去式/過去分詞) 禁止，阻止。\n句意翻譯：在那位受歡迎的網紅發布了關於新產品的帖子後，該公司的客戶服務部門被查詢和訂單淹沒了。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) misgiving。Misgiving (n.) 意指「疑慮，不安；預感不祥」，與句中「儘管有更大的潛在回報」（despite the potential for greater rewards）形成對比，描述了她對放棄穩定工作去開創高風險事業的深層疑慮。\n(A) candor (n.) 坦白，直率。\n(C) locution (n.) 慣用語，措辭。\n(D) saturnalia (n.) 狂歡節，狂宴。\n句意翻譯：儘管有更大的潛在回報，她對放棄穩定工作去開創高風險新事業感到深切的疑慮。",
+    "sentence": "She had a deep _______ about leaving her secure job to start a risky new venture, despite the potential for greater rewards."
+  },
+  {
+    "id": 109,
+    "options": {
+      "A": "suffused",
+      "B": "crepitated",
+      "C": "interdicted",
+      "D": "inundated"
     },
-    {
-        "id": 10,
-        "question": "The poet's latest collection had an overwhelmingly _______ tone, reflecting on lost love and the passage of time with profound sadness.",
-        "options": {
-            "A": "imperious",
-            "B": "lugubrious",
-            "C": "elegiac",
-            "D": "rancorous"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) elegiac。Elegiac (adj.) 意指「輓歌般的，哀傷的」，特別是用來表達對逝去的人、事物或時光的哀悼。句中「reflecting on lost love and the passage of time with profound sadness」（帶著深刻的悲傷反思失去的愛情和時光的流逝）完美符合「elegiac」的意涵。\n(A) imperious (adj.) 傲慢的，專橫的。\n(B) lugubrious (adj.) 悲傷的，陰鬱的。雖然也指悲傷，但 'elegiac' 更強調對逝去事物的哀悼和反思，更符合詩歌「反思」的語境，而 'lugubrious' 則常指誇張或令人沮喪的悲傷。\n(D) rancorous (adj.) 充滿敵意、惡意的；怨恨的。\n句意翻譯：這位詩人最新的詩集帶有一種壓倒性的輓歌般的基調，以深沉的悲傷反思失去的愛情和時光的流逝。"
+    "answer": "D",
+    "explanation": "正確答案是 (D) inundated。Inundate (v.) 意指「淹沒，氾濫；使應接不暇，使不堪負荷」，在句中完美描述了客戶服務部門因大量查詢和訂單而「應接不暇」的狀況。\n(A) suffused (v. 過去式/過去分詞) 瀰漫，充滿（通常指顏色、情感等）。\n(B) crepitated (v. 過去式/過去分詞) 發出劈啪聲，作爆裂聲。\n(C) interdicted (v. 過去式/過去分詞) 禁止，阻止。\n句意翻譯：在那位受歡迎的網紅發布了關於新產品的帖子後，該公司的客戶服務部門被查詢和訂單淹沒了。",
+    "sentence": "After the popular influencer posted about the new product, the company's customer service department was _______ with inquiries and orders."
+  },
+  {
+    "id": 110,
+    "options": {
+      "A": "imperious",
+      "B": "lugubrious",
+      "C": "elegiac",
+      "D": "rancorous"
     },
-    {
-        "id": 11,
-        "question": "The politician's reputation was irreparably damaged after it was revealed that he had a long history of making _______ statements to the public.",
-        "options": {
-            "A": "sagacious",
-            "B": "mendacious",
-            "C": "felicitous",
-            "D": "perspicacious"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) mendacious。'Mendacious' 意指不誠實的、說謊的。句中提到政治人物因長期向公眾發表不誠實的言論而聲譽受損，因此 'mendacious' 最符合語境。其他選項：(A) sagacious 意指睿智的；(C) felicitous 意指恰當的、得體的；(D) perspicacious 意指有洞察力的。這些詞義皆不符合句中導致聲譽受損的負面情境。\n\n句意翻譯：這名政治人物在被揭露長期向公眾發表不實言論後，聲譽受到了無法彌補的損害。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) elegiac。Elegiac (adj.) 意指「輓歌般的，哀傷的」，特別是用來表達對逝去的人、事物或時光的哀悼。句中「reflecting on lost love and the passage of time with profound sadness」（帶著深刻的悲傷反思失去的愛情和時光的流逝）完美符合「elegiac」的意涵。\n(A) imperious (adj.) 傲慢的，專橫的。\n(B) lugubrious (adj.) 悲傷的，陰鬱的。雖然也指悲傷，但 'elegiac' 更強調對逝去事物的哀悼和反思，更符合詩歌「反思」的語境，而 'lugubrious' 則常指誇張或令人沮喪的悲傷。\n(D) rancorous (adj.) 充滿敵意、惡意的；怨恨的。\n句意翻譯：這位詩人最新的詩集帶有一種壓倒性的輓歌般的基調，以深沉的悲傷反思失去的愛情和時光的流逝。",
+    "sentence": "The poet's latest collection had an overwhelmingly _______ tone, reflecting on lost love and the passage of time with profound sadness."
+  },
+  {
+    "id": 111,
+    "options": {
+      "A": "sagacious",
+      "B": "mendacious",
+      "C": "felicitous",
+      "D": "perspicacious"
     },
-    {
-        "id": 12,
-        "question": "Her analysis of the complex economic issues was so _______ that it cut through all the jargon and clarified the core problems for everyone.",
-        "options": {
-            "A": "ethereal",
-            "B": "prolix",
-            "C": "obfuscating",
-            "D": "trenchant"
-        },
-        "answer": "D",
-        "explanation": "正確答案是 (D) trenchant。'Trenchant' 意指（言論、分析等）銳利的、一針見血的、有力的。句中描述她的分析能夠穿透所有術語並澄清核心問題，顯示其見解深刻而有效。其他選項：(A) ethereal 意指飄渺的、超凡脫俗的；(B) prolix 意指冗長的、囉唆的；(C) obfuscating 意指使模糊不清的。這些詞義皆與句中清晰、有效的分析語境不符。\n\n句意翻譯：她對複雜經濟問題的分析如此透徹，以至於它穿透了所有術語，為所有人闡明了核心問題。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) mendacious。'Mendacious' 意指不誠實的、說謊的。句中提到政治人物因長期向公眾發表不誠實的言論而聲譽受損，因此 'mendacious' 最符合語境。其他選項：(A) sagacious 意指睿智的；(C) felicitous 意指恰當的、得體的；(D) perspicacious 意指有洞察力的。這些詞義皆不符合句中導致聲譽受損的負面情境。\n\n句意翻譯：這名政治人物在被揭露長期向公眾發表不實言論後，聲譽受到了無法彌補的損害。",
+    "sentence": "The politician's reputation was irreparably damaged after it was revealed that he had a long history of making _______ statements to the public."
+  },
+  {
+    "id": 112,
+    "options": {
+      "A": "ethereal",
+      "B": "prolix",
+      "C": "obfuscating",
+      "D": "trenchant"
     },
-    {
-        "id": 13,
-        "question": "Steve Jobs was often described as an _______, challenging established norms in the technology industry and refusing to conform to conventional wisdom.",
-        "options": {
-            "A": "acolyte",
-            "B": "demagogue",
-            "C": "iconoclast",
-            "D": "sycophant"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) iconoclast。'Iconoclast' 意指破除傳統者、反傳統者，特指挑戰既定信念或體制的人。句中提到史蒂夫·賈伯斯挑戰科技行業的既定規範並拒絕墨守成規，這正是 'iconoclast' 的典型行為。其他選項：(A) acolyte 意指助手、隨從；(B) demagogue 意指煽動者；(D) sycophant 意指馬屁精、奉承者。這些詞義皆不符合句中描述的創新與反叛精神。\n\n句意翻譯：史蒂夫·賈伯斯常被描述為一位反傳統者，挑戰科技產業的既定規範，並拒絕墨守傳統智慧。"
+    "answer": "D",
+    "explanation": "正確答案是 (D) trenchant。'Trenchant' 意指（言論、分析等）銳利的、一針見血的、有力的。句中描述她的分析能夠穿透所有術語並澄清核心問題，顯示其見解深刻而有效。其他選項：(A) ethereal 意指飄渺的、超凡脫俗的；(B) prolix 意指冗長的、囉唆的；(C) obfuscating 意指使模糊不清的。這些詞義皆與句中清晰、有效的分析語境不符。\n\n句意翻譯：她對複雜經濟問題的分析如此透徹，以至於它穿透了所有術語，為所有人闡明了核心問題。",
+    "sentence": "Her analysis of the complex economic issues was so _______ that it cut through all the jargon and clarified the core problems for everyone."
+  },
+  {
+    "id": 113,
+    "options": {
+      "A": "acolyte",
+      "B": "demagogue",
+      "C": "iconoclast",
+      "D": "sycophant"
     },
-    {
-        "id": 14,
-        "question": "Despite years of intensive research, there remains a significant _______ of concrete evidence to support the controversial theory.",
-        "options": {
-            "A": "surfeit",
-            "B": "plethora",
-            "C": "paucity",
-            "D": "abundance"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) paucity。'Paucity' 意指缺乏、不足、稀少。句中指出儘管經過多年的密集研究，但仍缺乏具體證據來支持這個有爭議的理論。其他選項：(A) surfeit 意指過量、過剩；(B) plethora 意指過多、過剩；(D) abundance 意指豐富、大量。這些詞義皆與句中「缺乏證據」的語境相反。\n\n句意翻譯：儘管經過多年的密集研究，支持這一有爭議理論的具體證據仍然嚴重不足。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) iconoclast。'Iconoclast' 意指破除傳統者、反傳統者，特指挑戰既定信念或體制的人。句中提到史蒂夫·賈伯斯挑戰科技行業的既定規範並拒絕墨守成規，這正是 'iconoclast' 的典型行為。其他選項：(A) acolyte 意指助手、隨從；(B) demagogue 意指煽動者；(D) sycophant 意指馬屁精、奉承者。這些詞義皆不符合句中描述的創新與反叛精神。\n\n句意翻譯：史蒂夫·賈伯斯常被描述為一位反傳統者，挑戰科技產業的既定規範，並拒絕墨守傳統智慧。",
+    "sentence": "Steve Jobs was often described as an _______, challenging established norms in the technology industry and refusing to conform to conventional wisdom."
+  },
+  {
+    "id": 114,
+    "options": {
+      "A": "surfeit",
+      "B": "plethora",
+      "C": "paucity",
+      "D": "abundance"
     },
-    {
-        "id": 15,
-        "question": "The coach would frequently _______ his players for their lack of effort, hoping his stern lectures would motivate them to perform better.",
-        "options": {
-            "A": "laud",
-            "B": "extol",
-            "C": "berate",
-            "D": "venerate"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) berate。'Berate' 意指嚴厲斥責、訓斥。句中描述教練因球員不夠努力而頻繁地斥責他們，希望嚴厲的訓話能激勵他們表現更好。其他選項：(A) laud 意指讚揚；(B) extol 意指頌揚、讚美；(D) venerate 意指尊敬、崇敬。這些詞義皆與句中「嚴厲斥責」以激勵的語境不符。\n\n句意翻譯：教練會頻繁地斥責他的球員不夠努力，希望他嚴厲的訓話能激勵他們表現更好。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) paucity。'Paucity' 意指缺乏、不足、稀少。句中指出儘管經過多年的密集研究，但仍缺乏具體證據來支持這個有爭議的理論。其他選項：(A) surfeit 意指過量、過剩；(B) plethora 意指過多、過剩；(D) abundance 意指豐富、大量。這些詞義皆與句中「缺乏證據」的語境相反。\n\n句意翻譯：儘管經過多年的密集研究，支持這一有爭議理論的具體證據仍然嚴重不足。",
+    "sentence": "Despite years of intensive research, there remains a significant _______ of concrete evidence to support the controversial theory."
+  },
+  {
+    "id": 115,
+    "options": {
+      "A": "laud",
+      "B": "extol",
+      "C": "berate",
+      "D": "venerate"
     },
-    {
-        "id": 16,
-        "question": "The desert nomad's face was deeply _______ by years of exposure to the harsh sun and arid winds.",
-        "options": {
-            "A": "unblemished",
-            "B": "wizened",
-            "C": "verdant",
-            "D": "robust"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) wizened。'Wizened' 意指（因年老、乾旱等）起皺的、乾枯的。句中描述沙漠遊牧民族的臉因長期暴露在烈日和乾燥的風中而深陷皺紋，'wizened' 精確地形容了這種狀態。其他選項：(A) unblemished 意指無瑕疵的、完美的；(C) verdant 意指翠綠的、長滿青草的（常用於形容景觀）；(D) robust 意指強壯的、結實的。這些詞義皆不符合句中描述的因惡劣環境造成的容貌特徵。\n\n句意翻譯：這位沙漠遊牧民族的臉因多年暴露在烈日和乾燥的風中而深深地佈滿皺紋。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) berate。'Berate' 意指嚴厲斥責、訓斥。句中描述教練因球員不夠努力而頻繁地斥責他們，希望嚴厲的訓話能激勵他們表現更好。其他選項：(A) laud 意指讚揚；(B) extol 意指頌揚、讚美；(D) venerate 意指尊敬、崇敬。這些詞義皆與句中「嚴厲斥責」以激勵的語境不符。\n\n句意翻譯：教練會頻繁地斥責他的球員不夠努力，希望他嚴厲的訓話能激勵他們表現更好。",
+    "sentence": "The coach would frequently _______ his players for their lack of effort, hoping his stern lectures would motivate them to perform better."
+  },
+  {
+    "id": 116,
+    "options": {
+      "A": "unblemished",
+      "B": "wizened",
+      "C": "verdant",
+      "D": "robust"
     },
-    {
-        "id": 17,
-        "question": "Historically, powerful empires sought to _______ smaller nations, imposing their rule and exploiting their resources.",
-        "options": {
-            "A": "emancipate",
-            "B": "liberate",
-            "C": "subjugate",
-            "D": "absolve"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) subjugate。'Subjugate' 意指征服、使屈服、使受制於人。句中描述強大帝國企圖征服較小的國家，強加統治並剝削其資源，'subjugate' 完美地符合這種壓迫行為。其他選項：(A) emancipate 意指解放；(B) liberate 意指解放；(D) absolve 意指免除（罪責、義務）。這些詞義皆與句中「征服與剝削」的語境相反。\n\n句意翻譯：歷史上，強大的帝國試圖征服小國，強加其統治並剝削其資源。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) wizened。'Wizened' 意指（因年老、乾旱等）起皺的、乾枯的。句中描述沙漠遊牧民族的臉因長期暴露在烈日和乾燥的風中而深陷皺紋，'wizened' 精確地形容了這種狀態。其他選項：(A) unblemished 意指無瑕疵的、完美的；(C) verdant 意指翠綠的、長滿青草的（常用於形容景觀）；(D) robust 意指強壯的、結實的。這些詞義皆不符合句中描述的因惡劣環境造成的容貌特徵。\n\n句意翻譯：這位沙漠遊牧民族的臉因多年暴露在烈日和乾燥的風中而深深地佈滿皺紋。",
+    "sentence": "The desert nomad's face was deeply _______ by years of exposure to the harsh sun and arid winds."
+  },
+  {
+    "id": 117,
+    "options": {
+      "A": "emancipate",
+      "B": "liberate",
+      "C": "subjugate",
+      "D": "absolve"
     },
-    {
-        "id": 18,
-        "question": "As a skilled interpreter and diplomat, she was a true _______, effortlessly switching between five different languages during international negotiations.",
-        "options": {
-            "A": "monologist",
-            "B": "rhetorician",
-            "C": "polyglot",
-            "D": "philologist"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) polyglot。'Polyglot' 意指通曉多種語言的人。句中描述她作為一名熟練的口譯員和外交官，在國際談判中能輕而易舉地切換五種不同的語言，這正是 'polyglot' 的特徵。其他選項：(A) monologist 意指獨白者；(B) rhetorician 意指修辭學家、雄辯家；(D) philologist 意指語言學家、文字學家（更側重於語言的學術研究而非流利使用多種語言）。\n\n句意翻譯：作為一名熟練的口譯員和外交官，她是一位真正的通曉多種語言的人，在國際談判中能輕而易舉地切換五種不同的語言。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) subjugate。'Subjugate' 意指征服、使屈服、使受制於人。句中描述強大帝國企圖征服較小的國家，強加統治並剝削其資源，'subjugate' 完美地符合這種壓迫行為。其他選項：(A) emancipate 意指解放；(B) liberate 意指解放；(D) absolve 意指免除（罪責、義務）。這些詞義皆與句中「征服與剝削」的語境相反。\n\n句意翻譯：歷史上，強大的帝國試圖征服小國，強加其統治並剝削其資源。",
+    "sentence": "Historically, powerful empires sought to _______ smaller nations, imposing their rule and exploiting their resources."
+  },
+  {
+    "id": 118,
+    "options": {
+      "A": "monologist",
+      "B": "rhetorician",
+      "C": "polyglot",
+      "D": "philologist"
     },
-    {
-        "id": 19,
-        "question": "The dictator's speech was filled with _______ warnings against any dissent, leaving no doubt about the severe consequences for opposition.",
-        "options": {
-            "A": "mollifying",
-            "B": "benign",
-            "C": "conciliatory",
-            "D": "minatory"
-        },
-        "answer": "D",
-        "explanation": "正確答案是 (D) minatory。'Minatory' 意指威脅性的、恐嚇的。句中描述獨裁者的演講充滿了對任何異議的威脅性警告，明確指出反對者將面臨的嚴重後果，這與 'minatory' 的詞義完全吻合。其他選項：(A) mollifying 意指安撫的、緩和的；(B) benign 意指良性的、和藹的；(C) conciliatory 意指調解的、安撫的。這些詞義皆與句中「威脅性警告」的語境相反。\n\n句意翻譯：獨裁者的演講充滿了對任何異議的威脅性警告，毫不懷疑地指出反對者將面臨的嚴重後果。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) polyglot。'Polyglot' 意指通曉多種語言的人。句中描述她作為一名熟練的口譯員和外交官，在國際談判中能輕而易舉地切換五種不同的語言，這正是 'polyglot' 的特徵。其他選項：(A) monologist 意指獨白者；(B) rhetorician 意指修辭學家、雄辯家；(D) philologist 意指語言學家、文字學家（更側重於語言的學術研究而非流利使用多種語言）。\n\n句意翻譯：作為一名熟練的口譯員和外交官，她是一位真正的通曉多種語言的人，在國際談判中能輕而易舉地切換五種不同的語言。",
+    "sentence": "As a skilled interpreter and diplomat, she was a true _______, effortlessly switching between five different languages during international negotiations."
+  },
+  {
+    "id": 119,
+    "options": {
+      "A": "mollifying",
+      "B": "benign",
+      "C": "conciliatory",
+      "D": "minatory"
     },
-    {
-        "id": 20,
-        "question": "Despite her strong reservations, she ultimately decided to _______ to her parents' wishes, knowing that further protest would be futile.",
-        "options": {
-            "A": "contend",
-            "B": "defy",
-            "C": "acquiesce",
-            "D": "gainsay"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) acquiesce。'Acquiesce' 意指默許、勉強同意、順從（不情願地接受）。句中描述儘管她有強烈保留，但最終還是決定順從父母的意願，因為她知道進一步的抗議是徒勞的，這完美符合 'acquiesce' 的語義。其他選項：(A) contend 意指競爭、主張；(B) defy 意指反抗、違抗；(D) gainsay 意指否認、反駁。這些詞義皆與句中「不情願地順從」的語境相反。\n\n句意翻譯：儘管她有強烈的保留，但最終她還是決定順從父母的意願，因為她知道進一步的抗議將是徒勞的。"
+    "answer": "D",
+    "explanation": "正確答案是 (D) minatory。'Minatory' 意指威脅性的、恐嚇的。句中描述獨裁者的演講充滿了對任何異議的威脅性警告，明確指出反對者將面臨的嚴重後果，這與 'minatory' 的詞義完全吻合。其他選項：(A) mollifying 意指安撫的、緩和的；(B) benign 意指良性的、和藹的；(C) conciliatory 意指調解的、安撫的。這些詞義皆與句中「威脅性警告」的語境相反。\n\n句意翻譯：獨裁者的演講充滿了對任何異議的威脅性警告，毫不懷疑地指出反對者將面臨的嚴重後果。",
+    "sentence": "The dictator's speech was filled with _______ warnings against any dissent, leaving no doubt about the severe consequences for opposition."
+  },
+  {
+    "id": 120,
+    "options": {
+      "A": "contend",
+      "B": "defy",
+      "C": "acquiesce",
+      "D": "gainsay"
     },
-    {
-        "id": 21,
-        "question": "The politician's skillful use of rhetoric and misdirection was a true act of _______, diverting public attention from the real issues at hand.",
-        "options": {
-            "A": "sagacity",
-            "B": "legerdemain",
-            "C": "candor",
-            "D": "serendipity"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) legerdemain。Legerdemain 指的是「變戲法、花招、詭計」。在句中，政治人物巧妙地運用修辭和誤導，將公眾注意力從真正問題上轉移，這種行為最符合「花招」或「詭計」。\n(A) sagacity 意為「睿智、洞察力」。\n(C) candor 意為「坦率、真誠」。\n(D) serendipity 意為「意外發現珍寶的才能」。\n句意翻譯：這位政治家巧妙地運用修辭和誤導，真是一種魔術般的詭計，將公眾的注意力從真正問題上轉移開來。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) acquiesce。'Acquiesce' 意指默許、勉強同意、順從（不情願地接受）。句中描述儘管她有強烈保留，但最終還是決定順從父母的意願，因為她知道進一步的抗議是徒勞的，這完美符合 'acquiesce' 的語義。其他選項：(A) contend 意指競爭、主張；(B) defy 意指反抗、違抗；(D) gainsay 意指否認、反駁。這些詞義皆與句中「不情願地順從」的語境相反。\n\n句意翻譯：儘管她有強烈的保留，但最終她還是決定順從父母的意願，因為她知道進一步的抗議將是徒勞的。",
+    "sentence": "Despite her strong reservations, she ultimately decided to _______ to her parents' wishes, knowing that further protest would be futile."
+  },
+  {
+    "id": 121,
+    "options": {
+      "A": "sagacity",
+      "B": "legerdemain",
+      "C": "candor",
+      "D": "serendipity"
     },
-    {
-        "id": 22,
-        "question": "Despite her obvious discomfort, she tried to _______ her true feelings, maintaining a façade of calm indifference throughout the tense meeting.",
-        "options": {
-            "A": "articulate",
-            "B": "betray",
-            "C": "dissemble",
-            "D": "extrapolate"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) dissemble。Dissemble 意為「掩飾、假裝」。句中描述儘管她感到明顯不適，她仍試圖掩飾自己的真實感受，在緊張的會議中保持冷靜漠然的外表，這與 dissemble 的意思完全吻合。\n(A) articulate 意為「清楚表達」。\n(B) betray 意為「背叛、洩露」。\n(D) extrapolate 意為「推斷、外推」。\n句意翻譯：儘管她顯然感到不適，她仍試圖掩飾自己的真實感受，在整個緊張的會議中保持著冷靜漠然的外表。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) legerdemain。Legerdemain 指的是「變戲法、花招、詭計」。在句中，政治人物巧妙地運用修辭和誤導，將公眾注意力從真正問題上轉移，這種行為最符合「花招」或「詭計」。\n(A) sagacity 意為「睿智、洞察力」。\n(C) candor 意為「坦率、真誠」。\n(D) serendipity 意為「意外發現珍寶的才能」。\n句意翻譯：這位政治家巧妙地運用修辭和誤導，真是一種魔術般的詭計，將公眾的注意力從真正問題上轉移開來。",
+    "sentence": "The politician's skillful use of rhetoric and misdirection was a true act of _______, diverting public attention from the real issues at hand."
+  },
+  {
+    "id": 122,
+    "options": {
+      "A": "articulate",
+      "B": "betray",
+      "C": "dissemble",
+      "D": "extrapolate"
     },
-    {
-        "id": 23,
-        "question": "The long-abandoned building emitted a _______ odor, a tell-tale sign of decaying organic matter and stagnant water within its dark confines.",
-        "options": {
-            "A": "aromatic",
-            "B": "ephemeral",
-            "C": "fetid",
-            "D": "pristine"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) fetid。Fetid 意為「惡臭的、腐敗的」。句中描述廢棄建築物散發出腐爛有機物和死水的氣味，因此「惡臭的」最符合語境。\n(A) aromatic 意為「芳香的」。\n(B) ephemeral 意為「短暫的、瞬息的」。\n(D) pristine 意為「原始的、潔淨的」。\n句意翻譯：那棟長期廢棄的建築物散發著惡臭，這是其黑暗內部腐爛有機物和死水存在的明顯跡象。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) dissemble。Dissemble 意為「掩飾、假裝」。句中描述儘管她感到明顯不適，她仍試圖掩飾自己的真實感受，在緊張的會議中保持冷靜漠然的外表，這與 dissemble 的意思完全吻合。\n(A) articulate 意為「清楚表達」。\n(B) betray 意為「背叛、洩露」。\n(D) extrapolate 意為「推斷、外推」。\n句意翻譯：儘管她顯然感到不適，她仍試圖掩飾自己的真實感受，在整個緊張的會議中保持著冷靜漠然的外表。",
+    "sentence": "Despite her obvious discomfort, she tried to _______ her true feelings, maintaining a façade of calm indifference throughout the tense meeting."
+  },
+  {
+    "id": 123,
+    "options": {
+      "A": "aromatic",
+      "B": "ephemeral",
+      "C": "fetid",
+      "D": "pristine"
     },
-    {
-        "id": 24,
-        "question": "The sudden surge in unexpected technical issues threatened to _______ the entire project, pushing deadlines and significantly increasing costs.",
-        "options": {
-            "A": "galvanize",
-            "B": "facilitate",
-            "C": "expedite",
-            "D": "stymie"
-        },
-        "answer": "D",
-        "explanation": "正確答案是 (D) stymie。Stymie 意為「阻礙、妨礙」。句中描述突如其來的技術問題可能阻礙整個專案的進程，導致截止日期推遲並顯著增加成本，因此 stymie 是最恰當的選擇。\n(A) galvanize 意為「刺激、激勵」。\n(B) facilitate 意為「促進、幫助」。\n(C) expedite 意為「加速、促進」。\n句意翻譯：突如其來的技術問題可能阻礙整個專案的進程，導致截止日期推遲並顯著增加成本。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) fetid。Fetid 意為「惡臭的、腐敗的」。句中描述廢棄建築物散發出腐爛有機物和死水的氣味，因此「惡臭的」最符合語境。\n(A) aromatic 意為「芳香的」。\n(B) ephemeral 意為「短暫的、瞬息的」。\n(D) pristine 意為「原始的、潔淨的」。\n句意翻譯：那棟長期廢棄的建築物散發著惡臭，這是其黑暗內部腐爛有機物和死水存在的明顯跡象。",
+    "sentence": "The long-abandoned building emitted a _______ odor, a tell-tale sign of decaying organic matter and stagnant water within its dark confines."
+  },
+  {
+    "id": 124,
+    "options": {
+      "A": "galvanize",
+      "B": "facilitate",
+      "C": "expedite",
+      "D": "stymie"
     },
-    {
-        "id": 25,
-        "question": "Making a _______ investment requires careful research and a thorough understanding of market trends, rather than impulsive decisions.",
-        "options": {
-            "A": "precipitous",
-            "B": "capricious",
-            "C": "judicious",
-            "D": "perfunctory"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) judicious。Judicious 意為「明智的、有判斷力的」。句中指出「明智的」投資需要仔細研究和對市場趨勢的透徹理解，而非衝動的決定，這與 judicious 的意思一致。\n(A) precipitous 意為「倉促的、陡峭的」。\n(B) capricious 意為「反覆無常的、任性的」。\n(D) perfunctory 意為「敷衍的、馬虎的」。\n句意翻譯：做出明智的投資需要仔細的研究和對市場趨勢的透徹理解，而不是衝動的決定。"
+    "answer": "D",
+    "explanation": "正確答案是 (D) stymie。Stymie 意為「阻礙、妨礙」。句中描述突如其來的技術問題可能阻礙整個專案的進程，導致截止日期推遲並顯著增加成本，因此 stymie 是最恰當的選擇。\n(A) galvanize 意為「刺激、激勵」。\n(B) facilitate 意為「促進、幫助」。\n(C) expedite 意為「加速、促進」。\n句意翻譯：突如其來的技術問題可能阻礙整個專案的進程，導致截止日期推遲並顯著增加成本。",
+    "sentence": "The sudden surge in unexpected technical issues threatened to _______ the entire project, pushing deadlines and significantly increasing costs."
+  },
+  {
+    "id": 125,
+    "options": {
+      "A": "precipitous",
+      "B": "capricious",
+      "C": "judicious",
+      "D": "perfunctory"
     },
-    {
-        "id": 26,
-        "question": "After several consecutive quarters of strong growth, the company grew dangerously _______, failing to innovate and adapt to emerging market challenges.",
-        "options": {
-            "A": "vigilant",
-            "B": "diffident",
-            "C": "complacent",
-            "D": "assiduous"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) complacent。Complacent 意為「自滿的、安於現狀的」。句中描述公司在經歷多次強勁增長後變得「自滿」，未能創新並適應新興市場的挑戰，這導致了危險的後果。\n(A) vigilant 意為「警惕的、警覺的」。\n(B) diffident 意為「缺乏自信的、羞怯的」。\n(D) assiduous 意為「勤奮的、刻苦的」。\n句意翻譯：在連續幾個季度的強勁增長後，該公司變得極度自滿，未能創新並適應新興市場的挑戰。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) judicious。Judicious 意為「明智的、有判斷力的」。句中指出「明智的」投資需要仔細研究和對市場趨勢的透徹理解，而非衝動的決定，這與 judicious 的意思一致。\n(A) precipitous 意為「倉促的、陡峭的」。\n(B) capricious 意為「反覆無常的、任性的」。\n(D) perfunctory 意為「敷衍的、馬虎的」。\n句意翻譯：做出明智的投資需要仔細的研究和對市場趨勢的透徹理解，而不是衝動的決定。",
+    "sentence": "Making a _______ investment requires careful research and a thorough understanding of market trends, rather than impulsive decisions."
+  },
+  {
+    "id": 126,
+    "options": {
+      "A": "vigilant",
+      "B": "diffident",
+      "C": "complacent",
+      "D": "assiduous"
     },
-    {
-        "id": 27,
-        "question": "Lacking preparation for the impromptu Q&A session, the speaker had to _______ his responses, relying on his extensive knowledge and quick wit.",
-        "options": {
-            "A": "articulate",
-            "B": "premeditate",
-            "C": "extemporize",
-            "D": "recapitulate"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) extemporize。Extemporize 意為「即興演講、即興創作」。句中描述講者由於缺乏準備，必須即興回答問題，依靠其廣泛的知識和機智，這與 extemporize 的意思完全符合。\n(A) articulate 意為「清楚表達」。\n(B) premeditate 意為「預謀、預先考慮」。\n(D) recapitulate 意為「概括、重述要點」。\n句意翻譯：由於沒有為即興問答環節做準備，這位發言人不得不即興發揮，依靠他廣泛的知識和敏捷的思維。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) complacent。Complacent 意為「自滿的、安於現狀的」。句中描述公司在經歷多次強勁增長後變得「自滿」，未能創新並適應新興市場的挑戰，這導致了危險的後果。\n(A) vigilant 意為「警惕的、警覺的」。\n(B) diffident 意為「缺乏自信的、羞怯的」。\n(D) assiduous 意為「勤奮的、刻苦的」。\n句意翻譯：在連續幾個季度的強勁增長後，該公司變得極度自滿，未能創新並適應新興市場的挑戰。",
+    "sentence": "After several consecutive quarters of strong growth, the company grew dangerously _______, failing to innovate and adapt to emerging market challenges."
+  },
+  {
+    "id": 127,
+    "options": {
+      "A": "articulate",
+      "B": "premeditate",
+      "C": "extemporize",
+      "D": "recapitulate"
     },
-    {
-        "id": 28,
-        "question": "Her lifelong _______ for solitary activities, such as reading and painting, made her somewhat uncomfortable in large social gatherings.",
-        "options": {
-            "A": "aversion",
-            "B": "proclivity",
-            "C": "antipathy",
-            "D": "reluctance"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) proclivity。Proclivity 意為「傾向、癖好」。句中描述她對獨自活動（如閱讀和繪畫）的終身「傾向」，使得她在大型社交聚會中感到不適。\n(A) aversion 意為「厭惡、反感」。\n(C) antipathy 意為「反感、憎惡」。\n(D) reluctance 意為「不情願」。\n雖然 A 和 C 描述負面情緒，但句意是指出一種長期的偏好或習慣，不是厭惡，故 proclivity 最為貼切。\n句意翻譯：她終身對閱讀和繪畫等獨自活動的傾向，使她在大型社交聚會中感到有些不自在。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) extemporize。Extemporize 意為「即興演講、即興創作」。句中描述講者由於缺乏準備，必須即興回答問題，依靠其廣泛的知識和機智，這與 extemporize 的意思完全符合。\n(A) articulate 意為「清楚表達」。\n(B) premeditate 意為「預謀、預先考慮」。\n(D) recapitulate 意為「概括、重述要點」。\n句意翻譯：由於沒有為即興問答環節做準備，這位發言人不得不即興發揮，依靠他廣泛的知識和敏捷的思維。",
+    "sentence": "Lacking preparation for the impromptu Q&A session, the speaker had to _______ his responses, relying on his extensive knowledge and quick wit."
+  },
+  {
+    "id": 128,
+    "options": {
+      "A": "aversion",
+      "B": "proclivity",
+      "C": "antipathy",
+      "D": "reluctance"
     },
-    {
-        "id": 29,
-        "question": "Despite overwhelming evidence, a small faction of critics continued to _______ the scientist's groundbreaking findings, clinging to outdated theories.",
-        "options": {
-            "A": "corroborate",
-            "B": "gainsay",
-            "C": "validate",
-            "D": "concede"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) gainsay。Gainsay 意為「否認、反駁」。句中描述儘管證據確鑿，一小部分批評者仍然「否認」這位科學家的開創性發現，堅持過時的理論。\n(A) corroborate 意為「證實、確證」。\n(C) validate 意為「驗證、使生效」。\n(D) concede 意為「承認、讓步」。\n句意翻譯：儘管有壓倒性的證據，一小部分批評家仍然否認這位科學家開創性的發現，堅守過時的理論。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) proclivity。Proclivity 意為「傾向、癖好」。句中描述她對獨自活動（如閱讀和繪畫）的終身「傾向」，使得她在大型社交聚會中感到不適。\n(A) aversion 意為「厭惡、反感」。\n(C) antipathy 意為「反感、憎惡」。\n(D) reluctance 意為「不情願」。\n雖然 A 和 C 描述負面情緒，但句意是指出一種長期的偏好或習慣，不是厭惡，故 proclivity 最為貼切。\n句意翻譯：她終身對閱讀和繪畫等獨自活動的傾向，使她在大型社交聚會中感到有些不自在。",
+    "sentence": "Her lifelong _______ for solitary activities, such as reading and painting, made her somewhat uncomfortable in large social gatherings."
+  },
+  {
+    "id": 129,
+    "options": {
+      "A": "corroborate",
+      "B": "gainsay",
+      "C": "validate",
+      "D": "concede"
     },
-    {
-        "id": 30,
-        "question": "The _______ march of time affects everyone, bringing change and aging to all living beings, regardless of their desires or efforts to resist.",
-        "options": {
-            "A": "ephemeral",
-            "B": "tractable",
-            "C": "inexorable",
-            "D": "pliable"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) inexorable。Inexorable 意為「不可阻擋的、必然的、不屈不撓的」。句中描述時間「不可阻擋的」前進影響所有人，帶來變化和衰老，無論人們如何抵抗，這與 inexorable 的含義完美契合。\n(A) ephemeral 意為「短暫的、瞬息的」。\n(B) tractable 意為「易駕馭的、溫順的」。\n(D) pliable 意為「柔韌的、易彎曲的、易受影響的」。\n句意翻譯：時間那不可阻擋的行進影響著每一個人，無論他們如何渴望或努力抵抗，都會給所有生物帶來變化和衰老。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) gainsay。Gainsay 意為「否認、反駁」。句中描述儘管證據確鑿，一小部分批評者仍然「否認」這位科學家的開創性發現，堅持過時的理論。\n(A) corroborate 意為「證實、確證」。\n(C) validate 意為「驗證、使生效」。\n(D) concede 意為「承認、讓步」。\n句意翻譯：儘管有壓倒性的證據，一小部分批評家仍然否認這位科學家開創性的發現，堅守過時的理論。",
+    "sentence": "Despite overwhelming evidence, a small faction of critics continued to _______ the scientist's groundbreaking findings, clinging to outdated theories."
+  },
+  {
+    "id": 130,
+    "options": {
+      "A": "ephemeral",
+      "B": "tractable",
+      "C": "inexorable",
+      "D": "pliable"
     },
-    {
-        "id": 31,
-        "question": "The philosopher's latest treatise was so _______ that only a handful of specialists could truly grasp its complex arguments.",
-        "options": {
-            "A": "jovial",
-            "B": "abstruse",
-            "C": "banal",
-            "D": "vivacious"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) abstruse。\n*   **abstruse (adj.)** 意指「深奧的，難懂的」，用來形容「只有少數專家才能真正理解其複雜論點」的論文，非常貼切。\n*   **句意翻譯：** 這位哲學家最新的論著是如此深奧，以至於只有少數專家才能真正理解其複雜的論點。\n*   (A) jovial (adj.) 意指「歡樂的，友好的」，不符文意。\n*   (C) banal (adj.) 意指「平庸的，乏味的」，不符文意。\n*   (D) vivacious (adj.) 意指「活潑的，生氣勃勃的」，不符文意。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) inexorable。Inexorable 意為「不可阻擋的、必然的、不屈不撓的」。句中描述時間「不可阻擋的」前進影響所有人，帶來變化和衰老，無論人們如何抵抗，這與 inexorable 的含義完美契合。\n(A) ephemeral 意為「短暫的、瞬息的」。\n(B) tractable 意為「易駕馭的、溫順的」。\n(D) pliable 意為「柔韌的、易彎曲的、易受影響的」。\n句意翻譯：時間那不可阻擋的行進影響著每一個人，無論他們如何渴望或努力抵抗，都會給所有生物帶來變化和衰老。",
+    "sentence": "The _______ march of time affects everyone, bringing change and aging to all living beings, regardless of their desires or efforts to resist."
+  },
+  {
+    "id": 131,
+    "options": {
+      "A": "jovial",
+      "B": "abstruse",
+      "C": "banal",
+      "D": "vivacious"
     },
-    {
-        "id": 32,
-        "question": "Always eager to gain favor with the CEO, the manager was a notorious _______, showering the boss with insincere compliments at every opportunity.",
-        "options": {
-            "A": "bauble",
-            "B": "sycophant",
-            "C": "protagonist",
-            "D": "visionary"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) sycophant。\n*   **sycophant (n.)** 意指「馬屁精，諂媚者」，題目中描述「總是渴望得到執行長的好感」且「不真誠地奉承老闆」，完美符合此詞義。\n*   **句意翻譯：** 這位經理總是渴望得到執行長的好感，是個臭名昭著的馬屁精，每次有機會都對老闆阿諛奉承。\n*   (A) bauble (n.) 意指「小玩意，廉價飾品」，與人無關。\n*   (C) protagonist (n.) 意指「主角」，不符文意。\n*   (D) visionary (n.) 意指「有遠見的人」，與情境中的負面行為不符。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) abstruse。\n*   **abstruse (adj.)** 意指「深奧的，難懂的」，用來形容「只有少數專家才能真正理解其複雜論點」的論文，非常貼切。\n*   **句意翻譯：** 這位哲學家最新的論著是如此深奧，以至於只有少數專家才能真正理解其複雜的論點。\n*   (A) jovial (adj.) 意指「歡樂的，友好的」，不符文意。\n*   (C) banal (adj.) 意指「平庸的，乏味的」，不符文意。\n*   (D) vivacious (adj.) 意指「活潑的，生氣勃勃的」，不符文意。",
+    "sentence": "The philosopher's latest treatise was so _______ that only a handful of specialists could truly grasp its complex arguments."
+  },
+  {
+    "id": 132,
+    "options": {
+      "A": "bauble",
+      "B": "sycophant",
+      "C": "protagonist",
+      "D": "visionary"
     },
-    {
-        "id": 33,
-        "question": "It was pure _______ that I stumbled upon the exact antique vase I'd been searching for at a remote roadside market.",
-        "options": {
-            "A": "obligatory",
-            "B": "forethought",
-            "C": "serendipity",
-            "D": "consternation"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) serendipity。\n*   **serendipity (n.)** 意指「意外發現新奇或有價值的事物的能力或現象；機緣湊巧，緣份」，題目中「偶然發現（stumbled upon）」且是「一直在尋找的」物品，描述了一種快樂的意外收穫。\n*   **句意翻譯：** 我在一個偏遠的路邊市場偶然發現了我一直在尋找的那個古董花瓶，這純粹是機緣巧巧。\n*   (A) obligatory (adj.) 意指「強制性的，義務的」，不符文意。\n*   (B) forethought (n.) 意指「預謀，事先考慮」，與「偶然發現」的語境相反。\n*   (D) consternation (n.) 意指「驚慌，大為震驚」，表達負面情緒，不符文意。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) sycophant。\n*   **sycophant (n.)** 意指「馬屁精，諂媚者」，題目中描述「總是渴望得到執行長的好感」且「不真誠地奉承老闆」，完美符合此詞義。\n*   **句意翻譯：** 這位經理總是渴望得到執行長的好感，是個臭名昭著的馬屁精，每次有機會都對老闆阿諛奉承。\n*   (A) bauble (n.) 意指「小玩意，廉價飾品」，與人無關。\n*   (C) protagonist (n.) 意指「主角」，不符文意。\n*   (D) visionary (n.) 意指「有遠見的人」，與情境中的負面行為不符。",
+    "sentence": "Always eager to gain favor with the CEO, the manager was a notorious _______, showering the boss with insincere compliments at every opportunity."
+  },
+  {
+    "id": 133,
+    "options": {
+      "A": "obligatory",
+      "B": "forethought",
+      "C": "serendipity",
+      "D": "consternation"
     },
-    {
-        "id": 34,
-        "question": "The unexpected change in the flight schedule began to _______ the already anxious passengers, who worried about missing their connecting flights.",
-        "options": {
-            "A": "placate",
-            "B": "stagnate",
-            "C": "perturb",
-            "D": "exhilarate"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) perturb。\n*   **perturb (v.)** 意指「使不安，使煩惱，使心煩意亂」，題目中「已經焦慮的乘客」因「飛行時刻表的意外變動」而「擔心錯過轉機」，這會讓他們更加不安。\n*   **句意翻譯：** 飛行時刻表的意外變動開始讓本已焦慮的乘客感到不安，他們擔心會錯過轉機。\n*   (A) placate (v.) 意指「安撫，使平靜」，與文意相反。\n*   (B) stagnate (v.) 意指「停滯不前」，不符文意。\n*   (D) exhilarate (v.) 意指「使興奮，使高興」，與文意相反。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) serendipity。\n*   **serendipity (n.)** 意指「意外發現新奇或有價值的事物的能力或現象；機緣湊巧，緣份」，題目中「偶然發現（stumbled upon）」且是「一直在尋找的」物品，描述了一種快樂的意外收穫。\n*   **句意翻譯：** 我在一個偏遠的路邊市場偶然發現了我一直在尋找的那個古董花瓶，這純粹是機緣巧巧。\n*   (A) obligatory (adj.) 意指「強制性的，義務的」，不符文意。\n*   (B) forethought (n.) 意指「預謀，事先考慮」，與「偶然發現」的語境相反。\n*   (D) consternation (n.) 意指「驚慌，大為震驚」，表達負面情緒，不符文意。",
+    "sentence": "It was pure _______ that I stumbled upon the exact antique vase I'd been searching for at a remote roadside market."
+  },
+  {
+    "id": 134,
+    "options": {
+      "A": "placate",
+      "B": "stagnate",
+      "C": "perturb",
+      "D": "exhilarate"
     },
-    {
-        "id": 35,
-        "question": "Despite his vast wealth, the old man was notoriously _______, refusing to spend a penny more than absolutely necessary, even on basic comforts.",
-        "options": {
-            "A": "magnanimous",
-            "B": "jovial",
-            "C": "parsimonious",
-            "D": "ostentatious"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) parsimonious。\n*   **parsimonious (adj.)** 意指「吝嗇的，過於節儉的」，題目中描述「儘管財富龐大」卻「拒絕多花一分錢，甚至在基本生活必需品上也是如此」，這正是吝嗇的表現。\n*   **句意翻譯：** 儘管財富龐大，這位老人卻是出了名的吝嗇，即使在基本生活必需品上，他也拒絕多花一分錢。\n*   (A) magnanimous (adj.) 意指「寬宏大量的，慷慨的」，與文意相反。\n*   (B) jovial (adj.) 意指「歡樂的，友好的」，與是否花錢無關。\n*   (D) ostentatious (adj.) 意指「炫耀的，賣弄的」，其花錢習慣通常是揮霍的，與文意相反。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) perturb。\n*   **perturb (v.)** 意指「使不安，使煩惱，使心煩意亂」，題目中「已經焦慮的乘客」因「飛行時刻表的意外變動」而「擔心錯過轉機」，這會讓他們更加不安。\n*   **句意翻譯：** 飛行時刻表的意外變動開始讓本已焦慮的乘客感到不安，他們擔心會錯過轉機。\n*   (A) placate (v.) 意指「安撫，使平靜」，與文意相反。\n*   (B) stagnate (v.) 意指「停滯不前」，不符文意。\n*   (D) exhilarate (v.) 意指「使興奮，使高興」，與文意相反。",
+    "sentence": "The unexpected change in the flight schedule began to _______ the already anxious passengers, who worried about missing their connecting flights."
+  },
+  {
+    "id": 135,
+    "options": {
+      "A": "magnanimous",
+      "B": "jovial",
+      "C": "parsimonious",
+      "D": "ostentatious"
     },
-    {
-        "id": 36,
-        "question": "Even when faced with unexpected technical glitches during the live broadcast, the seasoned news anchor maintained his _______, calmly addressing the audience.",
-        "options": {
-            "A": "trepidation",
-            "B": "equanimity",
-            "C": "vivacity",
-            "D": "agitation"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) equanimity。\n*   **equanimity (n.)** 意指「平靜，鎮定」，題目中描述資深新聞主播在「直播期間遇到突發技術故障」時仍能「平靜地對觀眾講話」，顯示其情緒穩定、處變不驚。\n*   **句意翻譯：** 即使在直播期間遇到突發技術故障，這位資深新聞主播依然保持鎮定，平靜地對觀眾講話。\n*   (A) trepidation (n.) 意指「恐懼，不安」，與文意相反。\n*   (C) vivacity (n.) 意指「活潑，生動」，雖然是積極特質，但在危機中強調的是冷靜而非活潑。\n*   (D) agitation (n.) 意指「焦慮，激動」，與文意相反。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) parsimonious。\n*   **parsimonious (adj.)** 意指「吝嗇的，過於節儉的」，題目中描述「儘管財富龐大」卻「拒絕多花一分錢，甚至在基本生活必需品上也是如此」，這正是吝嗇的表現。\n*   **句意翻譯：** 儘管財富龐大，這位老人卻是出了名的吝嗇，即使在基本生活必需品上，他也拒絕多花一分錢。\n*   (A) magnanimous (adj.) 意指「寬宏大量的，慷慨的」，與文意相反。\n*   (B) jovial (adj.) 意指「歡樂的，友好的」，與是否花錢無關。\n*   (D) ostentatious (adj.) 意指「炫耀的，賣弄的」，其花錢習慣通常是揮霍的，與文意相反。",
+    "sentence": "Despite his vast wealth, the old man was notoriously _______, refusing to spend a penny more than absolutely necessary, even on basic comforts."
+  },
+  {
+    "id": 136,
+    "options": {
+      "A": "trepidation",
+      "B": "equanimity",
+      "C": "vivacity",
+      "D": "agitation"
     },
-    {
-        "id": 37,
-        "question": "During her testimony, the witness subtly began to _______ to a previous incident without directly mentioning the details, hoping the jury would grasp her meaning.",
-        "options": {
-            "A": "stipulate",
-            "B": "allude",
-            "C": "enumerate",
-            "D": "interpolate"
-        },
-        "answer": "B",
-        "explanation": "正確答案是 (B) allude。\n*   **allude (v.)** 意指「暗指，間接提及」，題目中「微妙地開始...而沒有直接提及細節」正是此詞的確切含義。\n*   **句意翻譯：** 在作證期間，證人微妙地開始暗示之前的一起事件，沒有直接提及細節，希望陪審團能領會她的意思。\n*   (A) stipulate (v.) 意指「規定，約定」，不符文意。\n*   (C) enumerate (v.) 意指「列舉，點數」，與「沒有直接提及細節」的語境相反。\n*   (D) interpolate (v.) 意指「插入（文字、話語等）」，不符文意。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) equanimity。\n*   **equanimity (n.)** 意指「平靜，鎮定」，題目中描述資深新聞主播在「直播期間遇到突發技術故障」時仍能「平靜地對觀眾講話」，顯示其情緒穩定、處變不驚。\n*   **句意翻譯：** 即使在直播期間遇到突發技術故障，這位資深新聞主播依然保持鎮定，平靜地對觀眾講話。\n*   (A) trepidation (n.) 意指「恐懼，不安」，與文意相反。\n*   (C) vivacity (n.) 意指「活潑，生動」，雖然是積極特質，但在危機中強調的是冷靜而非活潑。\n*   (D) agitation (n.) 意指「焦慮，激動」，與文意相反。",
+    "sentence": "Even when faced with unexpected technical glitches during the live broadcast, the seasoned news anchor maintained his _______, calmly addressing the audience."
+  },
+  {
+    "id": 137,
+    "options": {
+      "A": "stipulate",
+      "B": "allude",
+      "C": "enumerate",
+      "D": "interpolate"
     },
-    {
-        "id": 38,
-        "question": "The patient's worsened condition was ultimately deemed _______, as it was a direct side effect of the prescribed medication rather than the original illness.",
-        "options": {
-            "A": "idiopathic",
-            "B": "congenital",
-            "C": "iatrogenic",
-            "D": "psychosomatic"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) iatrogenic。\n*   **iatrogenic (adj.)** 意指「醫源性的，由醫療引起的」，題目中明確指出病患狀況惡化是「所開藥物的直接副作用，而非原來的疾病」，這正是醫源性疾病的定義。\n*   **句意翻譯：** 病患惡化的病情最終被認定為醫源性的，因為它是所開藥物的直接副作用，而非原來的疾病。\n*   (A) idiopathic (adj.) 意指「特發性的，病因不明的」，與「直接副作用」的已知原因不符。\n*   (B) congenital (adj.) 意指「先天的，與生俱來的」，不符文意。\n*   (D) psychosomatic (adj.) 意指「心身疾病的，身心相關的」，與藥物副作用無關。"
+    "answer": "B",
+    "explanation": "正確答案是 (B) allude。\n*   **allude (v.)** 意指「暗指，間接提及」，題目中「微妙地開始...而沒有直接提及細節」正是此詞的確切含義。\n*   **句意翻譯：** 在作證期間，證人微妙地開始暗示之前的一起事件，沒有直接提及細節，希望陪審團能領會她的意思。\n*   (A) stipulate (v.) 意指「規定，約定」，不符文意。\n*   (C) enumerate (v.) 意指「列舉，點數」，與「沒有直接提及細節」的語境相反。\n*   (D) interpolate (v.) 意指「插入（文字、話語等）」，不符文意。",
+    "sentence": "During her testimony, the witness subtly began to _______ to a previous incident without directly mentioning the details, hoping the jury would grasp her meaning."
+  },
+  {
+    "id": 138,
+    "options": {
+      "A": "idiopathic",
+      "B": "congenital",
+      "C": "iatrogenic",
+      "D": "psychosomatic"
     },
-    {
-        "id": 39,
-        "question": "Her _______ nature made her an easy target for the con artists, as she believed every word they said without suspicion.",
-        "options": {
-            "A": "cynical",
-            "B": "sagacious",
-            "C": "guileless",
-            "D": "astute"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) guileless。\n*   **guileless (adj.)** 意指「天真無邪的，沒有詭計的，誠實的」，題目中描述她「輕易相信騙子的每一句話，沒有任何懷疑」，正是天真無邪的表現，使其成為容易受騙的目標。\n*   **句意翻譯：** 她天真無邪的性格使她成為騙子們的容易目標，因為她毫無懷疑地相信他們所說的每一句話。\n*   (A) cynical (adj.) 意指「憤世嫉俗的，懷疑的」，與文意相反。\n*   (B) sagacious (adj.) 意指「睿智的，聰明的」，聰明的人不容易受騙。\n*   (D) astute (adj.) 意指「精明的，敏銳的」，精明的人不容易受騙。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) iatrogenic。\n*   **iatrogenic (adj.)** 意指「醫源性的，由醫療引起的」，題目中明確指出病患狀況惡化是「所開藥物的直接副作用，而非原來的疾病」，這正是醫源性疾病的定義。\n*   **句意翻譯：** 病患惡化的病情最終被認定為醫源性的，因為它是所開藥物的直接副作用，而非原來的疾病。\n*   (A) idiopathic (adj.) 意指「特發性的，病因不明的」，與「直接副作用」的已知原因不符。\n*   (B) congenital (adj.) 意指「先天的，與生俱來的」，不符文意。\n*   (D) psychosomatic (adj.) 意指「心身疾病的，身心相關的」，與藥物副作用無關。",
+    "sentence": "The patient's worsened condition was ultimately deemed _______, as it was a direct side effect of the prescribed medication rather than the original illness."
+  },
+  {
+    "id": 139,
+    "options": {
+      "A": "cynical",
+      "B": "sagacious",
+      "C": "guileless",
+      "D": "astute"
     },
-    {
-        "id": 40,
-        "question": "Despite her advanced age, the hostess remained remarkably _______, dancing late into the night and engaging every guest in lively conversation.",
-        "options": {
-            "A": "lethargic",
-            "B": "languid",
-            "C": "vivacious",
-            "D": "somber"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) vivacious。\n*   **vivacious (adj.)** 意指「活潑的，生氣勃勃的」，題目中描述儘管年事已高，女主人卻「跳舞到深夜」並「與每位賓客進行熱烈交談」，展現了極大的活力與生氣。\n*   **句意翻譯：** 儘管年事已高，這位女主人依然保持著驚人的活力，跳舞到深夜，並與每位賓客進行熱烈交談。\n*   (A) lethargic (adj.) 意指「昏睡的，倦怠的」，與文意相反。\n*   (B) languid (adj.) 意指「無力的，懶洋洋的」，與文意相反。\n*   (D) somber (adj.) 意指「陰沉的，憂鬱的」，與文意相反。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) guileless。\n*   **guileless (adj.)** 意指「天真無邪的，沒有詭計的，誠實的」，題目中描述她「輕易相信騙子的每一句話，沒有任何懷疑」，正是天真無邪的表現，使其成為容易受騙的目標。\n*   **句意翻譯：** 她天真無邪的性格使她成為騙子們的容易目標，因為她毫無懷疑地相信他們所說的每一句話。\n*   (A) cynical (adj.) 意指「憤世嫉俗的，懷疑的」，與文意相反。\n*   (B) sagacious (adj.) 意指「睿智的，聰明的」，聰明的人不容易受騙。\n*   (D) astute (adj.) 意指「精明的，敏銳的」，精明的人不容易受騙。",
+    "sentence": "Her _______ nature made her an easy target for the con artists, as she believed every word they said without suspicion."
+  },
+  {
+    "id": 140,
+    "options": {
+      "A": "lethargic",
+      "B": "languid",
+      "C": "vivacious",
+      "D": "somber"
     },
-    {
-        "id": 41,
-        "question": "The senator took deep _______ at the journalist's implication that he was involved in the scandal, demanding a public apology.",
-        "options": {
-            "A": "depravity",
-            "B": "lethargy",
-            "C": "umbrage",
-            "D": "expiation"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) umbrage。Umbrage 指的是因感到受冒犯或生氣而產生的不悅或憤怒。句中表示參議員對於記者暗示他涉入醜聞感到非常生氣並要求道歉，'took umbrage at' 是一個常見的搭配。其他選項：(A) depravity 指道德敗壞；(B) lethargy 指倦怠、缺乏活力；(D) expiation 指贖罪、彌補。它們都不符合語境。\n句意：參議員對於記者暗示他涉入醜聞深感冒犯，要求公開道歉。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) vivacious。\n*   **vivacious (adj.)** 意指「活潑的，生氣勃勃的」，題目中描述儘管年事已高，女主人卻「跳舞到深夜」並「與每位賓客進行熱烈交談」，展現了極大的活力與生氣。\n*   **句意翻譯：** 儘管年事已高，這位女主人依然保持著驚人的活力，跳舞到深夜，並與每位賓客進行熱烈交談。\n*   (A) lethargic (adj.) 意指「昏睡的，倦怠的」，與文意相反。\n*   (B) languid (adj.) 意指「無力的，懶洋洋的」，與文意相反。\n*   (D) somber (adj.) 意指「陰沉的，憂鬱的」，與文意相反。",
+    "sentence": "Despite her advanced age, the hostess remained remarkably _______, dancing late into the night and engaging every guest in lively conversation."
+  },
+  {
+    "id": 141,
+    "options": {
+      "A": "depravity",
+      "B": "lethargy",
+      "C": "umbrage",
+      "D": "expiation"
     },
-    {
-        "id": 42,
-        "question": "Facing overwhelming government forces, the small band of _______ continued their guerilla warfare, hoping to eventually spark a wider rebellion.",
-        "options": {
-            "A": "paragons",
-            "B": "scaramouches",
-            "C": "insurgents",
-            "D": "obsequious"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) insurgents。Insurgent 指的是叛亂者、起義者，通常指反抗政府或現有權威的人。句中描述他們進行游擊戰並希望引發更大規模的叛亂，符合此意。其他選項：(A) paragons 指模範、典範；(B) scaramouches 指小丑、無賴；(D) obsequious 是形容詞，指諂媚的、奉承的，不適合此處的名詞語境。\n句意：面對壓倒性的政府軍，這小股叛亂分子繼續進行游擊戰，希望最終能點燃更大規模的叛亂。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) umbrage。Umbrage 指的是因感到受冒犯或生氣而產生的不悅或憤怒。句中表示參議員對於記者暗示他涉入醜聞感到非常生氣並要求道歉，'took umbrage at' 是一個常見的搭配。其他選項：(A) depravity 指道德敗壞；(B) lethargy 指倦怠、缺乏活力；(D) expiation 指贖罪、彌補。它們都不符合語境。\n句意：參議員對於記者暗示他涉入醜聞深感冒犯，要求公開道歉。",
+    "sentence": "The senator took deep _______ at the journalist's implication that he was involved in the scandal, demanding a public apology."
+  },
+  {
+    "id": 142,
+    "options": {
+      "A": "paragons",
+      "B": "scaramouches",
+      "C": "insurgents",
+      "D": "obsequious"
     },
-    {
-        "id": 43,
-        "question": "The politician's _______ rhetoric, full of hateful accusations and calls to action, only served to further polarize the already divided community.",
-        "options": {
-            "A": "plaintive",
-            "B": "bucolic",
-            "C": "pensive",
-            "D": "incendiary"
-        },
-        "answer": "D",
-        "explanation": "正確答案是 (D) incendiary。Incendiary 作為形容詞，指煽動性的、縱火的，常用來形容言論或行為意圖激起衝突或暴力。句中描述充滿仇恨指控和行動號召的言論，旨在使社群更加兩極化，'incendiary rhetoric' 符合此意。其他選項：(A) plaintive 指哀傷的、悲鳴的；(B) bucolic 指田園的、鄉村的；(C) pensive 指沉思的、憂鬱的。它們都不符合語境。\n句意：這位政治家煽動性的言辭，充滿仇恨的指控和行動號召，只會讓這個已經分裂的社群更加兩極化。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) insurgents。Insurgent 指的是叛亂者、起義者，通常指反抗政府或現有權威的人。句中描述他們進行游擊戰並希望引發更大規模的叛亂，符合此意。其他選項：(A) paragons 指模範、典範；(B) scaramouches 指小丑、無賴；(D) obsequious 是形容詞，指諂媚的、奉承的，不適合此處的名詞語境。\n句意：面對壓倒性的政府軍，這小股叛亂分子繼續進行游擊戰，希望最終能點燃更大規模的叛亂。",
+    "sentence": "Facing overwhelming government forces, the small band of _______ continued their guerilla warfare, hoping to eventually spark a wider rebellion."
+  },
+  {
+    "id": 143,
+    "options": {
+      "A": "plaintive",
+      "B": "bucolic",
+      "C": "pensive",
+      "D": "incendiary"
     },
-    {
-        "id": 44,
-        "question": "To _______ the angry gods, the ancient civilization would often offer elaborate sacrifices and perform intricate rituals.",
-        "options": {
-            "A": "deride",
-            "B": "consecrate",
-            "C": "propitiate",
-            "D": "expiate"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) propitiate。Propitiate 指的是取悅、安撫，尤指透過行動來平息神靈或權威者的憤怒，以贏回其好感。句中描述古文明為安撫憤怒的神靈而獻祭和舉行儀式，符合此意。其他選項：(A) deride 指嘲笑、嘲弄；(B) consecrate 指奉獻、使神聖化；(D) expiate 指贖罪、彌補過失。它們都不符合語境。\n句意：為了安撫憤怒的神靈，這個古老文明經常獻上精美的祭品並舉行複雜的儀式。"
+    "answer": "D",
+    "explanation": "正確答案是 (D) incendiary。Incendiary 作為形容詞，指煽動性的、縱火的，常用來形容言論或行為意圖激起衝突或暴力。句中描述充滿仇恨指控和行動號召的言論，旨在使社群更加兩極化，'incendiary rhetoric' 符合此意。其他選項：(A) plaintive 指哀傷的、悲鳴的；(B) bucolic 指田園的、鄉村的；(C) pensive 指沉思的、憂鬱的。它們都不符合語境。\n句意：這位政治家煽動性的言辭，充滿仇恨的指控和行動號召，只會讓這個已經分裂的社群更加兩極化。",
+    "sentence": "The politician's _______ rhetoric, full of hateful accusations and calls to action, only served to further polarize the already divided community."
+  },
+  {
+    "id": 144,
+    "options": {
+      "A": "deride",
+      "B": "consecrate",
+      "C": "propitiate",
+      "D": "expiate"
     },
-    {
-        "id": 45,
-        "question": "The assistant's _______ flattery and constant agreement with the CEO's every word quickly became irritating to everyone else in the meeting.",
-        "options": {
-            "A": "frugal",
-            "B": "irascible",
-            "C": "obsequious",
-            "D": "leonine"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) obsequious。Obsequious 指的是諂媚的、奉承的，過於順從的，以討好他人為目的。句中描述助理過度的奉承和不斷附和CEO的言論，令人感到厭煩，符合此意。其他選項：(A) frugal 指節儉的；(B) irascible 指易怒的；(D) leonine 指像獅子的。它們都不符合語境。\n句意：助理的諂媚奉承和對CEO每句話的持續附和，很快就讓會議中的其他人感到厭煩。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) propitiate。Propitiate 指的是取悅、安撫，尤指透過行動來平息神靈或權威者的憤怒，以贏回其好感。句中描述古文明為安撫憤怒的神靈而獻祭和舉行儀式，符合此意。其他選項：(A) deride 指嘲笑、嘲弄；(B) consecrate 指奉獻、使神聖化；(D) expiate 指贖罪、彌補過失。它們都不符合語境。\n句意：為了安撫憤怒的神靈，這個古老文明經常獻上精美的祭品並舉行複雜的儀式。",
+    "sentence": "To _______ the angry gods, the ancient civilization would often offer elaborate sacrifices and perform intricate rituals."
+  },
+  {
+    "id": 145,
+    "options": {
+      "A": "frugal",
+      "B": "irascible",
+      "C": "obsequious",
+      "D": "leonine"
     },
-    {
-        "id": 46,
-        "question": "The old chapel, long abandoned, was finally restored and re-_______ by the bishop, making it once again a sacred place of worship.",
-        "options": {
-            "A": "derided",
-            "B": "propitiated",
-            "C": "consecrated",
-            "D": "expiated"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) consecrated。Consecrate 指的是使神聖化、奉獻，通常指將某物（特別是建築物或物品）正式指定用於宗教或神聖目的。句中描述廢棄的小教堂被修復並由主教重新指定為神聖的禮拜場所，符合此意。其他選項：(A) derided 指嘲笑、嘲弄；(B) propitiated 指安撫、取悅；(D) expiated 指贖罪、彌補。它們都不符合語境。\n句意：那座長期廢棄的老教堂終於被修復並由主教重新祝聖，再次成為一個神聖的禮拜場所。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) obsequious。Obsequious 指的是諂媚的、奉承的，過於順從的，以討好他人為目的。句中描述助理過度的奉承和不斷附和CEO的言論，令人感到厭煩，符合此意。其他選項：(A) frugal 指節儉的；(B) irascible 指易怒的；(D) leonine 指像獅子的。它們都不符合語境。\n句意：助理的諂媚奉承和對CEO每句話的持續附和，很快就讓會議中的其他人感到厭煩。",
+    "sentence": "The assistant's _______ flattery and constant agreement with the CEO's every word quickly became irritating to everyone else in the meeting."
+  },
+  {
+    "id": 146,
+    "options": {
+      "A": "derided",
+      "B": "propitiated",
+      "C": "consecrated",
+      "D": "expiated"
     },
-    {
-        "id": 47,
-        "question": "Known for her unwavering integrity and profound wisdom, the elderly judge was considered a true _______ of ethical leadership in the legal community.",
-        "options": {
-            "A": "insurgent",
-            "B": "scaramouch",
-            "C": "paragon",
-            "D": "lethargy"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) paragon。Paragon 指的是典範、模範，是某種特質的完美典型。句中描述這位年長的法官因其堅定的正直和深邃的智慧而被視為倫理領導的典範，符合此意。其他選項：(A) insurgent 指叛亂者；(B) scaramouch 指小丑、無賴；(D) lethargy 指倦怠、缺乏活力。它們都不符合語境。\n句意：這位年長的法官以其堅定不移的正直和深邃的智慧而聞名，被視為法律界倫理領導的真正典範。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) consecrated。Consecrate 指的是使神聖化、奉獻，通常指將某物（特別是建築物或物品）正式指定用於宗教或神聖目的。句中描述廢棄的小教堂被修復並由主教重新指定為神聖的禮拜場所，符合此意。其他選項：(A) derided 指嘲笑、嘲弄；(B) propitiated 指安撫、取悅；(D) expiated 指贖罪、彌補。它們都不符合語境。\n句意：那座長期廢棄的老教堂終於被修復並由主教重新祝聖，再次成為一個神聖的禮拜場所。",
+    "sentence": "The old chapel, long abandoned, was finally restored and re-_______ by the bishop, making it once again a sacred place of worship."
+  },
+  {
+    "id": 147,
+    "options": {
+      "A": "insurgent",
+      "B": "scaramouch",
+      "C": "paragon",
+      "D": "lethargy"
     },
-    {
-        "id": 48,
-        "question": "After a week of intense exams, a deep sense of _______ settled over the students, making it hard for them to find motivation for anything else.",
-        "options": {
-            "A": "umbrage",
-            "B": "depravity",
-            "C": "lethargy",
-            "D": "expiation"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) lethargy。Lethargy 指的是倦怠、無精打采、缺乏能量和熱情。句中描述學生在經歷一週的緊張考試後，感到深深的疲憊和缺乏動力，符合此意。其他選項：(A) umbrage 指生氣、受冒犯；(B) depravity 指道德敗壞；(D) expiation 指贖罪、彌補。它們都不符合語境。\n句意：經過一週的緊張考試後，學生們感到深深的倦怠，難以找到做其他事情的動力。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) paragon。Paragon 指的是典範、模範，是某種特質的完美典型。句中描述這位年長的法官因其堅定的正直和深邃的智慧而被視為倫理領導的典範，符合此意。其他選項：(A) insurgent 指叛亂者；(B) scaramouch 指小丑、無賴；(D) lethargy 指倦怠、缺乏活力。它們都不符合語境。\n句意：這位年長的法官以其堅定不移的正直和深邃的智慧而聞名，被視為法律界倫理領導的真正典範。",
+    "sentence": "Known for her unwavering integrity and profound wisdom, the elderly judge was considered a true _______ of ethical leadership in the legal community."
+  },
+  {
+    "id": 148,
+    "options": {
+      "A": "umbrage",
+      "B": "depravity",
+      "C": "lethargy",
+      "D": "expiation"
     },
-    {
-        "id": 49,
-        "question": "Despite his immense wealth, the billionaire lived a remarkably _______ lifestyle, preferring simple meals and modest clothing.",
-        "options": {
-            "A": "obsequious",
-            "B": "pensive",
-            "C": "frugal",
-            "D": "irascible"
-        },
-        "answer": "C",
-        "explanation": "正確答案是 (C) frugal。Frugal 指的是節儉的、樸素的，特別是指在金錢和食物方面不浪費。句中描述億萬富翁儘管財富驚人，卻過著簡樸的生活，喜歡簡單的飯菜和樸素的衣著，符合此意。其他選項：(A) obsequious 指諂媚的；(B) pensive 指沉思的；(D) irascible 指易怒的。它們都不符合語境。\n句意：儘管他坐擁巨額財富，這位億萬富翁卻過著驚人地節儉的生活，偏愛簡單的飯菜和樸素的衣著。"
+    "answer": "C",
+    "explanation": "正確答案是 (C) lethargy。Lethargy 指的是倦怠、無精打采、缺乏能量和熱情。句中描述學生在經歷一週的緊張考試後，感到深深的疲憊和缺乏動力，符合此意。其他選項：(A) umbrage 指生氣、受冒犯；(B) depravity 指道德敗壞；(D) expiation 指贖罪、彌補。它們都不符合語境。\n句意：經過一週的緊張考試後，學生們感到深深的倦怠，難以找到做其他事情的動力。",
+    "sentence": "After a week of intense exams, a deep sense of _______ settled over the students, making it hard for them to find motivation for anything else."
+  },
+  {
+    "id": 149,
+    "options": {
+      "A": "obsequious",
+      "B": "pensive",
+      "C": "frugal",
+      "D": "irascible"
     },
-    {
-        "id": 50,
-        "question": "The ancient ritual of public confession and penance was believed to bring about the _______ of one's sins, cleansing the soul of guilt.",
-        "options": {
-            "A": "umbrage",
-            "B": "propitiation",
-            "C": "depravity",
-            "D": "expiation"
-        },
-        "answer": "D",
-        "explanation": "正確答案是 (D) expiation。Expiation 指的是贖罪、彌補罪過或錯誤的行為。句中描述透過公開懺悔和苦行來洗清罪孽並消除內疚，符合此意。其他選項：(A) umbrage 指生氣、受冒犯；(B) propitiation 指安撫、取悅（名詞形式）；(C) depravity 指道德敗壞。雖然 'propitiation' 有點相關，但 'expiation of sins' 是更為精確且常見的搭配，直接指代為罪孽贖罪。\n句意：古老的公開懺悔和苦行儀式被認為能帶來罪孽的贖罪，潔淨靈魂擺脫罪惡感。"
-    }
+    "answer": "C",
+    "explanation": "正確答案是 (C) frugal。Frugal 指的是節儉的、樸素的，特別是指在金錢和食物方面不浪費。句中描述億萬富翁儘管財富驚人，卻過著簡樸的生活，喜歡簡單的飯菜和樸素的衣著，符合此意。其他選項：(A) obsequious 指諂媚的；(B) pensive 指沉思的；(D) irascible 指易怒的。它們都不符合語境。\n句意：儘管他坐擁巨額財富，這位億萬富翁卻過著驚人地節儉的生活，偏愛簡單的飯菜和樸素的衣著。",
+    "sentence": "Despite his immense wealth, the billionaire lived a remarkably _______ lifestyle, preferring simple meals and modest clothing."
+  },
+  {
+    "id": 150,
+    "options": {
+      "A": "umbrage",
+      "B": "propitiation",
+      "C": "depravity",
+      "D": "expiation"
+    },
+    "answer": "D",
+    "explanation": "正確答案是 (D) expiation。Expiation 指的是贖罪、彌補罪過或錯誤的行為。句中描述透過公開懺悔和苦行來洗清罪孽並消除內疚，符合此意。其他選項：(A) umbrage 指生氣、受冒犯；(B) propitiation 指安撫、取悅（名詞形式）；(C) depravity 指道德敗壞。雖然 'propitiation' 有點相關，但 'expiation of sins' 是更為精確且常見的搭配，直接指代為罪孽贖罪。\n句意：古老的公開懺悔和苦行儀式被認為能帶來罪孽的贖罪，潔淨靈魂擺脫罪惡感。",
+    "sentence": "The ancient ritual of public confession and penance was believed to bring about the _______ of one's sins, cleansing the soul of guilt."
+  }
 ]
