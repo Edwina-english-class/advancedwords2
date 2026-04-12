@@ -1,0 +1,1202 @@
+[
+  {
+    "id": 251,
+    "question": "The retired general's memoir was a ______ account of his career, glossing over failures and attributing every success to his own brilliant leadership.",
+    "options": {
+      "A": "candid",
+      "B": "veracious",
+      "C": "self-aggrandizing",
+      "D": "contrite"
+    },
+    "answer": "C",
+    "explanation": "Self-aggrandizing（自我吹捧的）描述回憶錄中刻意誇大個人功績、掩蓋失敗的敘事方式。Candid 是坦白的，veracious 是真實誠實的，contrite 是痛悔的，三者均描述誠實或謙遜的態度，與「粉飾失敗、獨攬功勞」的描述相反。"
+  },
+  {
+    "id": 252,
+    "question": "The village's ______ festival, held every two years, brought together communities from across the region to celebrate the harvest with music, dance, and feasting.",
+    "options": {
+      "A": "quotidian",
+      "B": "biennial",
+      "C": "perennial",
+      "D": "sporadic"
+    },
+    "answer": "B",
+    "explanation": "Biennial (a.) 兩年一次的，精確描述「每兩年舉辦一次」的慶典。Quotidian 是日常普通的，perennial 是四季不斷或長年持續的，sporadic 是偶發不規律的，三者均不準確描述「固定兩年一次」的週期性活動。"
+  },
+  {
+    "id": 253,
+    "question": "The new medication showed ______ results in early trials, successfully eliminating the virus in over ninety percent of patients with minimal side effects.",
+    "options": {
+      "A": "inefficacious",
+      "B": "nugatory",
+      "C": "efficacious",
+      "D": "futile"
+    },
+    "answer": "C",
+    "explanation": "Efficacious (a.) 有效的，形容藥物在試驗中展現出高度的治療成效，符合「消滅九成患者體內病毒」的描述。Inefficacious 是無效的（反義），nugatory 是無用的（反義），futile 是徒勞的（反義），三者均表示無效或無用。"
+  },
+  {
+    "id": 254,
+    "question": "The author's latest work was praised for its ______ portrayal of grief, capturing the raw, unfiltered emotions of loss without resorting to sentimentality.",
+    "options": {
+      "A": "maudlin",
+      "B": "lachrymose",
+      "C": "unflinching",
+      "D": "saccharine"
+    },
+    "answer": "C",
+    "explanation": "Unflinching（不退縮的；直視的）描述對悲傷毫不迴避、真實呈現的刻畫方式，且「without sentimentality」與 maudlin、lachrymose、saccharine 均相悖。後三者均指過度傷感或甜膩，與「未訴諸煽情」的讚揚相反。"
+  },
+  {
+    "id": 255,
+    "question": "The fashion mogul's ______ taste in interior design was evident in every room of her mansion: gold fixtures, marble floors, and custom-made furniture from Paris.",
+    "options": {
+      "A": "austere",
+      "B": "spartan",
+      "C": "opulent",
+      "D": "frugal"
+    },
+    "answer": "C",
+    "explanation": "Opulent（豪華的；富麗堂皇的）雖不在原表中，但可通過排除法選出。Austere 是簡樸嚴肅的，spartan 是斯巴達式樸素的，frugal 是節儉的，三者均描述簡約的品味，與「金色裝置、大理石地板、巴黎訂製家具」的奢華描述相反。"
+  },
+  {
+    "id": 256,
+    "question": "The journalist's investigation revealed that the charity was little more than a ______, with most donations being diverted to the founders' personal accounts.",
+    "options": {
+      "A": "benefaction",
+      "B": "facade",
+      "C": "sanctuary",
+      "D": "conduit"
+    },
+    "answer": "B",
+    "explanation": "Facade (n.) 建築物正面，引申為「表面的偽裝」，形容慈善機構只是掩蓋挪用公款的幌子。Benefaction 是善舉，sanctuary 是避難所，conduit 是溝渠或管道，三者均不描述「欺騙性的外表掩蓋不法行為」的含義。"
+  },
+  {
+    "id": 257,
+    "question": "The scientist's hypothesis, once considered ______ by mainstream academia, has since been validated by multiple independent research teams.",
+    "options": {
+      "A": "canonical",
+      "B": "orthodox",
+      "C": "heterodox",
+      "D": "irrefutable"
+    },
+    "answer": "C",
+    "explanation": "Heterodox (a.) 非正統的，形容假說起初不被主流學術界接受，與後文「後來獲多個研究團隊驗證」形成對比。Canonical 和 orthodox 均指符合正統的（反義），irrefutable 是無可反駁的（若是如此便不會被忽視），三者均不符合「起初被拒絕」的語境。"
+  },
+  {
+    "id": 258,
+    "question": "His argument, while superficially ______, collapsed under scrutiny when the flawed assumptions underlying each of his key claims were exposed.",
+    "options": {
+      "A": "fallacious",
+      "B": "plausible",
+      "C": "specious",
+      "D": "spurious"
+    },
+    "answer": "B",
+    "explanation": "Plausible (a.) 似是而非的，形容論點表面上看起來合理可信，但實際上站不住腳——「superficially plausible but collapsed under scrutiny」是經典的反轉結構。Fallacious 和 spurious 明確指謬誤或假的（不需「仔細審查才發現」），specious 也是似是而非，但 plausible 更強調「表面」的合理性。"
+  },
+  {
+    "id": 259,
+    "question": "The judge issued a stern ______ to the lawyer for repeatedly interrupting opposing counsel, warning that further misconduct would result in contempt charges.",
+    "options": {
+      "A": "accolade",
+      "B": "encomium",
+      "C": "admonition",
+      "D": "panegyric"
+    },
+    "answer": "C",
+    "explanation": "Admonition（訓誡；警告）由 admonish（訓誡；警告）衍生，描述法官對律師不當行為的正式警告。Accolade 和 panegyric 均是讚揚，encomium 是頌辭，三者均為正面評價，與「嚴厲警告」相反。"
+  },
+  {
+    "id": 260,
+    "question": "The medieval city's ______ alleyways, twisting unpredictably through the old quarter, made navigation nearly impossible for first-time visitors.",
+    "options": {
+      "A": "rectilinear",
+      "B": "labyrinthine",
+      "C": "limpid",
+      "D": "pellucid"
+    },
+    "answer": "B",
+    "explanation": "Labyrinthine（迷宮般的）描述如迷宮般複雜曲折的小巷，使初次到訪者迷失方向。Rectilinear 是直線的（反義），limpid 和 pellucid 均指清澈明瞭，三者均不描述「使人迷失方向的複雜街道」。"
+  },
+  {
+    "id": 261,
+    "question": "The CEO's ______ manner in meetings—frequently cutting off speakers and dismissing ideas without consideration—created a culture of fear that stifled creativity.",
+    "options": {
+      "A": "deferential",
+      "B": "peremptory",
+      "C": "amenable",
+      "D": "complaisant"
+    },
+    "answer": "B",
+    "explanation": "Peremptory (a.) 專橫的，形容不容置疑、打斷他人並駁回意見的強硬態度，與「製造恐懼文化、扼殺創意」的後果吻合。Deferential 是恭順的，amenable 是通情達理的，complaisant 是討好的，三者均描述順從或願意配合的態度，與「獨斷」相反。"
+  },
+  {
+    "id": 262,
+    "question": "The mountain village's ______ beauty—untouched forests, crystal streams, and ancient stone paths—drew artists and poets seeking inspiration far from city life.",
+    "options": {
+      "A": "garish",
+      "B": "pastoral",
+      "C": "desolate",
+      "D": "lurid"
+    },
+    "answer": "B",
+    "explanation": "Pastoral (a.) 田園生活的，形容自然純樸的鄉村風光，與「未受破壞的森林、清澈溪流、古老石路」的描述完全吻合。Garish 是俗麗刺眼的，desolate 是荒涼的，lurid 是令人驚怕的，三者均描述令人不適的景象，與「吸引藝術家和詩人」的美景相反。"
+  },
+  {
+    "id": 263,
+    "question": "The whistleblower's decision to come forward was not ______ but the result of years of internal anguish and failed attempts to raise concerns through proper channels.",
+    "options": {
+      "A": "deliberate",
+      "B": "premeditated",
+      "C": "impulsive",
+      "D": "calculated"
+    },
+    "answer": "C",
+    "explanation": "Impulsive（衝動的）描述未經深思熟慮的突發行動，而題目強調決定「並非衝動，而是多年煎熬的結果」，故空格應填「衝動的」以形成對比。Deliberate、premeditated 和 calculated 均強調深思熟慮，與「多年掙扎後的結果」的描述反而一致，不構成對比。"
+  },
+  {
+    "id": 264,
+    "question": "The senator's ______ during the filibuster—speaking for fourteen hours without pause—was both physically and rhetorically remarkable.",
+    "options": {
+      "A": "torpor",
+      "B": "indolence",
+      "C": "stamina",
+      "D": "languor"
+    },
+    "answer": "C",
+    "explanation": "Stamina（耐力；持久力）描述連續演說十四小時所需的體力和精神力，與「令人矚目的肉體與修辭成就」吻合。Torpor 是萎靡不活躍，indolence 是懶惰，languor 是衰弱憔悴，三者均描述缺乏活力的狀態，與「十四小時不停歇」的壯舉相反。"
+  },
+  {
+    "id": 265,
+    "question": "The architect's design was criticized as ______, prioritizing visual spectacle over functional considerations that would affect the building's daily users.",
+    "options": {
+      "A": "utilitarian",
+      "B": "ergonomic",
+      "C": "meretricious",
+      "D": "commodious"
+    },
+    "answer": "C",
+    "explanation": "Meretricious (a.) 華而不實的，形容設計只注重外觀炫耀而忽略實際功能，與「視覺奇觀優先於功能考量」的批評完全吻合。Utilitarian 是強調實用的，ergonomic 是符合人體工學的，commodious 是寬敞的，三者均為正面或功能性的描述，與「華而不實」相反。"
+  },
+  {
+    "id": 266,
+    "question": "The psychologist noted that the patient's ______ behavior—hoarding objects, rarely leaving home, and avoiding all social contact—had worsened significantly over the past year.",
+    "options": {
+      "A": "gregarious",
+      "B": "ebullient",
+      "C": "reclusive",
+      "D": "convivial"
+    },
+    "answer": "C",
+    "explanation": "Reclusive (a.) 隱居的，形容迴避社會接觸、足不出戶的行為模式，與「囤積物品、幾乎不出門、避免所有社交」的描述一致。Gregarious 是群居愛社交的（反義），ebullient 是熱情洋溢的，convivial 是歡樂好客的，三者均描述外向社交的特質。"
+  },
+  {
+    "id": 267,
+    "question": "The professor's lectures were ______ exercises in obscurity, filled with jargon and needless complexity that left even graduate students bewildered.",
+    "options": {
+      "A": "perspicuous",
+      "B": "pellucid",
+      "C": "abstruse",
+      "D": "lucid"
+    },
+    "answer": "C",
+    "explanation": "Abstruse（深奧難懂的）雖不在表中，但可通過排除法選出。Perspicuous、pellucid 和 lucid 均指清晰易懂，三者均與「充滿術語和不必要的複雜性、讓研究生困惑」的描述相反。C 最符合「晦澀難懂」的語境。"
+  },
+  {
+    "id": 268,
+    "question": "Despite the harsh working conditions, the miners showed remarkable ______, continuing their shift twelve hours after a partial tunnel collapse had trapped three of their colleagues.",
+    "options": {
+      "A": "timidity",
+      "B": "trepidation",
+      "C": "fortitude",
+      "D": "pusillanimity"
+    },
+    "answer": "C",
+    "explanation": "Fortitude (n.) 堅忍不拔的，形容在危難中堅持工作的精神力量。Timidity 是膽小，trepidation 是驚恐，pusillanimity 是懦弱，三者均描述面對困難時退縮的態度，與「隧道部分坍塌後仍繼續工作十二小時」的堅韌相反。"
+  },
+  {
+    "id": 269,
+    "question": "The financial analyst warned that the startup's valuation was ______, built on speculative projections that bore little resemblance to actual revenue figures.",
+    "options": {
+      "A": "tangible",
+      "B": "substantiated",
+      "C": "illusory",
+      "D": "immutable"
+    },
+    "answer": "C",
+    "explanation": "Illusory (a.) 虛幻的，形容估值建立在不切實際的投機預測上，與真實收入數字嚴重脫節。Tangible 是真實可觸知的（反義），substantiated 是有依據的（反義），immutable 是不變的（描述穩定性而非真實性），三者均不描述「虛假不實的估值」。"
+  },
+  {
+    "id": 270,
+    "question": "The labor union's ______ demands—a forty percent wage increase, a thirty-hour work week, and lifetime job security—were rejected outright by management.",
+    "options": {
+      "A": "modest",
+      "B": "reasonable",
+      "C": "exorbitant",
+      "D": "judicious"
+    },
+    "answer": "C",
+    "explanation": "Exorbitant (a.) 過分的；過度的，形容遠超合理範圍的要求，與「管理層直接拒絕」的反應吻合。Modest 和 reasonable 均描述合理適中的（反義），judicious 是明智的，三者均不描述「被直接拒絕的過分要求」。"
+  },
+  {
+    "id": 271,
+    "question": "The documentary's ______ footage of factory farming practices was difficult to watch but served as a powerful catalyst for public debate about animal welfare.",
+    "options": {
+      "A": "anodyne",
+      "B": "harrowing",
+      "C": "innocuous",
+      "D": "benign"
+    },
+    "answer": "B",
+    "explanation": "Harrowing（令人痛苦的；折磨人的）描述讓人難以直視的工廠農場紀錄片畫面，與「難以觀看但引發公眾討論」的描述吻合。Anodyne 是不得罪人的，innocuous 和 benign 均是無害的，三者均描述溫和無衝擊性的內容，與「難以觀看的真實影像」相反。"
+  },
+  {
+    "id": 272,
+    "question": "The ______ between the two professors—once close colleagues—had festered for decades, rooted in a bitter dispute over credit for a jointly authored paper.",
+    "options": {
+      "A": "camaraderie",
+      "B": "rapport",
+      "C": "rancor",
+      "D": "concord"
+    },
+    "answer": "C",
+    "explanation": "Rancor (n.) 深仇；怨恨，形容長達數十年、因論文署名爭議而積累的深層敵意，與「festered」（腐化）搭配完美。Camaraderie 是友情，rapport 是融洽的關係，concord 是和諧，三者均描述正面的人際關係，與「長年積怨」相反。"
+  },
+  {
+    "id": 273,
+    "question": "The committee's ______ handling of the harassment complaint—taking eighteen months to reach a conclusion and ultimately clearing all accused parties—outraged advocacy groups.",
+    "options": {
+      "A": "expeditious",
+      "B": "diligent",
+      "C": "dilatory",
+      "D": "assiduous"
+    },
+    "answer": "C",
+    "explanation": "Dilatory (a.) 慢吞吞的；拖延的，形容委員會處理投訴歷時十八個月的拖沓作風，激怒倡議團體。Expeditious 是迅速的（反義），diligent 是勤勉的，assiduous 是勤勉的，三者均描述積極投入的處理態度，與「拖延十八個月」相反。"
+  },
+  {
+    "id": 274,
+    "question": "The empress's ______ over the vast empire was unchallenged; no noble dared question her edicts, and her word was the final law of the land.",
+    "options": {
+      "A": "subordination",
+      "B": "deference",
+      "C": "ascendancy",
+      "D": "subservience"
+    },
+    "answer": "C",
+    "explanation": "Ascendancy (n.) 支配或統治地位，形容皇后對龐大帝國無可爭辯的絕對權威，與「沒有貴族敢質疑她的命令」的描述吻合。Subordination 和 subservience 均指臣服（描述被統治者），deference 是恭順（也是被統治者的態度），三者均描述從屬地位，而非統治者的主導地位。"
+  },
+  {
+    "id": 275,
+    "question": "The candidate's promise to ______ the outdated tax code was popular with voters, who had long complained about its complexity and inequity.",
+    "options": {
+      "A": "perpetuate",
+      "B": "entrench",
+      "C": "overhaul",
+      "D": "enshrine"
+    },
+    "answer": "C",
+    "explanation": "Overhaul（全面改革）描述對過時稅法進行徹底的改革重建，符合選民對「複雜且不公平」稅制的長期抱怨。Perpetuate 是使永久持續（反義），entrench 是使深根固柢（反義），enshrine 是奉為神聖（反義），三者均表示維持現狀或強化，與「改革」相反。"
+  },
+  {
+    "id": 276,
+    "question": "The ______ of the ancient city's water system—aqueducts stretching over fifty miles and capable of supplying water to one million residents—still astonishes modern engineers.",
+    "options": {
+      "A": "inadequacy",
+      "B": "rudimentariness",
+      "C": "ingenuity",
+      "D": "futility"
+    },
+    "answer": "C",
+    "explanation": "Ingenious (a.) 聰明的；有創造力的，其名詞 ingenuity 描述古代水利系統設計的卓越智慧，令現代工程師嘆為觀止。Inadequacy 是不足，rudimentariness 是初步原始，futility 是徒勞，三者均為負面評價，與「令現代工程師驚嘆」的讚揚相反。"
+  },
+  {
+    "id": 277,
+    "question": "The young diplomat quickly learned to ______ a natural enthusiasm that might offend conservative hosts, presenting a more measured and formal persona at state events.",
+    "options": {
+      "A": "accentuate",
+      "B": "amplify",
+      "C": "dissemble",
+      "D": "broadcast"
+    },
+    "answer": "C",
+    "explanation": "Dissemble (v.) 掩飾，指刻意隱藏真實性格或情感，以符合外交場合的期待。Accentuate 和 amplify 均指強調放大（反義），broadcast 是廣播傳播（反義），三者均描述展示或放大某種特質，與「壓抑以免冒犯」相反。"
+  },
+  {
+    "id": 278,
+    "question": "Critics accused the biographer of being overly ______, presenting every aspect of the subject's life in a flattering light while ignoring well-documented controversies.",
+    "options": {
+      "A": "censorious",
+      "B": "hagiographic",
+      "C": "detached",
+      "D": "scathing"
+    },
+    "answer": "B",
+    "explanation": "Hagiographic（聖徒傳式的；過度美化的）雖不在表中，但可通過排除法選出。Censorious 是嚴苛批評的（反義），detached 是客觀超然的，scathing 是嚴厲批評的（反義），三者均不描述「以奉承的方式呈現所有細節、忽略爭議」的偏頗敘述。B 最精確。"
+  },
+  {
+    "id": 279,
+    "question": "The athlete's ______ recovery from a career-threatening injury, returning to competition just six months after surgery, inspired fans worldwide.",
+    "options": {
+      "A": "sluggish",
+      "B": "protracted",
+      "C": "miraculous",
+      "D": "faltering"
+    },
+    "answer": "C",
+    "explanation": "Miraculous（奇蹟般的）描述在手術後僅六個月便重返賽場的驚人復原，激勵全球粉絲。Sluggish 是遲緩的，protracted 是拖延漫長的，faltering 是蹣跚猶豫的，三者均描述緩慢或不順利的復原過程，與「六個月快速重返」的驚人成就相反。"
+  },
+  {
+    "id": 280,
+    "question": "The negotiator's ______ tone during the hostage crisis was essential in preventing panic and maintaining open communication with the armed suspect.",
+    "options": {
+      "A": "agitated",
+      "B": "volatile",
+      "C": "tempestuous",
+      "D": "placid"
+    },
+    "answer": "D",
+    "explanation": "Placid (a.) 平靜的，形容談判者在危急情況下保持的冷靜語氣，有助於防止恐慌並維持溝通。Agitated 是激動不安的，volatile 是不穩定易爆的，tempestuous 是騷動狂暴的，三者均描述情緒激烈的狀態，與「防止恐慌的鎮定語氣」相反。"
+  },
+  {
+    "id": 281,
+    "question": "The scholar's ______ research on medieval trade routes took fifteen years to complete, requiring mastery of seven languages and consultation of archives in twelve countries.",
+    "options": {
+      "A": "cursory",
+      "B": "painstaking",
+      "C": "haphazard",
+      "D": "desultory"
+    },
+    "answer": "B",
+    "explanation": "Painstaking (a.) 煞費苦心的，形容需要十五年、精通七種語言、查閱十二國檔案的艱辛研究過程。Cursory 是粗略草率的，haphazard 是無計畫偶然的，desultory 是散漫的，三者均描述不認真或不嚴謹的研究態度，難以產生如此深度的學術成果。"
+  },
+  {
+    "id": 282,
+    "question": "The government's attempt to ______ the protest movement through mass arrests backfired, turning the activists into martyrs and galvanizing public support.",
+    "options": {
+      "A": "foment",
+      "B": "disseminate",
+      "C": "quash",
+      "D": "propagate"
+    },
+    "answer": "C",
+    "explanation": "Quash (v.) 撤銷；鎮壓，指政府試圖通過大規模逮捕來壓制抗議運動，卻適得其反。Foment 和 propagate 均指煽動或推廣（反義，效果上更接近政府的反效果），disseminate 是傳播，三者均不描述「試圖強行壓制」的鎮壓行動。"
+  },
+  {
+    "id": 283,
+    "question": "The artist's studio was a ______ of creativity: half-finished canvases covered every surface, paint tubes lay scattered across the floor, and sketches pinned to every wall.",
+    "options": {
+      "A": "bastion",
+      "B": "maelstrom",
+      "C": "sanctuary",
+      "D": "paragon"
+    },
+    "answer": "B",
+    "explanation": "Maelstrom (n.) 大漩渦；大混亂，在此以比喻方式描述藝術家工作室中充滿活力的創作混亂景象。Bastion 是堡壘，sanctuary 是避難所，paragon 是典範，三者均不描述「四處散落、充滿未完成作品」的混亂創意空間。"
+  },
+  {
+    "id": 284,
+    "question": "The administration's ______ approach to the housing crisis—offering tax credits while leaving root causes unaddressed—was dismissed by experts as woefully inadequate.",
+    "options": {
+      "A": "comprehensive",
+      "B": "radical",
+      "C": "piecemeal",
+      "D": "sweeping"
+    },
+    "answer": "C",
+    "explanation": "Piecemeal (adv.) 一件一件地；零碎地，形容只提供稅收抵免而不解決根本原因的零星措施，被專家批評為嚴重不足。Comprehensive 是全面的，radical 是根本性的，sweeping 是大規模的，三者均描述全面徹底的政策方向，與「零碎應對」相反。"
+  },
+  {
+    "id": 285,
+    "question": "The courtroom fell silent as the defense attorney delivered a ______ argument that systematically dismantled every piece of the prosecution's evidence.",
+    "options": {
+      "A": "cogent",
+      "B": "fallacious",
+      "C": "specious",
+      "D": "vacuous"
+    },
+    "answer": "A",
+    "explanation": "Cogent (a.) 有說服力的，形容邏輯嚴密、逐一反駁控方證據的強力論述，令法庭為之肅靜。Fallacious 是謬誤的，specious 是似是而非的，vacuous 是空洞無物的，三者均描述論述的弱點，與「使法庭肅靜的有力論辯」相反。"
+  },
+  {
+    "id": 286,
+    "question": "The university's endowment fund, which had grown ______ over the past decade, now provided full scholarships to over three hundred students annually.",
+    "options": {
+      "A": "negligibly",
+      "B": "imperceptibly",
+      "C": "prodigiously",
+      "D": "marginally"
+    },
+    "answer": "C",
+    "explanation": "Prodigiously（驚人地；大量地）描述捐款基金在十年間的巨大增長，足以每年資助三百多名學生的全額獎學金。Negligibly、imperceptibly 和 marginally 均描述細微或幾乎察覺不到的增長，三者均與「龐大規模的獎學金計畫」相矛盾。"
+  },
+  {
+    "id": 287,
+    "question": "The disgraced official's attempt to ______ himself with the new administration by leaking damaging information about his former allies was seen as cynical and self-serving.",
+    "options": {
+      "A": "alienate",
+      "B": "ingratiate",
+      "C": "antagonize",
+      "D": "estrange"
+    },
+    "answer": "B",
+    "explanation": "Ingratiate (v.) 迎合；討好，指試圖通過洩露前盟友的不利資訊來博取新政府歡心的行為，被視為自私投機。Alienate、antagonize 和 estrange 均指疏遠或使對立（反義），三者均描述產生敵意的行為，與「試圖討好」相反。"
+  },
+  {
+    "id": 288,
+    "question": "The novel's central character was a ______ figure: simultaneously heroic and villainous, inspiring and destructive, deeply human and utterly terrifying.",
+    "options": {
+      "A": "monolithic",
+      "B": "ambivalent",
+      "C": "anodyne",
+      "D": "enigmatic"
+    },
+    "answer": "D",
+    "explanation": "Enigmatic (a.) 神秘的；難解的，形容既英雄又反派、既鼓舞人心又具破壞力的複雜矛盾人物。Monolithic 是巨大單一的，anodyne 是溫和無害的，ambivalent 是矛盾情感的（指觀眾對人物的感受而非人物本身），三者均不如 enigmatic 貼切地描述「令人費解的複雜性格」。"
+  },
+  {
+    "id": 289,
+    "question": "The critic argued that the film's ______ ending, in which the villain inexplicably reformed and all tension resolved without consequence, undermined everything the narrative had built.",
+    "options": {
+      "A": "harrowing",
+      "B": "denouement",
+      "C": "fatuous",
+      "D": "poignant"
+    },
+    "answer": "C",
+    "explanation": "Fatuous (a.) 昏庸的；愚蠢無意義的，形容反派莫名其妙改過、所有張力無疾而終的荒謬結局，破壞了整部敘事的積累。Harrowing 是令人痛苦的，denouement 是結局（名詞，非形容詞），poignant 是辛酸感人的，三者均不描述「邏輯崩潰的荒謬結局」。"
+  },
+  {
+    "id": 290,
+    "question": "After years of ______ criticism from peers, the researcher finally received recognition when her methodology was adopted as the industry standard.",
+    "options": {
+      "A": "lavish",
+      "B": "effusive",
+      "C": "caustic",
+      "D": "glowing"
+    },
+    "answer": "C",
+    "explanation": "Caustic (a.) 腐蝕性的；譏諷的，形容同行對研究者長期以來的尖酸批評，與「最終獲得認可」形成對比。Lavish、effusive 和 glowing 均描述熱情洋溢的正面評價（反義），三者均與「終於獲得認可」的轉折敘述相反——若批評一直是正面的，就不需要「終於」得到認可了。"
+  },
+  {
+    "id": 291,
+    "question": "The prime minister's ______ refusal to resign, despite mounting evidence of corruption and calls from within her own party, was widely seen as political survival instinct overriding ethics.",
+    "options": {
+      "A": "contrite",
+      "B": "penitent",
+      "C": "obdurate",
+      "D": "deferential"
+    },
+    "answer": "C",
+    "explanation": "Obdurate (a.) 固執的；執拗的，形容即便黨內同僚呼籲、腐敗證據確鑿，仍拒絕辭職的頑固態度，被視為政治生存本能凌駕道德之上。Contrite 和 penitent 均指後悔懺悔（反義），deferential 是恭順的，三者均描述願意承認錯誤或服從的態度。"
+  },
+  {
+    "id": 292,
+    "question": "The company's ______ advertising campaign, which falsely claimed its supplements could cure serious diseases, resulted in a massive regulatory fine.",
+    "options": {
+      "A": "veracious",
+      "B": "mendacious",
+      "C": "perspicuous",
+      "D": "candid"
+    },
+    "answer": "B",
+    "explanation": "Mendacious（虛假的；說謊的）由 mendacity（虛假）衍生，形容宣稱補充劑能治癒嚴重疾病的不實廣告，導致監管重罰。Veracious 和 candid 均指真實誠實的（反義），perspicuous 是清晰明白的，三者均為正面或中性描述，與「虛假宣傳」相反。"
+  },
+  {
+    "id": 293,
+    "question": "The philosopher's ______ on the nature of consciousness was so densely argued that even specialists in the field required multiple readings to fully grasp his thesis.",
+    "options": {
+      "A": "haiku",
+      "B": "anecdote",
+      "C": "treatise",
+      "D": "bromide"
+    },
+    "answer": "C",
+    "explanation": "Treatise（論文；專論）雖不完全在表中，但可通過排除法選出。Haiku 是俳句，anecdote 是軼事，bromide 是陳腐言語，三者均不描述「密集論證、需多次閱讀才能理解的學術著作」。C 最準確。"
+  },
+  {
+    "id": 294,
+    "question": "The investigative report described a ______ of corruption reaching from local officials to the highest levels of the national government.",
+    "options": {
+      "A": "vestige",
+      "B": "nexus",
+      "C": "zephyr",
+      "D": "motif"
+    },
+    "answer": "B",
+    "explanation": "Nexus (n.) 連結，在此指從地方官員延伸至中央政府高層的腐敗網絡中各節點之間的連繫。Vestige 是遺跡痕跡，zephyr 是微風，motif 是主題，三者均不描述「從基層到高層的腐敗連結網絡」。"
+  },
+  {
+    "id": 295,
+    "question": "The town's economic decline was ______ but relentless; the factories closed one by one, and each closure sent a ripple of unemployment through the community.",
+    "options": {
+      "A": "precipitous",
+      "B": "cataclysmic",
+      "C": "gradual",
+      "D": "meteoric"
+    },
+    "answer": "C",
+    "explanation": "Gradual（漸進的）與 relentless（無情的）搭配描述緩慢但持續的經濟衰退，工廠逐一關閉。Precipitous 是急劇的，cataclysmic 是災難性劇變的，meteoric 是曇花一現的（通常形容短暫的崛起），三者均描述快速或戲劇性的變化，與「一家一家逐步關閉」的漸進過程相反。"
+  },
+  {
+    "id": 296,
+    "question": "The board member's ______ remarks about the company's financial health proved to be seriously misleading, as the true situation was far worse than he had implied.",
+    "options": {
+      "A": "candid",
+      "B": "forthright",
+      "C": "disingenuous",
+      "D": "veracious"
+    },
+    "answer": "C",
+    "explanation": "Disingenuous（不誠實的；虛偽的）描述表面上似乎坦誠但實際上具有誤導性的言論，與「真實情況遠比暗示的更糟」吻合。Candid、forthright 和 veracious 均指坦率誠實（反義），三者均描述真實透明的溝通，與「具有嚴重誤導性」相反。"
+  },
+  {
+    "id": 297,
+    "question": "The historian argued that the emperor's seemingly ______ decision to invade on two fronts simultaneously was, in fact, a strategic masterstroke that divided his enemies' attention.",
+    "options": {
+      "A": "astute",
+      "B": "judicious",
+      "C": "foolhardy",
+      "D": "perspicacious"
+    },
+    "answer": "C",
+    "explanation": "Foolhardy (a.) 有勇無謀的，題目結構是「看似有勇無謀，實際上是戰略高招」的反轉論述，故空格應填表面負面評價的詞。Astute、judicious 和 perspicacious 均為正面描述（聰明、明智、獨具慧眼），若從一開始便是正面評價，後文「實際上是高招」便不構成有趣的歷史論點。"
+  },
+  {
+    "id": 298,
+    "question": "The fashion designer's new collection was ______, drawing simultaneously from Victorian corsetry, Japanese streetwear, and African tribal patterns.",
+    "options": {
+      "A": "parochial",
+      "B": "insular",
+      "C": "eclectic",
+      "D": "provincial"
+    },
+    "answer": "C",
+    "explanation": "Eclectic (a.) 折衷的，形容同時汲取維多利亞緊身衣、日本街頭時尚和非洲部落圖案等多元文化靈感的設計風格。Parochial、insular 和 provincial 均指偏狹守舊的，三者均描述視野狹窄、不接受多元影響的態度，與「廣泛融合多種文化」相反。"
+  },
+  {
+    "id": 299,
+    "question": "The CEO's public persona was polished and ______, but those who worked closely with her described a volatile, demanding boss who tolerated no failure.",
+    "options": {
+      "A": "boorish",
+      "B": "churlish",
+      "C": "affable",
+      "D": "cantankerous"
+    },
+    "answer": "C",
+    "explanation": "Affable（和藹可親的）雖不在表中，但可通過排除法選出。Boorish 是粗野的，churlish 是脾氣暴躁的，cantankerous 是愛吵架的，三者均描述令人不快的性格，不可能成為「公眾形象」，與「光鮮亮麗的公眾形象」矛盾。C 最符合「表面和善」的語境。"
+  },
+  {
+    "id": 300,
+    "question": "The philanthropist established a foundation to ______ the legacy of indigenous languages, funding documentation projects before the last native speakers passed away.",
+    "options": {
+      "A": "obliterate",
+      "B": "expunge",
+      "C": "perpetuate",
+      "D": "subvert"
+    },
+    "answer": "C",
+    "explanation": "Perpetuate (v.)（使永久持續）在此表示透過文獻記錄延續原住民語言的遺產，與「在最後母語者離世前完成記錄」的保存行動吻合。Obliterate 和 expunge 均指消滅或刪除（反義），subvert 是顛覆，三者均描述破壞或抹去，與「建立基金會保存」的積極保護行動相反。"
+  },
+  {
+    "id": 301,
+    "question": "The election campaign was marred by ______ accusations from both sides, with each party leveling unsubstantiated charges of corruption against the other.",
+    "options": {
+      "A": "veracious",
+      "B": "scurrilous",
+      "C": "laudatory",
+      "D": "encomiasticx"
+    },
+    "answer": "B",
+    "explanation": "Scurrilous (a.) 辱罵的，形容選舉中雙方互相發動毫無根據的腐敗指控，語義精確。Veracious 是真實的，laudatory 是讚揚的，encomiasticx（拼寫錯誤，近 encomiastic）均為正面評價，三者均不描述「充斥無端指控的惡劣選戰」。"
+  },
+  {
+    "id": 302,
+    "question": "The ______ of the new transit system's opening—speeches, ribbon cuttings, and a free-ride day for residents—was carefully orchestrated to maximize positive media coverage.",
+    "options": {
+      "A": "debacle",
+      "B": "pandemonium",
+      "C": "fanfare",
+      "D": "turmoil"
+    },
+    "answer": "C",
+    "explanation": "Fanfare (n.) 大張旗鼓宣揚；熱議，形容精心安排的盛大開幕活動，旨在最大化正面媒體報導。Debacle 是大失敗，pandemonium 是大混亂，turmoil 是動亂，三者均描述負面或混亂的事件，與「精心安排的慶典」相反。"
+  },
+  {
+    "id": 303,
+    "question": "The veteran journalist's ______ understanding of the region's political dynamics allowed her to anticipate developments that caught her less experienced colleagues by surprise.",
+    "options": {
+      "A": "rudimentary",
+      "B": "superficial",
+      "C": "nascent",
+      "D": "nuanced"
+    },
+    "answer": "D",
+    "explanation": "Nuanced（細緻入微的）描述資深記者對地區政治的深層理解，使其能預判局勢發展。Rudimentary 是初步的，superficial 是表面的，nascent 是新興的，三者均描述不成熟或淺薄的理解，難以據此做出準確預測。"
+  },
+  {
+    "id": 304,
+    "question": "The mountaineer described the summit as a moment of pure ______, where physical exhaustion gave way to an overwhelming sense of clarity and transcendence.",
+    "options": {
+      "A": "torpor",
+      "B": "ennui",
+      "C": "euphoria",
+      "D": "doldrums"
+    },
+    "answer": "C",
+    "explanation": "Euphoria (n.) 幸福愉快感，描述登頂時肉體疲憊讓位於強烈幸福感和超脫感的心理體驗。Torpor 是萎靡不活躍，ennui 是倦怠厭倦，doldrums 是精神不振，三者均描述負面或消極的心理狀態，與「壓倒性的清晰感和超脫感」相反。"
+  },
+  {
+    "id": 305,
+    "question": "The debate moderator struggled to maintain order as the candidates became increasingly ______, interrupting each other and abandoning prepared talking points for personal attacks.",
+    "options": {
+      "A": "decorous",
+      "B": "bellicose",
+      "C": "equable",
+      "D": "placid"
+    },
+    "answer": "B",
+    "explanation": "Bellicose (a.) 好戰的，形容候選人在辯論中變得越來越具攻擊性，相互打斷並發動人身攻擊。Decorous 是禮節端莊的（反義），equable 是平靜的（反義），placid 是平靜的（反義），三者均描述保持冷靜有序的態度，與「越來越好鬥」相反。"
+  },
+  {
+    "id": 306,
+    "question": "The documentary challenged the ______ view that the ancient civilization had collapsed solely due to climate change, presenting new evidence of political and military factors.",
+    "options": {
+      "A": "heterodox",
+      "B": "fringe",
+      "C": "prevailing",
+      "D": "marginal"
+    },
+    "answer": "C",
+    "explanation": "Prevailing（主流的；盛行的）形容學界普遍接受的氣候變化單因論，而紀錄片提出新證據挑戰此說。Heterodox 是非正統的（反義，描述的是紀錄片的立場），fringe 和 marginal 均指邊緣非主流的，三者均描述非主流觀點，與「被挑戰的主流觀點」相反。"
+  },
+  {
+    "id": 307,
+    "question": "The pianist's performance was technically ______, yet somehow emotionally hollow; every note was placed with precision, but there was no warmth or spontaneity in the playing.",
+    "options": {
+      "A": "flawed",
+      "B": "impeccable",
+      "C": "mediocre",
+      "D": "rudimentary"
+    },
+    "answer": "B",
+    "explanation": "Impeccable（無可挑剔的；完美的）描述技術層面無懈可擊的演奏，與後文「情感空洞」形成鮮明對比。Flawed 是有缺陷的，mediocre 是平庸的，rudimentary 是初步的，三者均描述技術層面的不足，不能構成「技術完美但情感缺失」的對比張力。"
+  },
+  {
+    "id": 308,
+    "question": "The professor's ______ commentary on her colleague's paper—calling it 'a monument to intellectual mediocrity'—was widely condemned as unprofessional.",
+    "options": {
+      "A": "laudatory",
+      "B": "vitriolic",
+      "C": "temperate",
+      "D": "benign"
+    },
+    "answer": "B",
+    "explanation": "Vitriolic (a.) 刻薄的，形容將同行論文稱為「智識平庸的紀念碑」的極度尖酸評論，被廣泛批評為不專業。Laudatory 是讚揚的（反義），temperate 是有節制適度的（反義），benign 是良善無害的（反義），三者均描述溫和或正面的評論，與「尖酸刻薄到引發譴責」相反。"
+  },
+  {
+    "id": 309,
+    "question": "The peace talks appeared to have reached a ______ when neither side would budge on the question of territorial sovereignty.",
+    "options": {
+      "A": "confluence",
+      "B": "concord",
+      "C": "denouement",
+      "D": "stalemate"
+    },
+    "answer": "D",
+    "explanation": "Stalemate (n.) 僵局，形容和平談判中雙方在主權問題上寸步不讓的僵持狀態。Confluence 是匯流，concord 是和諧（反義，代表達成共識），denouement 是結局（未必是僵局），三者均不準確描述「雙方僵持不下」的外交困境。"
+  },
+  {
+    "id": 310,
+    "question": "The witness's ______ account of the accident—changing key details each time she was questioned—raised serious doubts about her reliability.",
+    "options": {
+      "A": "consistent",
+      "B": "irrefutable",
+      "C": "vacillating",
+      "D": "steadfast"
+    },
+    "answer": "C",
+    "explanation": "Vacillating（動搖的；前後矛盾的）描述目擊者每次受訊時都改變關鍵細節的不穩定陳述，引發對其可靠性的質疑。Consistent 是一致的（反義），irrefutable 是無可反駁的（反義），steadfast 是堅定不變的（反義），三者均描述穩定可靠的作證，與「每次說法不同」相反。"
+  },
+  {
+    "id": 311,
+    "question": "After the corporate scandal broke, the company tried to ______ the damage with a series of public apologies and pledges of reform, but investors remained skeptical.",
+    "options": {
+      "A": "exacerbate",
+      "B": "mitigate",
+      "C": "perpetuate",
+      "D": "aggravate"
+    },
+    "answer": "B",
+    "explanation": "Mitigate (v.) 減輕；緩和，描述公司試圖通過公開道歉和改革承諾來降低醜聞損害。Exacerbate 和 aggravate 均指加重惡化（反義），perpetuate 是使永久持續（反義），三者均描述使情況更糟或持續，與「試圖修復損害」的目的相反。"
+  },
+  {
+    "id": 312,
+    "question": "The ______ of the reform bill's implementation meant that the new regulations would not take effect for three years, during which the old practices continued unchecked.",
+    "options": {
+      "A": "expedition",
+      "B": "celerity",
+      "C": "deferral",
+      "D": "alacrity"
+    },
+    "answer": "C",
+    "explanation": "Deferral（延遲；推遲）描述改革法案實施被推遲三年、舊慣例繼續不受約束的情況。Expedition 是迅速執行，celerity 是迅速，alacrity 是積極敏捷，三者均描述快速的行動，與「三年後才生效」的延遲相反。"
+  },
+  {
+    "id": 313,
+    "question": "The elderly novelist remained remarkably ______ in her eighties, producing two novels a year and maintaining an active schedule of readings and lectures.",
+    "options": {
+      "A": "decrepit",
+      "B": "doddering",
+      "C": "prolific",
+      "D": "moribund"
+    },
+    "answer": "C",
+    "explanation": "Prolific (a.) 多產的，形容八十歲的小說家每年仍出版兩部作品且保持活躍行程的驚人創作力。Decrepit 是衰老破舊的（反義），doddering 是因年老步履蹣跚的（反義），moribund 是垂死的（反義），三者均描述老年衰退，與「每年兩部新作的旺盛創作力」相反。"
+  },
+  {
+    "id": 314,
+    "question": "The general's ______ on military history filled the reading list for the war college's first semester, establishing itself as the authoritative text on tactical innovation.",
+    "options": {
+      "A": "anecdote",
+      "B": "bromide",
+      "C": "treatise",
+      "D": "haiku"
+    },
+    "answer": "C",
+    "explanation": "Treatise（論文；專論）描述列入戰爭學院必讀書目、被視為戰術創新權威著作的軍事史學術著作。Anecdote 是軼事，bromide 是陳腐言語，haiku 是俳句，三者均不描述「被列為必讀課本的權威學術著作」。"
+  },
+  {
+    "id": 315,
+    "question": "The medieval scholar's cosmology was entirely ______ by modern standards, placing Earth at the center of the universe with the sun and stars rotating around it.",
+    "options": {
+      "A": "prescient",
+      "B": "irrefutable",
+      "C": "germane",
+      "D": "erroneous"
+    },
+    "answer": "D",
+    "explanation": "Erroneous (a.) 錯誤的，形容以地球為宇宙中心、日月星辰繞地球旋轉的中世紀宇宙觀，以現代標準而言完全錯誤。Prescient 是有先見之明的（反義），irrefutable 是無可反駁的（反義），germane 是相關的（中性），三者均不能描述「現代標準下已被證偽的錯誤觀點」。"
+  },
+  {
+    "id": 316,
+    "question": "The CEO's ______ communication style—replying to emails with one or two words and conducting meetings in under ten minutes—was both admired and frustrating to her team.",
+    "options": {
+      "A": "verbose",
+      "B": "grandiloquent",
+      "C": "laconic",
+      "D": "loquacious"
+    },
+    "answer": "C",
+    "explanation": "Laconic（簡短的；言簡意賅的）雖不在原表中，但可通過排除法選出。Verbose 是冗長的，grandiloquent 是誇張浮誇的，loquacious 是多嘴健談的，三者均描述話多的溝通風格，與「回覆一兩個字、十分鐘內結束會議」的極度簡潔相反。"
+  },
+  {
+    "id": 317,
+    "question": "The committee's investigation revealed that the financial discrepancies were not the result of ______ error but of deliberate falsification of records.",
+    "options": {
+      "A": "inadvertent",
+      "B": "premeditated",
+      "C": "calculated",
+      "D": "intentional"
+    },
+    "answer": "A",
+    "explanation": "Inadvertent (a.) 不注意的；疏忽的，題目結構為「不是疏忽造成的，而是蓄意偽造的」，故空格應填表示「無意」的詞以與後文「deliberate」形成對比。Premeditated、calculated 和 intentional 均強調蓄意（與後文重複），不構成邏輯對比。"
+  },
+  {
+    "id": 318,
+    "question": "The artist's use of ______ imagery—blending the mundane with the fantastical in unsettling ways—was the defining characteristic of her surrealist period.",
+    "options": {
+      "A": "pastoral",
+      "B": "prosaic",
+      "C": "juxtaposed",
+      "D": "incongruous"
+    },
+    "answer": "D",
+    "explanation": "Incongruous（不協調的；不相稱的）雖不在表中，但可通過排除法選出。Pastoral 是田園的，prosaic 是平凡單調的，juxtaposed 是並置對比的（描述手法而非意象本身），三者均不準確描述「以令人不安的方式將平凡與奇幻混合」的超現實主義意象。D 最精確。"
+  },
+  {
+    "id": 319,
+    "question": "The philanthropist's ______ was evident in the scale of her giving: over three billion dollars donated to education and healthcare initiatives over thirty years.",
+    "options": {
+      "A": "cupidity",
+      "B": "parsimony",
+      "C": "largesse",
+      "D": "penury"
+    },
+    "answer": "C",
+    "explanation": "Largesse (n.) 慷慨施捨，形容三十年間捐出逾三十億美元的慷慨義舉。Cupidity 是貪婪，parsimony 是過度節儉，penury 是貧困，三者均描述對財富的吝嗇或缺乏，與「三十億美元的慷慨捐獻」相反。"
+  },
+  {
+    "id": 320,
+    "question": "The ______ nature of the peace agreement—dependent on the goodwill of leaders who could be replaced at any time—made its long-term prospects deeply uncertain.",
+    "options": {
+      "A": "ironclad",
+      "B": "robust",
+      "C": "ephemeral",
+      "D": "immutable"
+    },
+    "answer": "C",
+    "explanation": "Ephemeral（短暫的）雖不在原表中，但可通過排除法選出。Ironclad 是嚴格無法更改的，robust 是強健穩固的，immutable 是不變的，三者均描述持久穩定的協議，與「依賴可能隨時被替換的領導人善意」的脆弱性相矛盾。C 最符合「前景深度不確定」的語境。"
+  },
+  {
+    "id": 321,
+    "question": "The deposed monarch lived in ______ exile, stripped of titles and assets, surviving on the charity of distant relatives in a modest provincial town.",
+    "options": {
+      "A": "opulent",
+      "B": "sumptuous",
+      "C": "ignominious",
+      "D": "lavish"
+    },
+    "answer": "C",
+    "explanation": "Ignominious (a.) 可恥的，描述被剝奪頭銜和財產、靠遠親接濟度日的屈辱流亡生活，與昔日皇室地位形成強烈反差。Opulent、sumptuous 和 lavish 均描述奢華的生活條件（反義），三者均與「靠接濟維生、住在偏遠小鎮」的窘境相反。"
+  },
+  {
+    "id": 322,
+    "question": "The prime minister's ______ response to the crisis—flying to the affected region and personally meeting with victims—stood in sharp contrast to his predecessor's detachment.",
+    "options": {
+      "A": "aloof",
+      "B": "indifferent",
+      "C": "hands-on",
+      "D": "detached"
+    },
+    "answer": "C",
+    "explanation": "Hands-on（親力親為的）描述首相親赴災區、親自與受害者見面的積極介入方式，與前任的「detachment（超然距離）」形成對比。Aloof 和 detached 均是超然冷漠的（與前任相似），indifferent 是漠不關心的，三者均描述與問題保持距離的態度，與題意相反。"
+  },
+  {
+    "id": 323,
+    "question": "The nation's ______ history of colonialism continued to cast a long shadow over its diplomatic relationships with former colonies, complicating negotiations at every turn.",
+    "options": {
+      "A": "inconsequential",
+      "B": "peripheral",
+      "C": "ignominious",
+      "D": "negligible"
+    },
+    "answer": "C",
+    "explanation": "Ignominious (a.) 可恥的，形容殖民主義歷史的恥辱性質，持續影響與前殖民地的外交關係。Inconsequential、peripheral 和 negligible 均描述無關緊要或微不足道的，三者均暗示歷史影響不大，與「持續使外交複雜化」的深遠影響相矛盾。"
+  },
+  {
+    "id": 324,
+    "question": "The author's decision to write the entire novel in the second person was considered ______ by publishers, who feared readers would be alienated by the unconventional narrative voice.",
+    "options": {
+      "A": "conventional",
+      "B": "orthodox",
+      "C": "audacious",
+      "D": "pedestrian"
+    },
+    "answer": "C",
+    "explanation": "Audacious（大膽的；魯莽的）雖不在表中，但可通過排除法選出。Conventional 和 orthodox 均指傳統的（反義），pedestrian 是平凡乏味的（反義），三者均描述缺乏創新或冒險精神，與「使用第二人稱、出版商擔心讀者會疏遠」的非常規決定相反。C 最貼切。"
+  },
+  {
+    "id": 325,
+    "question": "The director's ______ perfectionism delayed the film's production by two years, as she rejected dozens of completed scenes and insisted on reshooting them from scratch.",
+    "options": {
+      "A": "negligible",
+      "B": "cursory",
+      "C": "exacting",
+      "D": "perfunctory"
+    },
+    "answer": "C",
+    "explanation": "Exacting (a.) 苛求的，形容導演對品質的極度嚴格要求，拒絕並重拍大量完成場景，導致製作延誤兩年。Negligible 是可忽略的，cursory 是粗略的，perfunctory 是敷衍的，三者均描述不嚴格或不認真的態度，與「拒絕數十個完成場景、要求重拍」的嚴苛標準相反。"
+  },
+  {
+    "id": 326,
+    "question": "The scholar's essay offered a ______ of the poet's entire body of work, tracing recurring themes from his earliest juvenilia to his final, posthumously published collection.",
+    "options": {
+      "A": "synopsis",
+      "B": "addendum",
+      "C": "epitaph",
+      "D": "anecdote"
+    },
+    "answer": "A",
+    "explanation": "Synopsis (n.) 摘要；概要，描述涵蓋詩人從早期習作到身後出版作品的整體評述文章。Addendum 是補充附錄，epitaph 是墓誌銘，anecdote 是軼事，三者均不描述「追蹤整個創作生涯主題的全面概覽性文章」。"
+  },
+  {
+    "id": 327,
+    "question": "The prime minister's ______ in managing the coalition—keeping wildly different factions together for six years—was considered one of the great political achievements of the era.",
+    "options": {
+      "A": "ineptitude",
+      "B": "maladroitness",
+      "C": "finesse",
+      "D": "vacillation"
+    },
+    "answer": "C",
+    "explanation": "Finesse (n.) 手段；策略，形容在六年間維繫性格迥異各派系的高超政治手腕，被視為時代的重大政治成就。Ineptitude 和 maladroitness 均指無能笨拙（反義），vacillation 是猶豫不決，三者均描述政治管理上的弱點，與「偉大的政治成就」相反。"
+  },
+  {
+    "id": 328,
+    "question": "The committee's recommendation was ______ rather than binding, meaning that the government was under no legal obligation to act on any of its findings.",
+    "options": {
+      "A": "mandatory",
+      "B": "ironclad",
+      "C": "compulsory",
+      "D": "advisory"
+    },
+    "answer": "D",
+    "explanation": "Advisory（諮詢性的；建議性的）描述委員會建議的非強制性質，政府無法律義務採納其調查結果。Mandatory、ironclad 和 compulsory 均描述具有強制約束力的要求（反義），三者均與「無法律義務」的描述相反。"
+  },
+  {
+    "id": 329,
+    "question": "The journalist's ______ portrayal of the refugee crisis—focusing on individual stories rather than abstract statistics—moved readers and prompted a wave of charitable donations.",
+    "options": {
+      "A": "detached",
+      "B": "dispassionate",
+      "C": "evocative",
+      "D": "clinical"
+    },
+    "answer": "C",
+    "explanation": "Evocative (a.) 引起回憶的；喚起情感的，形容聚焦個人故事、感動讀者並引發捐款熱潮的報導方式。Detached 是冷淡的，dispassionate 是冷靜客觀的，clinical 是臨床式冷淡的，三者均描述情感疏離的報導風格，與「感動讀者、引發慈善捐款」的情感共鳴相反。"
+  },
+  {
+    "id": 330,
+    "question": "The senator's ______ approach to the bill—introducing hundreds of amendments to delay its passage—was criticized as an abuse of legislative procedure.",
+    "options": {
+      "A": "expeditious",
+      "B": "obstructionist",
+      "C": "collaborative",
+      "D": "constructive"
+    },
+    "answer": "B",
+    "explanation": "Obstructionist（阻撓的；妨礙的）描述以大量修正案拖延法案通過的阻撓策略，被批評為濫用立法程序。Expeditious 是迅速的（反義），collaborative 是協作的，constructive 是建設性的，三者均描述積極推進或合作的立法態度，與「阻撓延誤」相反。"
+  },
+  {
+    "id": 331,
+    "question": "The writer's prose style was described as ______, piling subordinate clause upon subordinate clause until even attentive readers lost the thread of the argument.",
+    "options": {
+      "A": "concise",
+      "B": "succinct",
+      "C": "terse",
+      "D": "labyrinthine"
+    },
+    "answer": "D",
+    "explanation": "Labyrinthine（迷宮般的；複雜難以追蹤的）描述從句層層疊加、讓讀者迷失論述脈絡的複雜文風。Concise、succinct 和 terse 均指簡潔的（反義），三者均描述直接清晰的表達風格，與「層層嵌套的從句讓讀者迷失」相反。"
+  },
+  {
+    "id": 332,
+    "question": "The general's ______ during the siege was remarkable: for forty days, he maintained discipline, morale, and tactical coherence despite overwhelming enemy pressure.",
+    "options": {
+      "A": "trepidation",
+      "B": "equanimity",
+      "C": "consternation",
+      "D": "perturbation"
+    },
+    "answer": "B",
+    "explanation": "Equanimity（沉著；鎮靜）雖不完全在表中，但可通過排除法選出。Trepidation 是驚恐，consternation 是驚恐失措，perturbation 是煩擾不安，三者均描述面對壓力時的負面反應，與「四十天維持紀律、士氣和戰術連貫性」的傑出表現相反。"
+  },
+  {
+    "id": 333,
+    "question": "The administration's decision to ______ the opposition leader under the anti-terrorism statute was widely condemned as a politically motivated abuse of power.",
+    "options": {
+      "A": "exculpate",
+      "B": "exonerate",
+      "C": "incarcerate",
+      "D": "vindicate"
+    },
+    "answer": "C",
+    "explanation": "Incarcerate (v.) 監禁，描述以反恐法規拘禁反對黨領袖的行動，被廣泛譴責為政治操弄。Exculpate、exonerate 和 vindicate 均指無罪釋放或洗清罪名（反義），三者均描述對被告有利的法律行動，與「被批評為政治迫害」的逮捕相反。"
+  },
+  {
+    "id": 334,
+    "question": "The celebrity's ______ lifestyle—private jets, multiple mansions, and a staff of forty—became a lightning rod for criticism during the cost-of-living crisis.",
+    "options": {
+      "A": "frugal",
+      "B": "austere",
+      "C": "spartan",
+      "D": "profligate"
+    },
+    "answer": "D",
+    "explanation": "Profligate (a.) 揮霍的，形容私人飛機、多處豪宅和四十名員工的極度奢靡生活，在生活成本危機期間成為眾矢之的。Frugal、austere 和 spartan 均描述節儉樸素的生活方式（反義），三者均與「私人飛機和豪宅」的揮霍形成鮮明對比。"
+  },
+  {
+    "id": 335,
+    "question": "The corporation's ______ of the small town's water supply—pumping millions of gallons daily without adequate compensation—was the subject of a decade-long legal battle.",
+    "options": {
+      "A": "replenishment",
+      "B": "conservation",
+      "C": "expropriation",
+      "D": "purification"
+    },
+    "answer": "C",
+    "explanation": "Expropriation（徵用；充公）由 expropriate（充公；沒收）衍生，描述企業大量抽取小鎮水資源卻未給予充分補償的行為。Replenishment 是補充，conservation 是保育，purification 是淨化，三者均描述對水資源的正面管理，與「引發十年法律訴訟的不公平行為」相反。"
+  },
+  {
+    "id": 336,
+    "question": "The young politician's ______ attack on the bill's sponsor—questioning his intelligence and integrity in front of the full chamber—shocked even veteran legislators.",
+    "options": {
+      "A": "measured",
+      "B": "temperate",
+      "C": "scathing",
+      "D": "judicious"
+    },
+    "answer": "C",
+    "explanation": "Scathing (a.) 嚴苛的，形容在全體立法院面前質疑對方智力和誠信的激烈人身攻擊，震驚了資深議員。Measured 是有節制的（反義），temperate 是適度有節制的（反義），judicious 是明智的（反義），三者均描述謹慎克制的批評方式，與「震驚資深議員的猛烈攻擊」相反。"
+  },
+  {
+    "id": 337,
+    "question": "The hospital's ______ protocols for surgical hygiene, developed after a series of post-operative infections, reduced complication rates by over sixty percent.",
+    "options": {
+      "A": "lax",
+      "B": "perfunctory",
+      "C": "stringent",
+      "D": "cursory"
+    },
+    "answer": "C",
+    "explanation": "Stringent（嚴格的；精確的）描述在一系列術後感染後制定的嚴格手術衛生規程，有效降低了併發症發生率。Lax 是鬆散的（反義），perfunctory 是敷衍的（反義），cursory 是粗略的（反義），三者均描述不嚴格的衛生管理，難以達成降低六成以上併發症的效果。"
+  },
+  {
+    "id": 338,
+    "question": "The documentary argued that the celebrated general's reputation was largely ______, built on victories achieved by subordinates whose contributions had been systematically erased from official records.",
+    "options": {
+      "A": "merited",
+      "B": "warranted",
+      "C": "spurious",
+      "D": "substantiated"
+    },
+    "answer": "C",
+    "explanation": "Spurious (a.) 假的，形容建立在部屬功勳被系統性抹除的基礎上的虛假聲譽。Merited、warranted 和 substantiated 均描述有依據、應得的（反義），三者均表示聲譽名實相符，與「部屬貢獻被抹去、聲譽不實」的論點相反。"
+  },
+  {
+    "id": 339,
+    "question": "The opposition party's ______ of the government's economic record—citing only positive indicators while ignoring rising inequality—was dismissed as misleading.",
+    "options": {
+      "A": "diatribe",
+      "B": "harangue",
+      "C": "censure",
+      "D": "encomium"
+    },
+    "answer": "D",
+    "explanation": "Encomium (n.) 讚頌；頌辭，在此指反對黨對執政黨經濟成就的選擇性讚揚（只引用正面指標），被批評為具有誤導性。Diatribe 和 harangue 均指抨擊或斥責（反義，若反對黨抨擊，便不會只引用正面數據），censure 是責備，三者均描述批評性言論，與「只引用正面數據的讚揚」相反。"
+  },
+  {
+    "id": 340,
+    "question": "The historian described the treaty as ______, securing peace for only a generation before the underlying tensions erupted into an even more devastating conflict.",
+    "options": {
+      "A": "durable",
+      "B": "enduring",
+      "C": "palliative",
+      "D": "ironclad"
+    },
+    "answer": "C",
+    "explanation": "Palliative（治標不治本的；暫時緩和的）雖不在原表中，但可通過排除法選出。Durable、enduring 和 ironclad 均描述持久穩固的（反義），三者均與「只維持一代人的和平、深層緊張最終爆發為更大衝突」相矛盾。C 最準確描述「只能暫時緩解而未根治問題」的協議性質。"
+  },
+  {
+    "id": 341,
+    "question": "The child prodigy's ______ mastery of the violin at age seven left audiences and critics alike wondering whether they were witnessing the birth of a generational talent.",
+    "options": {
+      "A": "rudimentary",
+      "B": "mediocre",
+      "C": "virtuosic",
+      "D": "pedestrian"
+    },
+    "answer": "C",
+    "explanation": "Virtuosic（精湛技巧的）由 virtuosity（精湛技巧）衍生，描述七歲兒童天才令觀眾和評論家驚嘆、猜想是否是天才誕生的超凡琴藝。Rudimentary 是初步的，mediocre 是平庸的，pedestrian 是平凡乏味的，三者均描述普通或不成熟的技藝，與「引發廣泛驚嘆」的表現相反。"
+  },
+  {
+    "id": 342,
+    "question": "The CEO's announcement that the company would ______ from its longstanding policy of prioritizing shareholder returns was met with enthusiasm by employees and skepticism by investors.",
+    "options": {
+      "A": "perpetuate",
+      "B": "entrench",
+      "C": "deviate",
+      "D": "adhere"
+    },
+    "answer": "C",
+    "explanation": "Deviate (v.) 越軌；偏離，描述公司宣布偏離長期以股東回報為優先的政策，引發員工與投資者截然不同的反應。Perpetuate 是使永久持續，entrench 是使深根固柢，adhere 是遵守堅持，三者均描述維持或強化既有政策，與「宣布偏離」相反。"
+  },
+  {
+    "id": 343,
+    "question": "The small island nation's ______ geographical position at the intersection of major shipping lanes gave it outsized economic and strategic importance.",
+    "options": {
+      "A": "peripheral",
+      "B": "negligible",
+      "C": "pivotal",
+      "D": "incidental"
+    },
+    "answer": "C",
+    "explanation": "Pivotal (a.) 關鍵的；樞軸的，形容小島國位於主要航運路線交匯處的關鍵地理位置，賦予其超乎規模的經濟和戰略重要性。Peripheral 是不重要的周邊的，negligible 是可忽略的，incidental 是偶然附帶的，三者均描述次要或無足輕重的地位，與「超乎規模的重要性」相反。"
+  },
+  {
+    "id": 344,
+    "question": "The academic's prose style was admired for its ______, conveying complex philosophical arguments in sentences that were elegant without being obscure.",
+    "options": {
+      "A": "grandiloquence",
+      "B": "verbosity",
+      "C": "perspicuity",
+      "D": "opacity"
+    },
+    "answer": "C",
+    "explanation": "Perspicuous (a.) 清晰明白的，其名詞 perspicuity 描述能以優雅而不晦澀的句子傳達複雜哲學論點的寫作清晰度。Grandiloquence 是誇張浮誇，verbosity 是冗長，opacity 是不透明晦澀，三者均描述複雜難懂或冗贅的寫作風格，與「優雅且清晰」相反。"
+  },
+  {
+    "id": 345,
+    "question": "The young lawyer's career was nearly derailed when it emerged that she had ______ her academic credentials, claiming a degree she had never actually completed.",
+    "options": {
+      "A": "substantiated",
+      "B": "fabricated",
+      "C": "authenticated",
+      "D": "corroborated"
+    },
+    "answer": "B",
+    "explanation": "Fabricate（捏造；偽造）描述律師謊稱持有未完成學位的學歷造假行為，險些毀掉其職業生涯。Substantiated 是有依據的，authenticated 是已驗證真實的，corroborated 是已被佐證的，三者均描述學歷的真實性或被驗證（反義），與「聲稱未完成的學位」的欺騙相反。"
+  },
+  {
+    "id": 346,
+    "question": "The regime's ______ persecution of ethnic minorities—documented in thousands of witness testimonies and satellite images—prompted international calls for sanctions.",
+    "options": {
+      "A": "benign",
+      "B": "systemic",
+      "C": "incidental",
+      "D": "peripheral"
+    },
+    "answer": "B",
+    "explanation": "Systemic（系統性的）描述有組織、成模式地迫害少數民族的行為，與「數千份目擊證詞和衛星圖像記錄」所呈現的規模吻合。Benign 是良善無害的（反義），incidental 是偶然附帶的（與「系統性」相反），peripheral 是邊緣不重要的，三者均不描述「大規模有組織的迫害」。"
+  },
+  {
+    "id": 347,
+    "question": "The company's new employee wellness program was seen as ______ rather than genuinely caring, designed primarily to reduce sick days and improve productivity metrics.",
+    "options": {
+      "A": "altruistic",
+      "B": "magnanimous",
+      "C": "instrumental",
+      "D": "philanthropic"
+    },
+    "answer": "C",
+    "explanation": "Instrumental（工具性的；以達成目的為導向的）描述員工福利計畫以提高生產力為主要目的，而非真正關心員工健康。Altruistic 是利他的（反義），magnanimous 是寬宏大量的，philanthropic 是慈善的，三者均描述真誠關懷的態度，與「主要為了減少病假、改善生產力指標」的工具性動機相反。"
+  },
+  {
+    "id": 348,
+    "question": "The detective's ______ of the suspect's alibi—examining phone records, surveillance footage, and credit card transactions—eventually revealed a three-hour window unaccounted for.",
+    "options": {
+      "A": "cursory",
+      "B": "perfunctory",
+      "C": "meticulous",
+      "D": "superficial"
+    },
+    "answer": "C",
+    "explanation": "Meticulous (a.) 極注意細節的，形容逐一檢查電話記錄、監控畫面和信用卡交易的細緻調查過程，最終發現三小時的空窗期。Cursory、perfunctory 和 superficial 均描述粗略或草率的調查，三者難以從如此詳盡的多重資料來源中找出關鍵漏洞。"
+  },
+  {
+    "id": 349,
+    "question": "The opposition's ______ argument that the tax reform would benefit only the wealthy was difficult to counter, as independent analyses consistently supported their position.",
+    "options": {
+      "A": "specious",
+      "B": "fallacious",
+      "C": "spurious",
+      "D": "cogent"
+    },
+    "answer": "D",
+    "explanation": "Cogent (a.) 有說服力的，形容有獨立分析持續支持的有力論點，使執政黨難以反駁。Specious、fallacious 和 spurious 均描述表面合理但實際謬誤的論點（反義），三者均描述可被推翻的弱點，與「獨立分析一致支持、難以反駁」的強力論述相反。"
+  },
+  {
+    "id": 350,
+    "question": "The court's decision to ______ the defendant's confession—on the grounds that it had been obtained through coercion—fundamentally changed the direction of the trial.",
+    "options": {
+      "A": "validate",
+      "B": "authenticate",
+      "C": "substantiate",
+      "D": "suppress"
+    },
+    "answer": "D",
+    "explanation": "Suppress（壓制；排除）在法律語境中指法庭裁定因脅迫取得的供詞不得作為證據，從而改變了審判走向。Validate 是使具有效力，authenticate 是驗證真實性，substantiate 是證實，三者均描述使供詞具有法律效力或可信度的行動（反義），與「基於脅迫理由裁定無效」相反。"
+  }
+]
