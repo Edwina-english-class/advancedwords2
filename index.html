@@ -12,9 +12,7 @@
     --paper: #faf8f3;
     --paper-warm: #f5f0e8;
     --accent: #c8553d;
-    --accent-light: #e8765a;
     --gold: #c9a84c;
-    --sage: #5a7a6a;
     --correct: #3d7a5a;
     --correct-bg: #e8f4ee;
     --wrong: #b03020;
@@ -23,525 +21,120 @@
     --radius: 12px;
     --transition: 0.22s cubic-bezier(0.4,0,0.2,1);
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--paper); color: var(--ink); min-height: 100vh; display: flex; flex-direction: column; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--paper);
-    color: var(--ink);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* ── Header ── */
   header {
-    background: var(--ink);
-    padding: 18px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    background: var(--ink); padding: 18px 32px;
+    display: flex; align-items: center; justify-content: space-between;
+    position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.18);
   }
-
-  .logo {
-    font-family: 'Playfair Display', serif;
-    font-weight: 900;
-    font-size: 1.35rem;
-    color: var(--paper);
-    letter-spacing: -0.01em;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+  .logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.35rem; color: var(--paper); display: flex; align-items: center; gap: 10px; }
   .logo-dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; display: inline-block; }
-
-  .header-stats {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  .stat-pill {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 20px;
-    padding: 5px 14px;
-    font-size: 0.82rem;
-    color: var(--paper);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
+  .header-stats { display: flex; gap: 20px; align-items: center; }
+  .stat-pill { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 5px 14px; font-size: 0.82rem; color: var(--paper); font-weight: 500; display: flex; align-items: center; gap: 6px; }
   .stat-pill .val { color: var(--gold); font-weight: 700; font-size: 0.95rem; }
   .stat-pill.correct-pill .val { color: #6fcf97; }
   .stat-pill.wrong-pill .val { color: #f2994a; }
 
-  /* ── Main Layout ── */
-  main {
-    flex: 1;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 40px 24px 80px;
-  }
+  main { flex: 1; max-width: 800px; width: 100%; margin: 0 auto; padding: 40px 24px 80px; }
 
-  /* ── Mode Selector ── */
-  .mode-bar {
-    display: flex;
-    gap: 8px;
-    margin-bottom: 32px;
-    background: var(--paper-warm);
-    border-radius: 10px;
-    padding: 5px;
-    border: 1px solid rgba(26,26,46,0.08);
-  }
-  .mode-btn {
-    flex: 1;
-    padding: 9px 0;
-    border: none;
-    border-radius: 7px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 500;
-    cursor: pointer;
-    background: transparent;
-    color: var(--ink-soft);
-    transition: var(--transition);
-    letter-spacing: 0.01em;
-  }
-  .mode-btn.active {
-    background: var(--ink);
-    color: var(--paper);
-    box-shadow: 0 2px 8px rgba(26,26,46,0.18);
-  }
+  .mode-bar { display: flex; gap: 8px; margin-bottom: 32px; background: var(--paper-warm); border-radius: 10px; padding: 5px; border: 1px solid rgba(26,26,46,0.08); }
+  .mode-btn { flex: 1; padding: 9px 0; border: none; border-radius: 7px; font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 500; cursor: pointer; background: transparent; color: var(--ink-soft); transition: var(--transition); }
+  .mode-btn.active { background: var(--ink); color: var(--paper); box-shadow: 0 2px 8px rgba(26,26,46,0.18); }
 
-  /* ── Progress ── */
-  .progress-wrap {
-    margin-bottom: 28px;
-  }
-  .progress-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 8px;
-  }
-  .progress-label {
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-  }
-  .progress-num {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-  }
-  .progress-bar {
-    height: 6px;
-    background: var(--paper-warm);
-    border-radius: 3px;
-    overflow: hidden;
-    border: 1px solid rgba(26,26,46,0.07);
-  }
-  .progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, var(--accent), var(--gold));
-    border-radius: 3px;
-    transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
-  }
+  .progress-wrap { margin-bottom: 28px; }
+  .progress-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; }
+  .progress-label { font-size: 0.82rem; color: var(--ink-soft); font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase; }
+  .progress-num { font-family: 'DM Mono', monospace; font-size: 0.85rem; color: var(--ink-soft); }
+  .progress-bar { height: 6px; background: var(--paper-warm); border-radius: 3px; overflow: hidden; border: 1px solid rgba(26,26,46,0.07); }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, var(--accent), var(--gold)); border-radius: 3px; transition: width 0.5s cubic-bezier(0.4,0,0.2,1); }
 
-  /* ── Question Card ── */
-  .question-card {
-    background: white;
-    border-radius: var(--radius);
-    padding: 36px 40px;
-    box-shadow: var(--card-shadow);
-    margin-bottom: 20px;
-    border: 1px solid rgba(26,26,46,0.06);
-    animation: slideUp 0.3s ease;
-  }
-  @keyframes slideUp {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
+  .question-card { background: white; border-radius: var(--radius); padding: 36px 40px; box-shadow: var(--card-shadow); margin-bottom: 20px; border: 1px solid rgba(26,26,46,0.06); animation: slideUp 0.3s ease; }
+  @keyframes slideUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 
-  .q-meta {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 22px;
-  }
-  .q-number {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--accent);
-  }
-  .q-tag {
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    background: var(--paper-warm);
-    border-radius: 4px;
-    padding: 2px 8px;
-  }
+  .q-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 22px; }
+  .q-number { font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.05rem; color: var(--accent); }
+  .q-tag { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-soft); background: var(--paper-warm); border-radius: 4px; padding: 2px 8px; }
 
-  .q-sentence {
-    font-size: 1.13rem;
-    line-height: 1.75;
-    color: var(--ink);
-    font-weight: 300;
-    margin-bottom: 30px;
-    letter-spacing: 0.01em;
-  }
-  .q-sentence .blank {
-    font-family: 'DM Mono', monospace;
-    font-weight: 500;
-    color: var(--accent);
-    background: rgba(200, 85, 61, 0.07);
-    border-radius: 4px;
-    padding: 1px 6px;
-  }
+  .q-sentence { font-size: 1.13rem; line-height: 1.75; color: var(--ink); font-weight: 300; margin-bottom: 30px; }
+  .q-sentence .blank { font-family: 'DM Mono', monospace; font-weight: 500; color: var(--accent); background: rgba(200,85,61,0.07); border-radius: 4px; padding: 1px 6px; }
 
-  /* ── Options ── */
-  .options-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-  }
+  .options-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   @media (max-width: 560px) { .options-grid { grid-template-columns: 1fr; } }
 
-  .option-btn {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    border: 1.5px solid rgba(26,26,46,0.12);
-    border-radius: 9px;
-    background: var(--paper);
-    cursor: pointer;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 400;
-    color: var(--ink);
-    text-align: left;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-  }
-  .option-btn:hover:not(:disabled) {
-    border-color: var(--accent);
-    background: rgba(200,85,61,0.04);
-    transform: translateY(-1px);
-    box-shadow: 0 3px 12px rgba(200,85,61,0.12);
-  }
+  .option-btn { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border: 1.5px solid rgba(26,26,46,0.12); border-radius: 9px; background: var(--paper); cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--ink); text-align: left; transition: var(--transition); }
+  .option-btn:hover:not(:disabled) { border-color: var(--accent); background: rgba(200,85,61,0.04); transform: translateY(-1px); box-shadow: 0 3px 12px rgba(200,85,61,0.12); }
   .option-btn:disabled { cursor: default; }
-
-  .opt-label {
-    width: 28px;
-    height: 28px;
-    border-radius: 6px;
-    background: rgba(26,26,46,0.07);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'DM Mono', monospace;
-    font-weight: 500;
-    font-size: 0.82rem;
-    flex-shrink: 0;
-    transition: var(--transition);
-  }
+  .opt-label { width: 28px; height: 28px; border-radius: 6px; background: rgba(26,26,46,0.07); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-weight: 500; font-size: 0.82rem; flex-shrink: 0; transition: var(--transition); }
   .opt-text { flex: 1; font-style: italic; }
+  .option-btn.correct { border-color: var(--correct); background: var(--correct-bg); }
+  .option-btn.correct .opt-label { background: var(--correct); color: white; }
+  .option-btn.wrong { border-color: var(--wrong); background: var(--wrong-bg); }
+  .option-btn.wrong .opt-label { background: var(--wrong); color: white; }
 
-  .option-btn.correct {
-    border-color: var(--correct);
-    background: var(--correct-bg);
-  }
-  .option-btn.correct .opt-label {
-    background: var(--correct);
-    color: white;
-  }
-  .option-btn.wrong {
-    border-color: var(--wrong);
-    background: var(--wrong-bg);
-  }
-  .option-btn.wrong .opt-label {
-    background: var(--wrong);
-    color: white;
-  }
+  .explanation { margin-top: 20px; padding: 18px 20px; border-radius: 9px; border-left: 3px solid; font-size: 0.92rem; line-height: 1.7; font-weight: 300; display: none; }
+  .explanation.show { display: block; animation: fadeIn 0.35s ease; }
+  .explanation.correct-exp { background: var(--correct-bg); border-color: var(--correct); color: #1d4a30; }
+  .explanation.wrong-exp { background: var(--wrong-bg); border-color: var(--wrong); color: #5a1a10; }
+  .explanation strong { font-weight: 600; display: block; margin-bottom: 4px; font-size: 0.88rem; letter-spacing: 0.03em; text-transform: uppercase; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
 
-  /* ── Explanation ── */
-  .explanation {
-    margin-top: 20px;
-    padding: 18px 20px;
-    border-radius: 9px;
-    border-left: 3px solid;
-    font-size: 0.92rem;
-    line-height: 1.7;
-    font-weight: 300;
-    animation: fadeIn 0.35s ease;
-    display: none;
-  }
-  .explanation.show { display: block; }
-  .explanation.correct-exp {
-    background: var(--correct-bg);
-    border-color: var(--correct);
-    color: #1d4a30;
-  }
-  .explanation.wrong-exp {
-    background: var(--wrong-bg);
-    border-color: var(--wrong);
-    color: #5a1a10;
-  }
-  .explanation strong {
-    font-weight: 600;
-    display: block;
-    margin-bottom: 4px;
-    font-size: 0.88rem;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-  }
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(4px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-
-  /* ── Nav Buttons ── */
-  .nav-row {
-    display: flex;
-    gap: 12px;
-    justify-content: flex-end;
-    margin-top: 8px;
-  }
-  .nav-btn {
-    padding: 11px 26px;
-    border-radius: 8px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.92rem;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: var(--transition);
-    letter-spacing: 0.01em;
-  }
-  .nav-btn.primary {
-    background: var(--ink);
-    color: var(--paper);
-  }
+  .nav-row { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+  .nav-btn { padding: 11px 26px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; font-weight: 500; border: none; cursor: pointer; transition: var(--transition); }
+  .nav-btn.primary { background: var(--ink); color: var(--paper); }
   .nav-btn.primary:hover { background: var(--accent); }
-  .nav-btn.secondary {
-    background: var(--paper-warm);
-    color: var(--ink-soft);
-    border: 1.5px solid rgba(26,26,46,0.12);
-  }
+  .nav-btn.secondary { background: var(--paper-warm); color: var(--ink-soft); border: 1.5px solid rgba(26,26,46,0.12); }
   .nav-btn.secondary:hover { border-color: var(--ink); color: var(--ink); }
   .nav-btn:disabled { opacity: 0.35; cursor: default; }
 
-  /* ── Result Screen ── */
-  .result-screen {
-    display: none;
-    text-align: center;
-    animation: slideUp 0.4s ease;
-  }
-  .result-screen.show { display: block; }
+  .result-screen { display: none; text-align: center; }
+  .result-screen.show { display: block; animation: slideUp 0.4s ease; }
+  .result-trophy { font-size: 4rem; margin-bottom: 16px; }
+  .result-title { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--ink); margin-bottom: 8px; }
+  .result-sub { color: var(--ink-soft); font-size: 1rem; font-weight: 300; margin-bottom: 36px; }
 
-  .result-trophy {
-    font-size: 4rem;
-    margin-bottom: 16px;
-  }
-  .result-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--ink);
-    margin-bottom: 8px;
-  }
-  .result-sub {
-    color: var(--ink-soft);
-    font-size: 1rem;
-    font-weight: 300;
-    margin-bottom: 36px;
-  }
-
-  .score-ring-wrap {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 36px;
-  }
-  .score-ring {
-    position: relative;
-    width: 140px;
-    height: 140px;
-  }
+  .score-ring-wrap { display: flex; justify-content: center; margin-bottom: 36px; }
+  .score-ring { position: relative; width: 140px; height: 140px; }
   .score-ring svg { transform: rotate(-90deg); }
   .score-ring .ring-bg { fill: none; stroke: var(--paper-warm); stroke-width: 10; }
-  .score-ring .ring-fill {
-    fill: none;
-    stroke-width: 10;
-    stroke-linecap: round;
-    transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1);
-  }
-  .score-ring-text {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .score-big {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.2rem;
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1;
-  }
-  .score-label {
-    font-size: 0.72rem;
-    color: var(--ink-soft);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-top: 2px;
-  }
+  .score-ring .ring-fill { fill: none; stroke-width: 10; stroke-linecap: round; transition: stroke-dashoffset 1.2s cubic-bezier(0.4,0,0.2,1); }
+  .score-ring-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .score-big { font-family: 'Playfair Display', serif; font-size: 2.2rem; font-weight: 900; color: var(--ink); line-height: 1; }
+  .score-label { font-size: 0.72rem; color: var(--ink-soft); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 2px; }
 
-  .result-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 36px;
-  }
-  .rs-card {
-    background: white;
-    border-radius: var(--radius);
-    padding: 20px 12px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(26,26,46,0.06);
-  }
-  .rs-val {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.9rem;
-    font-weight: 900;
-    line-height: 1;
-    margin-bottom: 4px;
-  }
-  .rs-val.green { color: var(--correct); }
-  .rs-val.red { color: var(--wrong); }
-  .rs-val.blue { color: var(--accent); }
-  .rs-label {
-    font-size: 0.78rem;
-    color: var(--ink-soft);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    font-weight: 500;
-  }
-
-  .result-actions {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  .result-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-bottom: 36px; }
+  .rs-card { background: white; border-radius: var(--radius); padding: 20px 12px; box-shadow: var(--card-shadow); border: 1px solid rgba(26,26,46,0.06); }
+  .rs-val { font-family: 'Playfair Display', serif; font-size: 1.9rem; font-weight: 900; line-height: 1; margin-bottom: 4px; }
+  .rs-val.green { color: var(--correct); } .rs-val.red { color: var(--wrong); } .rs-val.blue { color: var(--accent); }
+  .rs-label { font-size: 0.78rem; color: var(--ink-soft); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500; }
+  .result-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .result-actions .nav-btn { padding: 13px 32px; font-size: 0.95rem; }
 
-  /* ── Mini map ── */
-  .mini-map-wrap {
-    background: white;
-    border-radius: var(--radius);
-    padding: 20px 24px;
-    margin-top: 20px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(26,26,46,0.06);
-  }
-  .mini-map-title {
-    font-size: 0.78rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--ink-soft);
-    margin-bottom: 14px;
-  }
-  .mini-map {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  .map-dot {
-    width: 22px;
-    height: 22px;
-    border-radius: 5px;
-    border: 1.5px solid rgba(26,26,46,0.12);
-    background: var(--paper-warm);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'DM Mono', monospace;
-    font-size: 0.6rem;
-    color: var(--ink-soft);
-    cursor: pointer;
-    transition: var(--transition);
-  }
+  .mini-map-wrap { background: white; border-radius: var(--radius); padding: 20px 24px; margin-top: 20px; box-shadow: var(--card-shadow); border: 1px solid rgba(26,26,46,0.06); }
+  .mini-map-title { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 14px; }
+  .mini-map { display: flex; flex-wrap: wrap; gap: 5px; }
+  .map-dot { width: 22px; height: 22px; border-radius: 5px; border: 1.5px solid rgba(26,26,46,0.12); background: var(--paper-warm); display: flex; align-items: center; justify-content: center; font-family: 'DM Mono', monospace; font-size: 0.6rem; color: var(--ink-soft); cursor: pointer; transition: var(--transition); }
   .map-dot:hover { border-color: var(--accent); }
   .map-dot.done-correct { background: var(--correct-bg); border-color: var(--correct); color: var(--correct); font-weight: 700; }
-  .map-dot.done-wrong   { background: var(--wrong-bg); border-color: var(--wrong); color: var(--wrong); font-weight: 700; }
-  .map-dot.current      { background: var(--ink); border-color: var(--ink); color: white; font-weight: 700; }
+  .map-dot.done-wrong { background: var(--wrong-bg); border-color: var(--wrong); color: var(--wrong); font-weight: 700; }
+  .map-dot.current { background: var(--ink); border-color: var(--ink); color: white; font-weight: 700; }
 
-  /* ── Review screen ── */
   .review-list { display: flex; flex-direction: column; gap: 16px; }
-  .review-item {
-    background: white;
-    border-radius: var(--radius);
-    padding: 22px 26px;
-    box-shadow: var(--card-shadow);
-    border: 1px solid rgba(26,26,46,0.06);
-    border-left: 4px solid;
-  }
-  .review-item.correct-item { border-left-color: var(--correct); }
-  .review-item.wrong-item   { border-left-color: var(--wrong); }
-  .review-q {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    font-weight: 300;
-    margin-bottom: 10px;
-    color: var(--ink);
-  }
-  .review-answer-row {
-    display: flex;
-    gap: 16px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    flex-wrap: wrap;
-  }
-  .review-correct { color: var(--correct); }
-  .review-wrong   { color: var(--wrong); }
-  .review-exp {
-    margin-top: 10px;
-    font-size: 0.85rem;
-    color: var(--ink-soft);
-    font-weight: 300;
-    line-height: 1.6;
-    padding-top: 10px;
-    border-top: 1px solid rgba(26,26,46,0.07);
-  }
+  .review-item { background: white; border-radius: var(--radius); padding: 22px 26px; box-shadow: var(--card-shadow); border: 1px solid rgba(26,26,46,0.06); border-left: 4px solid; }
+  .review-item.wrong-item { border-left-color: var(--wrong); }
+  .review-q { font-size: 0.95rem; line-height: 1.65; font-weight: 300; margin-bottom: 10px; color: var(--ink); }
+  .review-answer-row { display: flex; gap: 16px; font-size: 0.85rem; font-weight: 500; flex-wrap: wrap; }
+  .review-correct { color: var(--correct); } .review-wrong { color: var(--wrong); }
+  .review-exp { margin-top: 10px; font-size: 0.85rem; color: var(--ink-soft); font-weight: 300; line-height: 1.6; padding-top: 10px; border-top: 1px solid rgba(26,26,46,0.07); }
 </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">
-    <span class="logo-dot"></span>
-    高頻詞彙刷題系統
-  </div>
+  <div class="logo"><span class="logo-dot"></span>高頻詞彙刷題系統</div>
   <div class="header-stats">
-    <div class="stat-pill">題庫 <span class="val" id="hd-total">100</span> 題</div>
+    <div class="stat-pill">題庫 <span class="val" id="hd-total">—</span> 題</div>
     <div class="stat-pill correct-pill">✓ <span class="val" id="hd-correct">0</span></div>
     <div class="stat-pill wrong-pill">✗ <span class="val" id="hd-wrong">0</span></div>
   </div>
@@ -550,9 +143,9 @@
 <main>
   <div class="mode-bar">
     <button class="mode-btn active" onclick="setMode('sequential')">📖 順序刷題</button>
-    <button class="mode-btn" onclick="setMode('random')">🔀 隨機刷題</button>
-    <button class="mode-btn" onclick="setMode('mistakes')">🔁 錯題重練</button>
-    <button class="mode-btn" onclick="showReview()">📋 錯題回顧</button>
+    <button class="mode-btn"        onclick="setMode('random')">🔀 隨機刷題</button>
+    <button class="mode-btn"        onclick="setMode('mistakes')">🔁 錯題重練</button>
+    <button class="mode-btn"        onclick="showReview()">📋 錯題回顧</button>
   </div>
 
   <!-- Quiz area -->
@@ -560,17 +153,15 @@
     <div class="progress-wrap">
       <div class="progress-row">
         <span class="progress-label">Progress</span>
-        <span class="progress-num" id="progress-num">0 / 100</span>
+        <span class="progress-num" id="progress-num">0 / 0</span>
       </div>
-      <div class="progress-bar">
-        <div class="progress-fill" id="progress-fill" style="width:0%"></div>
-      </div>
+      <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
     </div>
 
     <div class="question-card" id="question-card">
       <div class="q-meta">
-        <span class="q-number" id="q-number">Q1</span>
-        <span class="q-tag" id="q-tag">順序模式</span>
+        <span class="q-number" id="q-number">Q—</span>
+        <span class="q-tag"    id="q-tag">順序模式</span>
       </div>
       <p class="q-sentence" id="q-sentence"></p>
       <div class="options-grid" id="options-grid"></div>
@@ -578,8 +169,8 @@
     </div>
 
     <div class="nav-row">
-      <button class="nav-btn secondary" onclick="prevQ()" id="btn-prev" disabled>← 上一題</button>
-      <button class="nav-btn primary" onclick="nextQ()" id="btn-next" disabled>下一題 →</button>
+      <button class="nav-btn secondary" id="btn-prev" onclick="prevQ()" disabled>← 上一題</button>
+      <button class="nav-btn primary"   id="btn-next" onclick="nextQ()" disabled>下一題 →</button>
     </div>
 
     <div class="mini-map-wrap">
@@ -592,134 +183,66 @@
   <div class="result-screen" id="result-screen">
     <div class="result-trophy" id="result-trophy">🏆</div>
     <h2 class="result-title" id="result-title">刷題完成！</h2>
-    <p class="result-sub" id="result-sub">你已完成本輪所有題目</p>
+    <p class="result-sub">你已完成本輪所有題目</p>
     <div class="score-ring-wrap">
       <div class="score-ring">
         <svg viewBox="0 0 140 140" width="140" height="140">
-          <circle class="ring-bg" cx="70" cy="70" r="60"/>
-          <circle class="ring-fill" id="ring-fill" cx="70" cy="70" r="60"
-            stroke-dasharray="376.99" stroke-dashoffset="376.99"/>
+          <circle class="ring-bg"   cx="70" cy="70" r="60"/>
+          <circle class="ring-fill" id="ring-fill" cx="70" cy="70" r="60" stroke-dasharray="376.99" stroke-dashoffset="376.99"/>
         </svg>
         <div class="score-ring-text">
-          <span class="score-big" id="score-pct">0%</span>
+          <span class="score-big"  id="score-pct">0%</span>
           <span class="score-label">正確率</span>
         </div>
       </div>
     </div>
     <div class="result-stats">
       <div class="rs-card"><div class="rs-val green" id="rs-correct">0</div><div class="rs-label">答對題數</div></div>
-      <div class="rs-card"><div class="rs-val red" id="rs-wrong">0</div><div class="rs-label">答錯題數</div></div>
-      <div class="rs-card"><div class="rs-val blue" id="rs-total">0</div><div class="rs-label">作答總數</div></div>
+      <div class="rs-card"><div class="rs-val red"   id="rs-wrong">0</div><div class="rs-label">答錯題數</div></div>
+      <div class="rs-card"><div class="rs-val blue"  id="rs-total">0</div><div class="rs-label">作答總數</div></div>
     </div>
     <div class="result-actions">
       <button class="nav-btn secondary" onclick="showReview()">📋 查看錯題</button>
-      <button class="nav-btn primary" onclick="restartMode()">🔄 再來一輪</button>
+      <button class="nav-btn primary"   onclick="restartMode()">🔄 再來一輪</button>
     </div>
   </div>
 
   <!-- Review screen -->
-  <div id="review-screen" style="display:none; animation: slideUp 0.3s ease;">
-    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:20px;">
-      <h2 style="font-family:'Playfair Display',serif; font-size:1.4rem; font-weight:900;">錯題回顧</h2>
-      <button class="nav-btn secondary" onclick="backToQuiz()" style="padding:8px 18px; font-size:0.85rem;">← 返回刷題</button>
+  <div id="review-screen" style="display:none;">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+      <h2 style="font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:900;">錯題回顧</h2>
+      <button class="nav-btn secondary" onclick="backToQuiz()" style="padding:8px 18px;font-size:0.85rem;">← 返回刷題</button>
     </div>
     <div class="review-list" id="review-list"></div>
-    <div id="no-mistakes" style="display:none; text-align:center; padding:60px; color:var(--ink-soft);">
-      <div style="font-size:3rem; margin-bottom:12px;">🎉</div>
-      <div style="font-family:'Playfair Display',serif; font-size:1.3rem; font-weight:700;">目前沒有錯題！</div>
-      <div style="font-size:0.9rem; margin-top:6px;">繼續保持，全力衝刺！</div>
+    <div id="no-mistakes" style="display:none;text-align:center;padding:60px;color:var(--ink-soft);">
+      <div style="font-size:3rem;margin-bottom:12px;">🎉</div>
+      <div style="font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:700;">目前沒有錯題！</div>
+      <div style="font-size:0.9rem;margin-top:6px;">繼續保持，全力衝刺！</div>
     </div>
   </div>
 </main>
 
 <script>
+// ═══════════════════════════════════════════════════
+//  全域狀態
+// ═══════════════════════════════════════════════════
 let QUESTIONS = [];
-let _loadError = false;
-
-// ── Persistence ──────────────────────────────────────────────
-const SAVE_KEY = 'vocabQuiz_v1';
-
-function saveProgress() {
-  const payload = {
-    mode,
-    qIndex,
-    answered,
-    correctCount,
-    wrongCount,
-    queueIds: queue.map(q => q.id),
-    savedAt: Date.now()
-  };
-  try { localStorage.setItem(SAVE_KEY, JSON.stringify(payload)); } catch(e) {}
-}
-
-function loadProgress() {
-  try {
-    const raw = localStorage.getItem(SAVE_KEY);
-    if (!raw) return null;
-    return JSON.parse(raw);
-  } catch(e) { return null; }
-}
-
-function clearProgress() {
-  try { localStorage.removeItem(SAVE_KEY); } catch(e) {}
-}
-
-function formatRelativeTime(ts) {
-  if (!ts) return '';
-  const diff = Date.now() - ts;
-  const mins = Math.floor(diff / 60000);
-  const hrs  = Math.floor(diff / 3600000);
-  const days = Math.floor(diff / 86400000);
-  if (mins < 1)   return '剛才';
-  if (mins < 60)  return `${mins} 分鐘前`;
-  if (hrs  < 24)  return `${hrs} 小時前`;
-  return `${days} 天前`;
-}
-
-// ── State ────────────────────────────────────────────────────
 let mode = 'sequential';
 let queue = [];
 let qIndex = 0;
-let answered = {};   // questionId -> {correct: bool, chosen: str}
+let answered = {};        // { [id]: { correct: bool, chosen: str } }
 let correctCount = 0;
 let wrongCount = 0;
 let currentAnswered = false;
 
-function setMode(m) {
-  mode = m;
-  document.querySelectorAll('.mode-btn').forEach((b, i) => {
-    b.classList.toggle('active', ['sequential','random','mistakes','review'][i] === m);
-  });
-  if (m === 'mistakes') {
-    const mistakeIds = Object.keys(answered).filter(id => !answered[id].correct).map(Number);
-    if (mistakeIds.length === 0) { alert('目前沒有錯題！請先作答。'); return; }
-    queue = QUESTIONS.filter(q => mistakeIds.includes(q.id));
-    shuffleArr(queue);
-    qIndex = 0;
-    currentAnswered = false;
-    renderQuestion();
-    document.getElementById('quiz-area').style.display = '';
-    document.getElementById('result-screen').classList.remove('show');
-    document.getElementById('review-screen').style.display = 'none';
-  } else if (m === 'random') {
-    queue = [...QUESTIONS];
-    shuffleArr(queue);
-    qIndex = 0;
-    currentAnswered = false;
-    renderQuestion();
-    document.getElementById('quiz-area').style.display = '';
-    document.getElementById('result-screen').classList.remove('show');
-    document.getElementById('review-screen').style.display = 'none';
-  } else if (m === 'sequential') {
-    queue = [...QUESTIONS];
-    qIndex = 0;
-    currentAnswered = false;
-    renderQuestion();
-    document.getElementById('quiz-area').style.display = '';
-    document.getElementById('result-screen').classList.remove('show');
-    document.getElementById('review-screen').style.display = 'none';
-  }
-  updateMiniMap();
+// ═══════════════════════════════════════════════════
+//  工具函數
+// ═══════════════════════════════════════════════════
+
+// 正規化空白：支援任意數量底線（3 個以上都算）
+const BLANK_RE = /_{3,}/g;
+function highlightBlank(text) {
+  return text.replace(BLANK_RE, '<span class="blank">______</span>');
 }
 
 function shuffleArr(arr) {
@@ -729,32 +252,139 @@ function shuffleArr(arr) {
   }
 }
 
+function getQuestionText(q) {
+  // 相容 q.question（新格式）與 q.sentence（舊格式）
+  return q.question || q.sentence || '';
+}
+
+// ═══════════════════════════════════════════════════
+//  LocalStorage 進度存取
+// ═══════════════════════════════════════════════════
+const SAVE_KEY = 'vocabQuiz_v2';
+
+function saveProgress() {
+  try {
+    localStorage.setItem(SAVE_KEY, JSON.stringify({
+      mode, qIndex, answered, correctCount, wrongCount,
+      queueIds: queue.map(q => q.id),
+      savedAt: Date.now()
+    }));
+  } catch(e) {}
+}
+
+function loadSaved() {
+  try { return JSON.parse(localStorage.getItem(SAVE_KEY)); }
+  catch(e) { return null; }
+}
+
+function clearSaved() {
+  try { localStorage.removeItem(SAVE_KEY); } catch(e) {}
+}
+
+function formatRelativeTime(ts) {
+  if (!ts) return '';
+  const mins = Math.floor((Date.now() - ts) / 60000);
+  if (mins < 1)  return '剛才';
+  if (mins < 60) return `${mins} 分鐘前`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24)  return `${hrs} 小時前`;
+  return `${Math.floor(hrs / 24)} 天前`;
+}
+
+// ═══════════════════════════════════════════════════
+//  Toast 通知
+// ═══════════════════════════════════════════════════
+function showToast(msg, type = 'info') {
+  let t = document.getElementById('_toast');
+  if (!t) {
+    t = document.createElement('div');
+    t.id = '_toast';
+    t.style.cssText = `position:fixed;bottom:28px;left:50%;transform:translateX(-50%) translateY(80px);
+      background:var(--ink);color:var(--paper);padding:11px 22px;border-radius:30px;
+      font-size:0.88rem;font-weight:500;z-index:9999;
+      transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
+      box-shadow:0 4px 20px rgba(0,0,0,0.25);white-space:nowrap;pointer-events:none;
+      display:flex;align-items:center;gap:8px;`;
+    document.body.appendChild(t);
+  }
+  const icons = { info:'💾', success:'✅', resume:'📌' };
+  t.innerHTML = `<span>${icons[type]||'💾'}</span><span>${msg}</span>`;
+  t.style.background = type==='success' ? 'var(--correct)' : type==='resume' ? '#2d3a6e' : 'var(--ink)';
+  t.style.transform = 'translateX(-50%) translateY(0)';
+  clearTimeout(t._tid);
+  t._tid = setTimeout(() => { t.style.transform = 'translateX(-50%) translateY(80px)'; }, 2600);
+}
+
+// ═══════════════════════════════════════════════════
+//  模式切換（核心修復：每次都重新建立 queue）
+// ═══════════════════════════════════════════════════
+function setMode(m) {
+  mode = m;
+
+  // 更新 active 按鈕（前三個對應 mode；第四個是 showReview，不在此處理）
+  document.querySelectorAll('.mode-btn').forEach((b, i) => {
+    const map = ['sequential', 'random', 'mistakes', null];
+    b.classList.toggle('active', map[i] === m);
+  });
+
+  if (m === 'mistakes') {
+    const ids = Object.keys(answered)
+      .filter(id => !answered[id].correct)
+      .map(Number);
+    if (ids.length === 0) {
+      alert('目前沒有錯題！請先作答。');
+      return;
+    }
+    queue = QUESTIONS.filter(q => ids.includes(q.id));
+    shuffleArr(queue);
+
+  } else if (m === 'random') {
+    // ★ 關鍵修復：重新複製並洗牌，每次切換都產生新的隨機順序
+    queue = [...QUESTIONS];
+    shuffleArr(queue);
+
+  } else { // sequential
+    queue = [...QUESTIONS];
+  }
+
+  qIndex = 0;
+  currentAnswered = false;
+
+  document.getElementById('quiz-area').style.display = '';
+  document.getElementById('result-screen').classList.remove('show');
+  document.getElementById('review-screen').style.display = 'none';
+
+  renderQuestion();
+}
+
+// ═══════════════════════════════════════════════════
+//  渲染題目
+// ═══════════════════════════════════════════════════
 function renderQuestion() {
   if (qIndex >= queue.length) { showResult(); return; }
+
   const q = queue[qIndex];
   const prev = answered[q.id];
   currentAnswered = !!prev;
 
-  // Card animation
+  // 卡片動畫重置
   const card = document.getElementById('question-card');
   card.style.animation = 'none';
   void card.offsetWidth;
   card.style.animation = '';
 
-  // Meta
+  // 題號 & 標籤
   document.getElementById('q-number').textContent = `Q${q.id}`;
-  const tagMap = { sequential: '順序模式', random: '隨機模式', mistakes: '錯題重練' };
+  const tagMap = { sequential:'順序模式', random:'隨機模式', mistakes:'錯題重練' };
   document.getElementById('q-tag').textContent = tagMap[mode] || '刷題';
 
-  // Sentence: highlight blank
-  const sentenceEl = document.getElementById('q-sentence');
-  sentenceEl.innerHTML = q.sentence.replace('_____', '<span class="blank">_____</span>');
+  // 題目文字（相容新舊欄位名稱）
+  document.getElementById('q-sentence').innerHTML = highlightBlank(getQuestionText(q));
 
-  // Options
+  // 選項
   const grid = document.getElementById('options-grid');
   grid.innerHTML = '';
-  const optKeys = Object.keys(q.options);
-  optKeys.forEach(key => {
+  Object.keys(q.options).forEach(key => {
     const btn = document.createElement('button');
     btn.className = 'option-btn';
     btn.innerHTML = `<span class="opt-label">${key}</span><span class="opt-text">${q.options[key]}</span>`;
@@ -767,7 +397,7 @@ function renderQuestion() {
     grid.appendChild(btn);
   });
 
-  // Explanation
+  // 解析框
   const expEl = document.getElementById('explanation');
   if (currentAnswered && prev) {
     expEl.className = 'explanation show ' + (prev.correct ? 'correct-exp' : 'wrong-exp');
@@ -777,11 +407,11 @@ function renderQuestion() {
     expEl.innerHTML = '';
   }
 
-  // Nav buttons
+  // 導覽按鈕
   document.getElementById('btn-prev').disabled = qIndex === 0;
   document.getElementById('btn-next').disabled = !currentAnswered;
 
-  // Progress
+  // 進度列
   const done = Object.keys(answered).length;
   const total = QUESTIONS.length;
   document.getElementById('progress-num').textContent = `${done} / ${total}`;
@@ -791,6 +421,9 @@ function renderQuestion() {
   updateHeaderStats();
 }
 
+// ═══════════════════════════════════════════════════
+//  作答
+// ═══════════════════════════════════════════════════
 function selectAnswer(chosen, q) {
   if (currentAnswered) return;
   currentAnswered = true;
@@ -798,11 +431,10 @@ function selectAnswer(chosen, q) {
   const isCorrect = chosen === q.answer;
   const wasAnswered = !!answered[q.id];
 
-  // Only count first attempt
   if (!wasAnswered) {
     if (isCorrect) correctCount++; else wrongCount++;
   } else {
-    // Re-doing mistakes mode: update if now correct
+    // 錯題重練時答對：修正計數
     if (!answered[q.id].correct && isCorrect) {
       correctCount++;
       wrongCount = Math.max(0, wrongCount - 1);
@@ -811,16 +443,13 @@ function selectAnswer(chosen, q) {
 
   answered[q.id] = { correct: isCorrect, chosen };
 
-  // Style buttons
-  const btns = document.querySelectorAll('.option-btn');
-  btns.forEach(btn => {
+  document.querySelectorAll('.option-btn').forEach(btn => {
     btn.disabled = true;
     const key = btn.querySelector('.opt-label').textContent;
     if (key === q.answer) btn.classList.add('correct');
     if (key === chosen && !isCorrect) btn.classList.add('wrong');
   });
 
-  // Explanation
   const expEl = document.getElementById('explanation');
   expEl.className = 'explanation show ' + (isCorrect ? 'correct-exp' : 'wrong-exp');
   expEl.innerHTML = `<strong>${isCorrect ? '✓ 答對了！' : '✗ 答錯了'}</strong>${q.explanation}`;
@@ -829,15 +458,22 @@ function selectAnswer(chosen, q) {
 
   updateMiniMap();
   updateHeaderStats();
+  saveProgress();
+  showToast('進度已儲存', 'info');
 }
 
+// ═══════════════════════════════════════════════════
+//  上一題 / 下一題
+// ═══════════════════════════════════════════════════
 function nextQ() {
   if (qIndex < queue.length - 1) {
     qIndex++;
     currentAnswered = false;
     renderQuestion();
+    saveProgress();
   } else {
     showResult();
+    clearSaved();
   }
 }
 
@@ -848,22 +484,24 @@ function prevQ() {
   }
 }
 
+// ═══════════════════════════════════════════════════
+//  Mini Map
+// ═══════════════════════════════════════════════════
 function updateMiniMap() {
   const map = document.getElementById('mini-map');
   map.innerHTML = '';
-  const total = queue.length || QUESTIONS.length;
-  const displayQ = queue.length ? queue : QUESTIONS;
-  displayQ.forEach((q, i) => {
+  const quizVisible = document.getElementById('quiz-area').style.display !== 'none';
+  queue.forEach((q, i) => {
     const dot = document.createElement('div');
     dot.className = 'map-dot';
     dot.textContent = q.id;
     dot.title = `Q${q.id}`;
-    if (i === qIndex && document.getElementById('quiz-area').style.display !== 'none') {
+    if (i === qIndex && quizVisible) {
       dot.classList.add('current');
     } else if (answered[q.id]) {
       dot.classList.add(answered[q.id].correct ? 'done-correct' : 'done-wrong');
     }
-    dot.onclick = () => { qIndex = i; renderQuestion(); };
+    dot.onclick = () => { qIndex = i; currentAnswered = false; renderQuestion(); };
     map.appendChild(dot);
   });
 }
@@ -873,11 +511,13 @@ function updateHeaderStats() {
   document.getElementById('hd-wrong').textContent = wrongCount;
 }
 
+// ═══════════════════════════════════════════════════
+//  結果畫面
+// ═══════════════════════════════════════════════════
 function showResult() {
   document.getElementById('quiz-area').style.display = 'none';
   document.getElementById('review-screen').style.display = 'none';
-  const rs = document.getElementById('result-screen');
-  rs.classList.add('show');
+  document.getElementById('result-screen').classList.add('show');
 
   const total = Object.keys(answered).length;
   const pct = total ? Math.round(correctCount / total * 100) : 0;
@@ -886,37 +526,45 @@ function showResult() {
   document.getElementById('rs-correct').textContent = correctCount;
   document.getElementById('rs-wrong').textContent = wrongCount;
   document.getElementById('rs-total').textContent = total;
+  document.getElementById('result-trophy').textContent =
+    pct >= 90 ? '🏆' : pct >= 70 ? '🥈' : pct >= 50 ? '🥉' : '📚';
+  document.getElementById('result-title').textContent =
+    pct >= 90 ? '太厲害了！' : pct >= 70 ? '表現不錯！' : pct >= 50 ? '繼續加油！' : '需要多練習！';
 
-  // Trophy
-  const trophies = pct >= 90 ? '🏆' : pct >= 70 ? '🥈' : pct >= 50 ? '🥉' : '📚';
-  document.getElementById('result-trophy').textContent = trophies;
-  document.getElementById('result-title').textContent = pct >= 90 ? '太厲害了！' : pct >= 70 ? '表現不錯！' : pct >= 50 ? '繼續加油！' : '需要多練習！';
-
-  // Ring animation
   setTimeout(() => {
-    const circumference = 2 * Math.PI * 60;
-    const offset = circumference * (1 - pct / 100);
     const ring = document.getElementById('ring-fill');
     ring.style.stroke = pct >= 70 ? 'var(--correct)' : pct >= 50 ? 'var(--gold)' : 'var(--wrong)';
-    ring.style.strokeDashoffset = offset;
+    ring.style.strokeDashoffset = 376.99 * (1 - pct / 100);
   }, 100);
 }
 
+function restartMode() {
+  document.getElementById('result-screen').classList.remove('show');
+  setMode(mode);
+}
+
+// ═══════════════════════════════════════════════════
+//  錯題回顧
+// ═══════════════════════════════════════════════════
 function showReview() {
   document.getElementById('quiz-area').style.display = 'none';
   document.getElementById('result-screen').classList.remove('show');
-  const rs = document.getElementById('review-screen');
-  rs.style.display = '';
+  document.getElementById('review-screen').style.display = '';
 
-  const mistakeIds = Object.keys(answered).filter(id => !answered[id].correct).map(Number);
+  // 第四個按鈕 active
+  document.querySelectorAll('.mode-btn').forEach((b, i) => {
+    b.classList.toggle('active', i === 3);
+  });
+
+  const mistakeIds = Object.keys(answered)
+    .filter(id => !answered[id].correct)
+    .map(Number);
+
   const list = document.getElementById('review-list');
   const noEl = document.getElementById('no-mistakes');
-
   list.innerHTML = '';
-  if (mistakeIds.length === 0) {
-    noEl.style.display = '';
-    return;
-  }
+
+  if (mistakeIds.length === 0) { noEl.style.display = ''; return; }
   noEl.style.display = 'none';
 
   mistakeIds.forEach(id => {
@@ -926,13 +574,12 @@ function showReview() {
     const div = document.createElement('div');
     div.className = 'review-item wrong-item';
     div.innerHTML = `
-      <div class="review-q">${q.sentence.replace('_____','<span style="color:var(--accent);font-family:DM Mono,monospace">_____</span>')}</div>
+      <div class="review-q">${highlightBlank(getQuestionText(q))}</div>
       <div class="review-answer-row">
         <span class="review-wrong">✗ 你的答案：${info.chosen}) ${q.options[info.chosen]}</span>
         <span class="review-correct">✓ 正確答案：${q.answer}) ${q.options[q.answer]}</span>
       </div>
-      <div class="review-exp">${q.explanation}</div>
-    `;
+      <div class="review-exp">${q.explanation}</div>`;
     list.appendChild(div);
   });
 }
@@ -940,97 +587,50 @@ function showReview() {
 function backToQuiz() {
   document.getElementById('review-screen').style.display = 'none';
   document.getElementById('quiz-area').style.display = '';
+  document.querySelectorAll('.mode-btn').forEach((b, i) => {
+    b.classList.toggle('active', ['sequential','random','mistakes',null][i] === mode);
+  });
   renderQuestion();
 }
 
-function restartMode() {
-  document.getElementById('result-screen').classList.remove('show');
-  setMode(mode);
-}
-
-// ── Auto-save on every answer ─────────────────────────────────
-const _origSelectAnswer = selectAnswer;
-// Patch selectAnswer to auto-save after each pick
-const _selectAnswerOrig = selectAnswer;
-
-// ── Toast notification ────────────────────────────────────────
-function showToast(msg, type = 'info') {
-  let toast = document.getElementById('save-toast');
-  if (!toast) {
-    toast = document.createElement('div');
-    toast.id = 'save-toast';
-    toast.style.cssText = `
-      position:fixed; bottom:28px; left:50%; transform:translateX(-50%) translateY(80px);
-      background:var(--ink); color:var(--paper); padding:11px 22px; border-radius:30px;
-      font-size:0.88rem; font-weight:500; z-index:9999; transition:transform 0.3s cubic-bezier(0.4,0,0.2,1);
-      box-shadow:0 4px 20px rgba(0,0,0,0.25); white-space:nowrap; pointer-events:none;
-      display:flex; align-items:center; gap:8px;
-    `;
-    document.body.appendChild(toast);
-  }
-  const icons = { info:'💾', success:'✅', resume:'📌' };
-  toast.innerHTML = `<span>${icons[type]||'💾'}</span><span>${msg}</span>`;
-  if (type === 'success') toast.style.background = 'var(--correct)';
-  else if (type === 'resume') toast.style.background = '#2d3a6e';
-  else toast.style.background = 'var(--ink)';
-  toast.style.transform = 'translateX(-50%) translateY(0)';
-  clearTimeout(toast._timeout);
-  toast._timeout = setTimeout(() => {
-    toast.style.transform = 'translateX(-50%) translateY(80px)';
-  }, 2600);
-}
-
-// ── Resume banner ─────────────────────────────────────────────
+// ═══════════════════════════════════════════════════
+//  進度恢復 Banner
+// ═══════════════════════════════════════════════════
 function showResumeBanner(saved) {
   const existing = document.getElementById('resume-banner');
   if (existing) existing.remove();
 
-  const done = Object.keys(saved.answered).length;
+  const done = Object.keys(saved.answered || {}).length;
   const total = QUESTIONS.length;
   const pct = total ? Math.round(done / total * 100) : 0;
-  const timeStr = formatRelativeTime(saved.savedAt);
-  const modeLabel = { sequential:'順序模式', random:'隨機模式', mistakes:'錯題重練' }[saved.mode] || saved.mode;
+  const modeLabel = { sequential:'順序模式', random:'隨機模式', mistakes:'錯題重練' }[saved.mode] || '';
 
   const banner = document.createElement('div');
   banner.id = 'resume-banner';
-  banner.style.cssText = `
-    background: #2d3a6e; color: white; border-radius: 12px;
-    padding: 18px 22px; margin-bottom: 20px;
-    display: flex; align-items: center; gap: 16px;
-    animation: slideUp 0.35s ease; border: 1px solid rgba(255,255,255,0.1);
-    box-shadow: 0 4px 20px rgba(45,58,110,0.25);
-  `;
+  banner.style.cssText = `background:#2d3a6e;color:white;border-radius:12px;
+    padding:18px 22px;margin-bottom:20px;display:flex;align-items:center;gap:16px;
+    animation:slideUp 0.35s ease;border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 4px 20px rgba(45,58,110,0.25);`;
   banner.innerHTML = `
-    <div style="font-size:2rem; flex-shrink:0;">📌</div>
-    <div style="flex:1; min-width:0;">
-      <div style="font-weight:600; font-size:0.95rem; margin-bottom:4px;">發現上次的進度！</div>
-      <div style="font-size:0.82rem; opacity:0.8; line-height:1.5;">
-        ${modeLabel}・已完成 <strong>${done}/${total} 題</strong>（${pct}%）・${timeStr}儲存
+    <div style="font-size:2rem;flex-shrink:0;">📌</div>
+    <div style="flex:1;min-width:0;">
+      <div style="font-weight:600;font-size:0.95rem;margin-bottom:4px;">發現上次的進度！</div>
+      <div style="font-size:0.82rem;opacity:0.8;line-height:1.5;">
+        ${modeLabel}・已完成 <strong>${done}/${total} 題</strong>（${pct}%）・${formatRelativeTime(saved.savedAt)} 儲存
       </div>
-      <div style="height:4px; background:rgba(255,255,255,0.15); border-radius:2px; margin-top:8px; overflow:hidden;">
-        <div style="height:100%; width:${pct}%; background:var(--gold); border-radius:2px; transition:width 0.8s ease;"></div>
+      <div style="height:4px;background:rgba(255,255,255,0.15);border-radius:2px;margin-top:8px;overflow:hidden;">
+        <div style="height:100%;width:${pct}%;background:var(--gold);border-radius:2px;transition:width 0.8s ease;"></div>
       </div>
     </div>
-    <div style="display:flex; flex-direction:column; gap:8px; flex-shrink:0;">
-      <button onclick="resumeProgress()" style="
-        background:var(--gold); color:var(--ink); border:none; border-radius:7px;
-        padding:8px 16px; font-size:0.85rem; font-weight:600; cursor:pointer;
-        font-family:'DM Sans',sans-serif; white-space:nowrap;
-      ">繼續作答 →</button>
-      <button onclick="discardProgress()" style="
-        background:rgba(255,255,255,0.12); color:white; border:1px solid rgba(255,255,255,0.2);
-        border-radius:7px; padding:8px 16px; font-size:0.82rem; cursor:pointer;
-        font-family:'DM Sans',sans-serif; white-space:nowrap;
-      ">從頭開始</button>
-    </div>
-  `;
-
-  const main = document.querySelector('main');
-  main.insertBefore(banner, main.firstChild);
+    <div style="display:flex;flex-direction:column;gap:8px;flex-shrink:0;">
+      <button onclick="resumeProgress()" style="background:var(--gold);color:var(--ink);border:none;border-radius:7px;padding:8px 16px;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;">繼續作答 →</button>
+      <button onclick="discardProgress()" style="background:rgba(255,255,255,0.12);color:white;border:1px solid rgba(255,255,255,0.2);border-radius:7px;padding:8px 16px;font-size:0.82rem;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;">從頭開始</button>
+    </div>`;
+  document.querySelector('main').insertBefore(banner, document.querySelector('main').firstChild);
 }
 
 function resumeProgress() {
-  const saved = loadProgress();
+  const saved = loadSaved();
   if (!saved) return;
 
   mode = saved.mode || 'sequential';
@@ -1038,22 +638,18 @@ function resumeProgress() {
   correctCount = saved.correctCount || 0;
   wrongCount = saved.wrongCount || 0;
 
-  // Restore queue
   if (saved.queueIds && saved.queueIds.length) {
     queue = saved.queueIds.map(id => QUESTIONS.find(q => q.id === id)).filter(Boolean);
   } else {
     queue = [...QUESTIONS];
   }
 
-  // Find first unanswered question in queue
-  let resumeIndex = saved.qIndex || 0;
-  // If that question is already answered, find next unanswered
-  const firstUnanswered = queue.findIndex((q, i) => i >= resumeIndex && !answered[q.id]);
-  qIndex = firstUnanswered >= 0 ? firstUnanswered : resumeIndex;
+  const resumeIdx = saved.qIndex || 0;
+  const firstUnanswered = queue.findIndex((q, i) => i >= resumeIdx && !answered[q.id]);
+  qIndex = firstUnanswered >= 0 ? firstUnanswered : resumeIdx;
 
-  // Update mode buttons
   document.querySelectorAll('.mode-btn').forEach((b, i) => {
-    b.classList.toggle('active', ['sequential','random','mistakes','review'][i] === mode);
+    b.classList.toggle('active', ['sequential','random','mistakes',null][i] === mode);
   });
 
   const banner = document.getElementById('resume-banner');
@@ -1066,108 +662,72 @@ function resumeProgress() {
 }
 
 function discardProgress() {
-  clearProgress();
+  clearSaved();
   const banner = document.getElementById('resume-banner');
   if (banner) banner.remove();
   showToast('已清除舊進度，從頭開始');
 }
 
-// ── Patch nextQ and selectAnswer to auto-save ─────────────────
-const _nextQ_orig = nextQ;
-
-// Override selectAnswer to add save
-const _selectAnswer_patched = selectAnswer;
-selectAnswer = function(chosen, q) {
-  _selectAnswer_patched(chosen, q);
-  saveProgress();
-  showToast('進度已儲存', 'info');
-};
-
-// Override nextQ to save qIndex
-nextQ = function() {
-  if (qIndex < queue.length - 1) {
-    qIndex++;
-    currentAnswered = false;
-    renderQuestion();
-    saveProgress();
-  } else {
-    showResult();
-    clearProgress(); // Clear after completing a round
-  }
-};
-
-// ── Add reset button to header ────────────────────────────────
-(function addResetBtn() {
-  const headerStats = document.querySelector('.header-stats');
-  if (!headerStats) return;
+// ═══════════════════════════════════════════════════
+//  Header 清除進度按鈕
+// ═══════════════════════════════════════════════════
+(function() {
   const btn = document.createElement('button');
   btn.textContent = '🗑 清除進度';
-  btn.style.cssText = `
-    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 20px; padding: 5px 14px; font-size: 0.78rem; color: rgba(255,255,255,0.7);
-    cursor: pointer; font-family: 'DM Sans',sans-serif; font-weight: 500;
-    transition: background 0.2s;
-  `;
+  btn.style.cssText = `background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);
+    border-radius:20px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.7);
+    cursor:pointer;font-family:'DM Sans',sans-serif;font-weight:500;transition:background 0.2s;`;
   btn.onmouseenter = () => btn.style.background = 'rgba(200,85,61,0.3)';
   btn.onmouseleave = () => btn.style.background = 'rgba(255,255,255,0.08)';
   btn.onclick = () => {
     if (confirm('確定要清除所有進度嗎？此操作無法復原。')) {
-      clearProgress();
+      clearSaved();
       answered = {}; correctCount = 0; wrongCount = 0;
       updateHeaderStats();
       setMode('sequential');
       showToast('進度已清除！');
     }
   };
-  headerStats.appendChild(btn);
+  document.querySelector('.header-stats').appendChild(btn);
 })();
 
-// ── Fetch questions from JSON files ──────────────────────────
+// ═══════════════════════════════════════════════════
+//  載入題庫
+// ═══════════════════════════════════════════════════
 async function loadQuestions() {
   showLoadingScreen('正在載入題庫…');
 
   let files = [];
   try {
-    const res = await fetch('questions/manifest.json');
-    if (res.ok) {
-      const manifest = await res.json();
-      files = manifest.files || [];
-    }
+    const r = await fetch('questions/manifest.json');
+    if (r.ok) { const m = await r.json(); files = m.files || []; }
   } catch(e) {}
+  if (!files.length) files = ['questions/vocab_quiz_all100.json'];
 
-  if (files.length === 0) {
-    files = ['questions/vocab_quiz_all100.json'];
-  }
-
-  let allQuestions = [];
-  let failedFiles = [];
-
-  for (const file of files) {
+  let all = [], failed = [];
+  for (const f of files) {
     try {
-      const res = await fetch(file);
-      if (!res.ok) throw new Error('HTTP ' + res.status);
-      const data = await res.json();
-      if (Array.isArray(data)) allQuestions = allQuestions.concat(data);
-    } catch(e) {
-      failedFiles.push(file);
-      console.warn('Failed to load:', file, e);
-    }
+      const r = await fetch(f);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const d = await r.json();
+      if (Array.isArray(d)) all = all.concat(d);
+    } catch(e) { failed.push(f); console.warn('Failed:', f, e); }
   }
 
-  // Deduplicate by id, sort
+  // 去重 & 排序
   const seen = new Set();
-  allQuestions = allQuestions.filter(q => { if (seen.has(q.id)) return false; seen.add(q.id); return true; });
-  allQuestions.sort((a, b) => a.id - b.id);
+  all = all.filter(q => { if (seen.has(q.id)) return false; seen.add(q.id); return true; });
+  all.sort((a, b) => a.id - b.id);
 
-  if (allQuestions.length === 0) { showLoadError(failedFiles); return; }
+  if (!all.length) { showLoadError(failed); return; }
 
-  QUESTIONS = allQuestions;
+  QUESTIONS = all;
   document.getElementById('hd-total').textContent = QUESTIONS.length;
   hideLoadingScreen();
 
-  if (failedFiles.length > 0) showToast('⚠️ ' + failedFiles.length + ' 個檔案載入失敗', 'info');
+  if (failed.length) showToast(`⚠️ ${failed.length} 個檔案載入失敗`, 'info');
 
-  const saved = loadProgress();
+  const saved = loadSaved();
   if (saved && Object.keys(saved.answered || {}).length > 0) {
     setMode('sequential');
     showResumeBanner(saved);
@@ -1177,28 +737,40 @@ async function loadQuestions() {
 }
 
 function showLoadingScreen(msg) {
-  let el = document.getElementById('loading-screen');
+  let el = document.getElementById('_loading');
   if (!el) {
     el = document.createElement('div');
-    el.id = 'loading-screen';
+    el.id = '_loading';
     el.style.cssText = 'position:fixed;inset:0;background:var(--paper);z-index:9998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;';
     document.body.appendChild(el);
   }
-  el.innerHTML = '<div style="font-size:2.5rem">📚</div><div style="font-family:Playfair Display,serif;font-size:1.3rem;font-weight:700;color:var(--ink)">' + msg + '</div><div style="width:180px;height:4px;background:var(--paper-warm);border-radius:2px;overflow:hidden;"><div style="height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:2px;animation:lbar 1.2s ease-in-out infinite;"></div></div><style>@keyframes lbar{0%{width:0%;margin-left:0}50%{width:80%;margin-left:0}100%{width:0%;margin-left:100%}}</style>';
-  el.style.display = 'flex';
+  el.innerHTML = `<div style="font-size:2.5rem">📚</div>
+    <div style="font-family:Playfair Display,serif;font-size:1.3rem;font-weight:700;color:var(--ink)">${msg}</div>
+    <div style="width:180px;height:4px;background:var(--paper-warm);border-radius:2px;overflow:hidden;">
+      <div style="height:100%;background:linear-gradient(90deg,var(--accent),var(--gold));border-radius:2px;animation:lbar 1.2s ease-in-out infinite;"></div>
+    </div>
+    <style>@keyframes lbar{0%{width:0%;margin-left:0}50%{width:80%;margin-left:0}100%{width:0%;margin-left:100%}}</style>`;
 }
 
 function hideLoadingScreen() {
-  const el = document.getElementById('loading-screen');
+  const el = document.getElementById('_loading');
   if (el) { el.style.transition='opacity 0.3s'; el.style.opacity='0'; setTimeout(()=>el.remove(),300); }
 }
 
-function showLoadError(failedFiles) {
+function showLoadError(failed) {
   hideLoadingScreen();
-  document.querySelector('main').innerHTML = '<div style="text-align:center;padding:60px 20px;"><div style="font-size:3rem;margin-bottom:16px;">⚠️</div><h2 style="font-family:Playfair Display,serif;font-size:1.6rem;margin-bottom:10px;color:var(--ink)">無法載入題庫</h2><p style="color:var(--ink-soft);line-height:1.7;font-size:0.95rem;max-width:440px;margin:0 auto 24px">請確認你的 GitHub 專案結構如下：</p><div style="background:var(--ink);color:#a8d8a8;border-radius:10px;padding:20px 28px;font-family:DM Mono,monospace;font-size:0.85rem;text-align:left;display:inline-block;line-height:2">your-repo/<br>├── index.html<br>├── questions/<br>│&nbsp;&nbsp; ├── manifest.json<br>│&nbsp;&nbsp; └── vocab_quiz_all100.json</div></div>';
+  document.querySelector('main').innerHTML = `
+    <div style="text-align:center;padding:60px 20px;">
+      <div style="font-size:3rem;margin-bottom:16px;">⚠️</div>
+      <h2 style="font-family:Playfair Display,serif;font-size:1.6rem;margin-bottom:10px;">無法載入題庫</h2>
+      <p style="color:var(--ink-soft);font-size:0.95rem;max-width:440px;margin:0 auto 24px;">請確認 GitHub 專案結構如下：</p>
+      <div style="background:var(--ink);color:#a8d8a8;border-radius:10px;padding:20px 28px;font-family:DM Mono,monospace;font-size:0.85rem;text-align:left;display:inline-block;line-height:2">
+        your-repo/<br>├── index.html<br>├── questions/<br>│&nbsp;&nbsp; ├── manifest.json<br>│&nbsp;&nbsp; └── vocab_quiz_all100.json
+      </div>
+    </div>`;
 }
 
-// ── Init ─────────────────────────────────────────────────────
+// ── 啟動 ──────────────────────────────────────────
 loadQuestions();
 </script>
 </body>
