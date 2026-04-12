@@ -2,6 +2,7 @@
   "files": [
     "questions/vocab_quiz_all100.json",
     "questions/wordspower_1.json",
-    "questions/wordspower_2.json"
+    "questions/wordspower_2.json",
+    "questions/wordspower_3.json"
   ]
 }
